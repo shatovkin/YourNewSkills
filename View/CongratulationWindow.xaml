@@ -1,0 +1,13 @@
+﻿<Window x:Class="NewSkills.View.CongratulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:NewSkills.View"
+        mc:Ignorable="d"
+        Title="CongratulationWindow" WindowStyle="None">
+    <Grid>
+        <Image x:Name="imageEinstein" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Resources/Einstein1.gif"/>
+    </Grid>
+</Window>

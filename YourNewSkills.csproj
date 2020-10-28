@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2243AF4D-B26A-441A-B63B-36E00FD864D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewSkills</RootNamespace>
+    <AssemblyName>NewSkills</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\dsh\Desktop\newSkills\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>02A0F8102E214EA8BABF91111F438919914E558B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NewSkills_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NewSkills.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controller\KeyGenerator.cs" />
+    <Compile Include="Controller\LicenseServiceController.cs" />
+    <Compile Include="Controller\StreamReaderController.cs" />
+    <Compile Include="Controller\UtilController.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LicenceServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CongratulationModel.cs" />
+    <Compile Include="ViewModel\FirstViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\NextLetterService.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\StartConditionViewModelFirst.cs" />
+    <Compile Include="ViewModel\StartConditionViewModelTwo.cs" />
+    <Compile Include="ViewModel\StartConditionViewModel.cs" />
+    <Compile Include="View\CongratulationWindow.xaml.cs">
+      <DependentUpon>CongratulationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FirstUC.xaml.cs">
+      <DependentUpon>FirstUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LicenseWindow.xaml.cs">
+      <DependentUpon>LicenseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StarConditionalViewFirst.xaml.cs">
+      <DependentUpon>StarConditionalViewFirst.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartConditionViewTwo.xaml.cs">
+      <DependentUpon>StartConditionViewTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartConditionView.xaml.cs">
+      <DependentUpon>StartConditionView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PopupUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CongratulationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FirstUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\LicenseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StarConditionalViewFirst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartConditionViewTwo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\StartConditionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PopupUserControl.xaml.cs">
+      <DependentUpon>PopupUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NewSkills_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\LicenceServiceRef\service.wsdl" />
+    <None Include="Service References\LicenceServiceRef\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenceServiceRef\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_0sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_1sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_2sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_3sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_4sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_5sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_6sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_7sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_8sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_9sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\letter_a1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_b1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_b2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_bl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_bsign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_comma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ee2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_g1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_g2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_h1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_h2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_hard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_i1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_i2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_j1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_j2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ja1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ja2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_jo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_jo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ju1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ju2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_k1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_k2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_m2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_n2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_o1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_o2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_quals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_sche1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_sche2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_semicolon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_sh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_sh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_space.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_u1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_u2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_z1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_z2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ze1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_ze2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_zg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_zg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\keyBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\inputText.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\letter_score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\letter_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\letter_underscore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\success_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LicenceServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LicenceServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LicenceServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LicenceServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\svitolk129.png" />
+    <Resource Include="Resources\soundOff.png" />
+    <Resource Include="Resources\soundOn.png" />
+    <Resource Include="icon.ico" />
+    <Resource Include="View\LicenseKeys.txt" />
+    <Resource Include="Resources\checkBoxInActive.png" />
+    <Resource Include="Resources\checkBoxActive.png" />
+    <EmbeddedResource Include="Resources\audio_Bukva_a12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_a22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_be12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_be22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ce12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ce22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_che12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_che22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_de12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_de22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_e12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_e22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ef12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_el%2712.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_el%2722.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_em12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_em22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_en12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_en22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_er12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_er22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_es12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_es22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ge12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ge22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ha12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ha22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_i12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_i22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_i_kratnoe12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_i_kratnoe22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ka12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ka22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_myagkij_znak11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_myagkij_znak22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_o12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_o22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_pe12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_pe22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_sha12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_sha22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_shcha12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_shcha22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_te12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_te22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_tvyordyj_znak11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_tvyordyj_znak22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_u12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_u22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ve12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ve22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_y12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_y22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ya12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ya22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ye12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ye22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_yo12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_yo22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_yu12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_yu22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ze12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_ze22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_zhe12.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Bukva_zhe22.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_chetyre11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_chetyre21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_devyat%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_devyat%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_dva11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_dva21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_nol%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_nol%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_odin11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_pyat%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_odin21.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_pyat%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_sem%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_sem%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_shest%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_shest%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_tri11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_tri21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_vosem%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Cifra_vosem%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Defis11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Defis21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Dvoetochie11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Dvoetochie21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Kavychki11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Kavychki21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Nizhnee_podchyorkivanie11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Nizhnee_podchyorkivanie21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Nomer11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Nomer21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Plyus11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Plyus21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Probel_levoj11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Probel_levoj21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Probel_pravoj11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Probel_pravoj21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Procent11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Procent21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Ravno11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Ravno21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Skobka_otkryvaetsya11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Skobka_otkryvaetsya21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Skobka_zakryvaetsya11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Skobka_zakryvaetsya21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Tochka11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Tochka21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Tochka_s_zapyatoj11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Tochka_s_zapyatoj21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Voprositel%27nyj znak11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Voprositel%27nyj znak21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Vosklicatel%27nyj_znak11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Vosklicatel%27nyj_znak21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_A11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_A21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Be11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Be21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ce11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ce21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Che11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Che21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_De11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_De21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_E11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_E21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ef11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ef21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_El%2711.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_El%2721.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Em11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Em21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_En11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_En21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Er11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Er21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Es11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Es21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ge11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ge21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ha11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ha21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_I11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_I21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_I_kratnoe11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_I_kratnoe21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ka11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ka21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Pe11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Pe21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Sha11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Sha21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Shcha11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Shcha21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Te11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Te21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_U11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_U21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ve11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ve21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ya11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ya21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ye11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ye21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Yo11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Yo21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Yu11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Yu21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ze11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Ze21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Zhe11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_Zhe21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_О11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zaglavnaya_О21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zapyataya11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zapyataya21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zvezdochka11.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_Zvezdochka21.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_pereryv_30_minut_33.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_pereryv_5_minut_32.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_wavpereryv_zakonchen_34.wav.wav" />
+    <EmbeddedResource Include="Resources\audio_zvuk_vokzala_31.wav.wav" />
+    <Resource Include="Resources\dalee.png" />
+    <Content Include="Resources\Einstein1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\Einstein.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

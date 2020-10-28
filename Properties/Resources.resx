@@ -1,0 +1,1270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inputText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inputText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="keyBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyBoard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter+.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_0sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_0sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_1sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_1sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_2sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_2sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_3sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_3sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_4sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_4sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_5sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_5sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_6sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_6sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_7sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_7sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_8sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_8sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_9sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_9sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_a2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_b1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_b1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_b2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_b2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_bl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_bl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_bsign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_bsign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ch1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ch1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ch2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ch2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_comma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_comma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_d2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_d2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_e1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_e1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_e2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_e2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ee1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ee1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ee2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ee2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_f1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_f2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_g1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_g1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_g2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_g2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_h1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_h1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_h2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_h2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_hard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_hard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_i1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_i1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_i2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_i2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_j1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_j1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_j2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_j2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ja1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ja2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ja2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_jo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_jo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_jo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_jo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ju1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ju1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ju2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ju2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_k1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_k1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_k2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_k2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_l1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_l1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_l2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_l2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_m1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_m1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_m2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_m2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_n2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_n2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_o1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_o2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_o2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_p1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_p1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_p2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_p2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_point" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_point.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_quals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_quals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_r1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_r1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_r2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_r2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_s1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_s1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_s2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_s2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_sche1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_sche1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_sche2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_sche2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_score" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\letter_score.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_semicolon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_semicolon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_sh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_sh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_sh2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_sh2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_space" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_t1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_t1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_t2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_t2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_u1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_u1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_u2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_u2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_underscore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_underscore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_x2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_x2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_z1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_z1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_z2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_z2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ze1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ze1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_ze2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_ze2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_zg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_zg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter_zg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_zg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="success_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\success_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Einstein" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\einstein.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Einstein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\einstein.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soundOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\soundoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soundOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\soundon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkBoxActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkBoxActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkBoxInActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkBoxInActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="audio_Bukva_a12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_a12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_be12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_be12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ce12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ce12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_che12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_che12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_de12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_de12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_e12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_e12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ef12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ef12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_el_12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_el'12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_em12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_em12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_en12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_en12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_er12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_er12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_es12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_es12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ge12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ge12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ha12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_i12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i_kratnoe12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_i_kratnoe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ka12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ka12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_myagkij_znak11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_myagkij_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_o12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_o12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_pe12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_pe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_sha12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_sha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_shcha12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_shcha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_te12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_te12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_tvyordyj_znak11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_tvyordyj_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_u12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_u12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ve12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ve12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_y12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_y12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ya12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ya12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ye12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ye12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yo12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_yo12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yu12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_yu12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ze12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_ze12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_zhe12_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Bukva_zhe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_chetyre11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_chetyre11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_devyat_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_devyat'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_dva11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_dva11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_nol_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_nol'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_odin11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_odin11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_pyat_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_pyat'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_sem_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_sem'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_shest_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_shest'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_tri11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_tri11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_vosem_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Cifra_vosem'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Defis11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Defis11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Dvoetochie11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Dvoetochie11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Kavychki11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Kavychki11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nizhnee_podchyorkivanie11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Nizhnee_podchyorkivanie11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nomer11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Nomer11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Plyus11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Plyus11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_levoj11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Probel_levoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_pravoj11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Probel_pravoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Procent11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Procent11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Ravno11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Ravno11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_otkryvaetsya11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Skobka_otkryvaetsya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_zakryvaetsya11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Skobka_zakryvaetsya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Tochka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka_s_zapyatoj11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Tochka_s_zapyatoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Voprositel_nyj_znak11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Voprositel'nyj znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Vosklicatel_nyj_znak11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Vosklicatel'nyj_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_A11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_A11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Be11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Be11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ce11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ce11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Che11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Che11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_De11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_De11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_E11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_E11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ef11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ef11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_El_11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_El'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Em11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Em11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_En11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_En11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Er11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Er11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Es11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Es11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ge11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ge11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ha11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_I11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I_kratnoe11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_I_kratnoe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ka11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Pe11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Pe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Sha11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Sha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Shcha11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Shcha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Te11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Te11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_U11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_U11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ve11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ve11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ya11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ye11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ye11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yo11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Yo11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yu11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Yu11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ze11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Ze11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Zhe11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_Zhe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_О11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zaglavnaya_О11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zapyataya11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zapyataya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zvezdochka11_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_Zvezdochka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_a12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_a12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_a22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_a22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_be12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_be12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_be22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_be22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ce12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ce12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ce22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ce22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_che12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_che12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_che22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_che22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_de12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_de12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_de22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_de22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_e12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_e12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_e22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_e22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ef12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ef12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_el_12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_el'12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_el_22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_el'22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_em12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_em12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_em22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_em22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_en12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_en12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_en22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_en22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_er12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_er12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_er22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_er22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_es12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_es12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_es22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_es22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ge12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ge12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ge22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ge22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ha12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ha22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ha22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_i12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_i22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i_kratnoe12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_i_kratnoe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_i_kratnoe22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_i_kratnoe22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ka12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ka12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ka22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ka22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_myagkij_znak11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_myagkij_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_myagkij_znak22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_myagkij_znak22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_o12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_o12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_o22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_o22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_pe12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_pe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_pe22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_pe22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_sha12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_sha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_sha22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_sha22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_shcha12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_shcha12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_shcha22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_shcha22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_te12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_te12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_te22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_te22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_tvyordyj_znak11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_tvyordyj_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_tvyordyj_znak22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_tvyordyj_znak22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_u12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_u12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_u22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_u22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ve12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ve12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ve22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ve22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_y12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_y12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_y22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_y22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ya12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ya12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ya22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ya22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ye12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ye12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ye22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ye22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yo12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_yo12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yo22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_yo22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yu12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_yu12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_yu22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_yu22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ze12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ze12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_ze22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_ze22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_zhe12_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_zhe12.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Bukva_zhe22_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_zhe22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_chetyre11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_chetyre11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_chetyre21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_chetyre21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_devyat_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_devyat'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_devyat_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_devyat'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_dva11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_dva11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_dva21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_dva21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_nol_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_nol'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_nol_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_nol'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_odin11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_odin11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_pyat_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_pyat'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_pyat_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_pyat'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_sem_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_sem'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_sem_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_sem'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_shest_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_shest'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_shest_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_shest'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_tri11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_tri11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_tri21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_tri21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_vosem_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_vosem'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_vosem_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_vosem'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Defis11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_defis11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Defis21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_defis21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Dvoetochie11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_dvoetochie11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Dvoetochie21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_dvoetochie21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Kavychki11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_kavychki11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Kavychki21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_kavychki21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nizhnee_podchyorkivanie11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_nizhnee_podchyorkivanie11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nizhnee_podchyorkivanie21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_nizhnee_podchyorkivanie21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nomer11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_nomer11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Nomer21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_nomer21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Plyus11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_plyus11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Plyus21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_plyus21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_levoj11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_probel_levoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_levoj21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_probel_levoj21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_pravoj11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_probel_pravoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Probel_pravoj21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_probel_pravoj21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Procent11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_procent11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Procent21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_procent21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Ravno11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_ravno11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Ravno21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_ravno21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_otkryvaetsya11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_skobka_otkryvaetsya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_otkryvaetsya21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_skobka_otkryvaetsya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_zakryvaetsya11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_skobka_zakryvaetsya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_zakryvaetsya21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_skobka_zakryvaetsya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_tochka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_tochka21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka_s_zapyatoj11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_tochka_s_zapyatoj11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Tochka_s_zapyatoj21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_tochka_s_zapyatoj21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Voprositel_nyj_znak11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_voprositel'nyj znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Voprositel_nyj_znak21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_voprositel'nyj znak21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Vosklicatel_nyj_znak11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_vosklicatel'nyj_znak11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Vosklicatel_nyj_znak21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_vosklicatel'nyj_znak21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_A11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_a11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_A21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_a21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Be11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_be11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Be21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_be21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ce11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ce11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ce21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ce21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Che11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_che11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Che21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_che21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_De11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_de11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_De21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_de21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_E11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_e11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_E21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_e21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ef11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ef11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ef21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ef21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_El_11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_el'11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_El_21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_el'21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Em11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_em11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Em21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_em21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_En11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_en11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_En21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_en21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Er11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_er11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Er21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_er21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Es11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_es11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Es21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_es21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ge11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ge11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ge21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ge21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ha11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ha21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ha21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_i11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_i21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I_kratnoe11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_i_kratnoe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_I_kratnoe21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_i_kratnoe21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ka11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ka21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ka21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Pe11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_pe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Pe21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_pe21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Sha11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_sha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Sha21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_sha21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Shcha11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_shcha11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Shcha21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_shcha21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Te11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_te11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Te21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_te21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_U11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_u11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_U21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_u21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ve11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ve11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ve21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ve21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ya11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ya21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ye11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ye11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ye21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ye21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yo11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_yo11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yo21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_yo21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yu11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_yu11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Yu21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_yu21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ze11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ze11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Ze21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_ze21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Zhe11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_zhe11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_Zhe21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_zhe21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_О11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_о11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zaglavnaya_О21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zaglavnaya_о21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zapyataya11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zapyataya11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zapyataya21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zapyataya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zvezdochka11_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zvezdochka11.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Zvezdochka21_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zvezdochka21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Cifra_odin21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_cifra_odin21.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_pereryv_30_minut_33_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_pereryv_30_minut_33.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_pereryv_5_minut_32_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_pereryv_5_minut_32.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_wavpereryv_zakonchen_34_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_wavpereryv_zakonchen_34.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_zvuk_vokzala_31_wav" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_zvuk_vokzala_31.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dalee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dalee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
