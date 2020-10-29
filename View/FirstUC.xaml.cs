@@ -41,6 +41,7 @@ namespace NewSkills.View
         private bool writeLetter = false;
         private int correctTextLenght = 0;
 
+
         public FirstUC(string fileName, Label progressLabel, MainWindow mainWindow)
         {
             InitializeComponent();
@@ -50,13 +51,25 @@ namespace NewSkills.View
             fontVariantSettings = Properties.Settings.Default.FontVariant;
             this.inputText = fileName;
             streamReaderController = new StreamReaderController(fileName);
+
             wholeText = streamReaderController.file;
+            suggestionMessage.Text = nextLetterClass.getLetter(wholeText[0].First(), fontVariantSettings).letterDescription;
             fileLength = wholeText.Length;
             exampleText.Text = streamReaderController.file[0];
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+
+        private char getFirstLetter(string[] wholeText)
+        {
+
+            char firstLine = wholeText[0].First();
+
+
+            return firstLine;
         }
 
 
@@ -76,20 +89,20 @@ namespace NewSkills.View
             {
                 typingTextTxt.IsReadOnly = true;
 
-                if (mainWindow.CommonTime < UtilController.MaxCommonTime)
-                {
-                    if (UtilController.DoSoundPause5 == true)
-                    {
-                        voiceMessages(Properties.Resources.audio_pereryv_5_minut_32_wav);
-                        UtilController.DoSoundPause5 = false;
-                    }
-                }
-                else
+                if (mainWindow.CommonTime % UtilController.MaxCommonTime == 0)
                 {
                     if (UtilController.DoSoundPause30 == true)
                     {
                         voiceMessages(Properties.Resources.audio_pereryv_30_minut_33_wav);
                         UtilController.DoSoundPause30 = false;
+                    }
+                }
+                else
+                {
+                    if (UtilController.DoSoundPause5 == true)
+                    {
+                        voiceMessages(Properties.Resources.audio_pereryv_5_minut_32_wav);
+                        UtilController.DoSoundPause5 = false;
                     }
                 }
             }
@@ -196,11 +209,14 @@ namespace NewSkills.View
 
         private char lastLetterBeforeClickSpace(string typingText)
         {
-            if (typingText.Length >= 3)
+            if (typingText.Length > 1)
             {
-                return typingText.Substring(typingText.Length - 3).ToCharArray()[0];
+                return typingText.Substring(typingText.Length - 1).ToCharArray()[0];
             }
-            return 'ß';
+            else
+            {
+                return typingText.ToCharArray()[0];
+            }
         }
 
         //**сравнить строку с входящим текстом **/
@@ -281,11 +297,6 @@ namespace NewSkills.View
 
         private void previewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Tab)
-            {
-                this.typingTextTxt.Focus();
-            }
-
             if (e.Key == Key.Space)
             {
                 spaceButtonClicked = true;
@@ -293,6 +304,11 @@ namespace NewSkills.View
             else
             {
                 spaceButtonClicked = false;
+            }
+
+            if (UtilController.WorkTime == 0 && UtilController.PauseTime == 0 && UtilController.ActivateWorkOrPause == true)
+            {
+                mainWindow.AnyKeyPressed = true;
             }
         }
 
@@ -366,7 +382,8 @@ namespace NewSkills.View
         private BitmapSource getImagePathFromProperty(Bitmap resource)
         {
             Bitmap bitmap = new System.Drawing.Bitmap(resource);//it is in the memory now
-            return Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            return Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(),
+                IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
         }
     }
 }

@@ -47,15 +47,18 @@ namespace NewSkills
         private bool runTimer = false;
         public bool RunTimer { get { return runTimer; } set { runTimer = value; } }
         private bool anyKeyPressed = false;
+        public  bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; } }
         // End of Timer Variables
 
         public MainWindow()
         {
             InitializeComponent();
+
+            soundOn = Properties.Settings.Default.SoundOn;
             checkSoundContent();
-            this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight);
-            this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth);
-            Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            //this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight);
+            //this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth);
+            //Application.Current.MainWindow.WindowState = WindowState.Maximized;
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
 
@@ -445,7 +448,13 @@ namespace NewSkills
 
         private void soundButton_Click(object sender, RoutedEventArgs e)
         {
-            checkSoundContent();
+            if (soundOn == true)
+            {
+                setSoundImageContent("soundOff", false);
+            }
+            else {
+                setSoundImageContent("soundOn", true);
+            }
         }
 
 
@@ -460,7 +469,7 @@ namespace NewSkills
         private void checkSoundContent()
         {
 
-            if (soundOn == false)
+            if (soundOn == true)
             {
                 setSoundImageContent("soundOn", true);
             }
