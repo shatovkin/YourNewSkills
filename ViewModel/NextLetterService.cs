@@ -408,7 +408,7 @@ namespace NewSkills.ViewModel
                     return wrapper;
                 case (char)alphabet.Letter_bl:
                     wrapper.letterDescription = "Буква 'ы'[ы] левой 3-м на месте";
-                    wrapper.directionDescription = "LeftSpace";
+                    wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_y12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Soft:
@@ -438,7 +438,7 @@ namespace NewSkills.ViewModel
                     return wrapper;
                 case (char)alphabet.Letter_JA:
                     wrapper.letterDescription = "Заглавная буква 'Я'[Йа], правой шифт, левой 4-м вниз";
-                    wrapper.directionDescription = "RightSpace";
+                    wrapper.directionDescription = "RightSpace"; 
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ya11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ja:
@@ -553,7 +553,7 @@ namespace NewSkills.ViewModel
                     return wrapper;
                 case (char)alphabet.Letter_Stern:
                     wrapper.letterDescription = "'*'[Звездочка], левой шифт, правой 2-м вершина";
-                    wrapper.directionDescription = "RightSpace";
+                    wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zvezdochka11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Number:
@@ -909,7 +909,7 @@ namespace NewSkills.ViewModel
                 case (char)alphabet.Letter_bl:
                     wrapper.letterDescription = "Буква 'ы'[ы] левой безымянным на месте";
                     //wrapper.letterDescription = "'ы'  Левая - 3-м на месте";
-                    wrapper.directionDescription = "LeftSpace";
+                    wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_y22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Soft:
@@ -1083,7 +1083,7 @@ namespace NewSkills.ViewModel
                 case (char)alphabet.Letter_Stern:
                     wrapper.letterDescription = "'*'[Звездочка], левой шифт, правой средним вершина";
                     //wrapper.letterDescription = "'Звёздочка'  Шифт + Правая - 2-м вершина";
-                    wrapper.directionDescription = "RightSpace";
+                    wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zvezdochka21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Number:

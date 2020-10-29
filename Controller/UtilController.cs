@@ -10,11 +10,11 @@ namespace NewSkills.Controller
 {
     class UtilController
     {
-        private static int sekWork = 60; // 60
-        private static int sekPause = 30; // 60
+        private static int sekWork = 10; // 60
+        private static int sekPause = 5; // 60
 
-        private static int maxCommonTime = 300; // 300
-        private static int pauseAfterMaxCommonTime = 45;
+        private static int maxCommonTime = 30; // 300
+        private static int pauseAfterMaxCommonTime = 15;
         
         private static int workTime = sekWork;
         private static int pauseTime = sekPause;
