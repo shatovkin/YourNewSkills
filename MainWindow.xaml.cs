@@ -42,12 +42,13 @@ namespace NewSkills
         // Timer Variables
         private DispatcherTimer timer;
         private bool soundOn = false;
+        private bool instructionOn = false;
         private static int commonTime = 0;
         public int CommonTime { get { return commonTime; } set { commonTime = value; } }
         private bool runTimer = false;
         public bool RunTimer { get { return runTimer; } set { runTimer = value; } }
         private bool anyKeyPressed = false;
-        public  bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; } }
+        public bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; } }
         // End of Timer Variables
 
         public MainWindow()
@@ -84,7 +85,7 @@ namespace NewSkills
                         UtilController.WorkTime--;
                         setTime(UtilController.WorkTime);//1500
                     }
-                    else if (UtilController.PauseTime > 0)
+                    else if (UtilController.PauseTime > 0 && UtilController.Rounds != 0)
                     {
                         UtilController.ActivateWorkOrPause = true;
                         UtilController.PauseTime--;
@@ -105,10 +106,10 @@ namespace NewSkills
                             UtilController.ActivateWorkOrPause = false;
                             anyKeyPressed = false;
 
-                            if (CommonTime > UtilController.MaxCommonTime)
+                            if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                             {
                                 UtilController.WorkTime = UtilController.WorkTime;
-                                UtilController.PauseTime = UtilController.PauseAfterMaxCommonTime;
+                                UtilController.PauseTime = UtilController.ThirtyMinutesPauseCountDown;
                             }
                         }
                     }
@@ -225,7 +226,7 @@ namespace NewSkills
                 }
                 else
                 {
-                    if (CommonTime > UtilController.MaxCommonTime)
+                    if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                     {
                         UtilController.showPause(pauseLbl, "Отдых 30 минут");
 
@@ -238,7 +239,7 @@ namespace NewSkills
                             voiceMessages(Properties.Resources.audio_wavpereryv_zakonchen_34_wav);
                         }
                     }
-                    else if (CommonTime < UtilController.MaxCommonTime)
+                    else if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                     {
                         UtilController.showPause(pauseLbl, "Отдых 5 минут");
 
@@ -265,7 +266,7 @@ namespace NewSkills
                 }
                 else
                 {
-                    if (CommonTime > UtilController.MaxCommonTime)
+                    if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                     {
                         UtilController.showPause(pauseLbl, "Отдых 30 минут");
 
@@ -303,7 +304,7 @@ namespace NewSkills
                 }
                 else
                 {
-                    if (CommonTime > UtilController.MaxCommonTime)
+                    if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                     {
                         UtilController.showPause(pauseLbl, "Отдых 30 минут");
 
@@ -342,9 +343,11 @@ namespace NewSkills
                 }
                 else
                 {
-                    if (CommonTime > UtilController.MaxCommonTime)
+                    if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                     {
                         UtilController.showPause(pauseLbl, "Отдых 30 минут");
+
+                        time = UtilController.ThirtyMinutesPauseCountDown;
 
                         if (time == 10)
                         {
@@ -354,7 +357,6 @@ namespace NewSkills
                         {
                             voiceMessages(Properties.Resources.audio_wavpereryv_zakonchen_34_wav);
                         }
-
                     }
                     else
                     {
@@ -373,7 +375,6 @@ namespace NewSkills
                 }
             }
         }
-
 
         private void Home_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -400,8 +401,6 @@ namespace NewSkills
             popup_uc.Visibility = Visibility.Collapsed;
             popup_uc.IsOpen = false;
         }
-
-
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
@@ -452,7 +451,8 @@ namespace NewSkills
             {
                 setSoundImageContent("soundOff", false);
             }
-            else {
+            else
+            {
                 setSoundImageContent("soundOn", true);
             }
         }
@@ -468,7 +468,6 @@ namespace NewSkills
 
         private void checkSoundContent()
         {
-
             if (soundOn == true)
             {
                 setSoundImageContent("soundOn", true);
@@ -486,5 +485,24 @@ namespace NewSkills
             sp.Play();
         }
 
+        private void instructionButton_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer sp = new SoundPlayer();
+
+            if (instructionOn == false)
+            {
+                instructionOn = true;
+                instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instruction" + ".png")), VerticalAlignment = VerticalAlignment.Center };
+                sp.Stream = Properties.Resources.instructionSound;
+                sp.Play();
+
+            }
+            else
+            {
+                instructionOn = false;
+                sp.Stop();
+                instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instructionOff" + ".png")), VerticalAlignment = VerticalAlignment.Center };
+            }
+        }
     }
 }
