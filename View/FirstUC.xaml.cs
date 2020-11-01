@@ -31,7 +31,6 @@ namespace NewSkills.View
         public bool spaceButtonClicked = false;
         private string inputText;
         private Label progressLabel;
-
         NextLetterService nextLetterClass = new NextLetterService();
         NextLetterService.NextLetterWrapper nextLetterWrapper = new NextLetterService.NextLetterWrapper();
 
@@ -40,7 +39,6 @@ namespace NewSkills.View
         private int fileLength;
         private bool writeLetter = false;
         private int correctTextLenght = 0;
-
 
         public FirstUC(string fileName, Label progressLabel, MainWindow mainWindow)
         {
@@ -62,16 +60,11 @@ namespace NewSkills.View
             timer.Start();
         }
 
-
         private char getFirstLetter(string[] wholeText)
         {
-
             char firstLine = wholeText[0].First();
-
-
             return firstLine;
         }
-
 
         // ежесекундый запуск метода, для таймера
         // тут высчитывается, должна ли работать пауза или печать
@@ -89,10 +82,20 @@ namespace NewSkills.View
             {
                 typingTextTxt.IsReadOnly = true;
 
-                if (mainWindow.CommonTime % UtilController.MaxCommonTime == 0)
+                if (UtilController.CommonRounds == 0 || UtilController.ThirtyMinutesPauseCountDown != 0)
                 {
+                    if (UtilController.ThirtyMinutesPauseCountDown == 0)
+                    {
+                        UtilController.ThirtyMinutesPauseCountDown = 27;
+                        UtilController.PauseTime = 27;
+
+                    }
+
+                    UtilController.ThirtyMinutesPauseCountDown--;
+
                     if (UtilController.DoSoundPause30 == true)
                     {
+                        UtilController.CommonRounds = UtilController.Rounds;
                         voiceMessages(Properties.Resources.audio_pereryv_30_minut_33_wav);
                         UtilController.DoSoundPause30 = false;
                     }
@@ -101,8 +104,12 @@ namespace NewSkills.View
                 {
                     if (UtilController.DoSoundPause5 == true)
                     {
-                        voiceMessages(Properties.Resources.audio_pereryv_5_minut_32_wav);
+                        UtilController.CommonRounds--;
                         UtilController.DoSoundPause5 = false;
+
+                        if (UtilController.CommonRounds != 0) {
+                            voiceMessages(Properties.Resources.audio_pereryv_5_minut_32_wav);
+                        }
                     }
                 }
             }
@@ -123,7 +130,7 @@ namespace NewSkills.View
                         typingText = typingText + "|";
                     }
 
-                    if (typingText.Length < sampleText.Length)
+                    if (typingText.Length <= sampleText.Length)
                     {
                         if (!getCurrentLetter(typingText.Length, typingText, sampleText))
                         {
@@ -290,6 +297,7 @@ namespace NewSkills.View
                 else
                 {
                     exampleText.Text = streamReaderController.file[1];
+                    return streamReaderController.file[fileLine].First();
                 }
             }
             return '*';
@@ -311,8 +319,6 @@ namespace NewSkills.View
                 mainWindow.AnyKeyPressed = true;
             }
         }
-
-
 
         private void popUpToRightCase(string message)
         {
@@ -377,7 +383,6 @@ namespace NewSkills.View
             sp.Stream = resourcesPath;
             sp.Play();
         }
-
 
         private BitmapSource getImagePathFromProperty(Bitmap resource)
         {

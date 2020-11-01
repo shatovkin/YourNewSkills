@@ -10,11 +10,11 @@ namespace NewSkills.Controller
 {
     class UtilController
     {
-        private static int sekWork = 10; // 60
-        private static int sekPause = 5; // 60
+        private static int rounds = 2;
+        private static int sekWork = 12; 
+        private static int sekPause = 15; 
 
-        private static int maxCommonTime = 30; // 300
-        private static int pauseAfterMaxCommonTime = 15;
+        private static int thirtyMinutesPauseCountDown = 0;
         
         private static int workTime = sekWork;
         private static int pauseTime = sekPause;
@@ -23,8 +23,10 @@ namespace NewSkills.Controller
         private static int afterPauseTime = sekPause;
         private static int startWorkTime = sekWork;
         public static int StartWorkTime { get { return startWorkTime; } set { startWorkTime = value; } }
-        
-        public static int MaxCommonTime { get { return maxCommonTime; } set { maxCommonTime = value; } }
+
+        private static int commonRounds = rounds;
+        public static int CommonRounds { get { return commonRounds; } set { commonRounds = value; } }
+        public static int Rounds { get { return rounds; } set { rounds = value; } }
         public static string ProgessInPerCent { get { return progessInPerCent; } set { progessInPerCent = value; } }
         private static int lettersSum = 0;
         private static int endSum = 0;
@@ -47,7 +49,7 @@ namespace NewSkills.Controller
         public static int AfterWorkTime { get { return afterWorkTime; } set { afterWorkTime = value; } }
         public static bool BlockTextFieldAndTimer { get { return blockTextFieldAndTimer; } set { blockTextFieldAndTimer = value; } }
 
-        public static int PauseAfterMaxCommonTime { get { return pauseAfterMaxCommonTime; } set { pauseAfterMaxCommonTime = value; } }
+        public static int ThirtyMinutesPauseCountDown { get { return thirtyMinutesPauseCountDown; } set { thirtyMinutesPauseCountDown = value; } }
 
         public static void getProgressInPercent(string typingText, string wholeText, bool setToHundertPercent)
         {

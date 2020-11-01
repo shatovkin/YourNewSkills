@@ -841,7 +841,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ef12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_X:
-                    wrapper.letterDescription = "ЗЗаглавная буква 'Х'[Ха], левой шифт, правой мизинцем направо вверх";
+                    wrapper.letterDescription = "Заглавная буква 'Х'[Ха], левой шифт, правой мизинцем направо вверх";
                     //wrapper.letterDescription = "'Х'  Шифт + Правая - 4-м направо вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ha21_wav;
@@ -1015,7 +1015,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Cifra_nol_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Comma:
-                    wrapper.letterDescription = ",' [Запятая] левой шифт, правой мизинцем вниз";
+                    wrapper.letterDescription = "',' [Запятая] левой шифт, правой мизинцем вниз";
                     //wrapper.letterDescription = "'Запятая'  Шифт + Правая - 4-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zapyataya21_wav;

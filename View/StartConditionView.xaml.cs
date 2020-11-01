@@ -20,12 +20,12 @@ namespace NewSkills.View
         bool btn6Bool = false;
 
 
-        bool btn1Controll = true;
-        bool btn2Controll = true;
-        bool btn3Controll = true;
-        bool btn4Controll = true;
-        bool btn5Controll = true;
-        bool btn6Controll = true;
+        bool btn1Controll = false;
+        bool btn2Controll = false;
+        bool btn3Controll = false;
+        bool btn4Controll = false;
+        bool btn5Controll = false;
+        bool btn6Controll = false;
 
 
         Label progress;
