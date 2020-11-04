@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseServiceWebApp", "..\
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "newskills", "newskills\newskills.vdproj", "{32B8890F-8F30-43F5-BCAC-A5FEB2C5A958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Test", "..\..\..\..\..\Downloads\WPF_Test1\WPF_Test\WPF_Test.csproj", "{F2C48752-E1F2-4974-94F8-9C5C6F69CB3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Test", "..\WPF_Test\WPF_Test\WPF_Test.csproj", "{F2C48752-E1F2-4974-94F8-9C5C6F69CB3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

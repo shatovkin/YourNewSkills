@@ -126,6 +126,55 @@ namespace NewSkills.View
                 ToFirstViewBtn.IsEnabled = false;
             }
         }
+
+        public static readonly DependencyProperty ActHeightProperty =
+           DependencyProperty.Register("ActHeight", typeof(double), typeof(StartConditionViewTwo), new
+               PropertyMetadata(((double)0), new PropertyChangedCallback(OnActHeightChanged)));
+        public static readonly DependencyProperty ActWidthProperty =
+            DependencyProperty.Register("ActWidth", typeof(double), typeof(StartConditionViewTwo), new
+                PropertyMetadata(((double)0), new PropertyChangedCallback(OnActWidthChanged)));
+
+        private static void OnActHeightChanged(DependencyObject d,
+            DependencyPropertyChangedEventArgs e)
+        {
+            StartConditionViewTwo StartConditionView_ = d as StartConditionViewTwo;
+            StartConditionView_.OnActHeightChanged(e);
+        }
+
+
+        private static void OnActWidthChanged(DependencyObject d,
+            DependencyPropertyChangedEventArgs e)
+        {
+            StartConditionViewTwo StartConditionView_ = d as StartConditionViewTwo;
+            StartConditionView_.OnActWidthChanged(e);
+        }
+
+
+        private void OnActHeightChanged(DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+        private void OnActWidthChanged(DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
+        public double ActHeight
+        {
+            get { return (double)GetValue(ActHeightProperty); }
+            set { SetValue(ActHeightProperty, value); }
+        }
+        public double ActWidth
+        {
+            get { return (double)GetValue(ActWidthProperty); }
+            set { SetValue(ActWidthProperty, value); }
+        }
+
+        private void StartConditionView_OnSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ActHeight = e.NewSize.Height;
+            ActWidth = e.NewSize.Width;
+        }
     }
 }
 

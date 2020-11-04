@@ -5,71 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewSkills.View"
         mc:Ignorable="d"
-        Height="auto"
-        VerticalAlignment="Stretch"
-        VerticalContentAlignment="Stretch">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto">
-        <StackPanel Margin="50,50">
-            <StackPanel Margin="40,0">
-                <StackPanel Orientation="Horizontal" Height="80"  Margin="35,10,0,10">
-                    <Button x:Name="btn7" Height="28" VerticalAlignment="Top" Margin="0,15" Click="btn7_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Center"
+        x:Name="CurrentPresenter" 
+        SizeChanged="StartConditionView_OnSizeChanged">
+
+    <UserControl.Resources>
+        <local:MathConverter x:Key="MathConverter" />
+    </UserControl.Resources>
+    <WrapPanel>
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="50">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="80"  Margin="0,0,0,10">
+                        <Button x:Name="btn7" Height="28" VerticalAlignment="Top" Margin="0,10" Click="btn7_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Button>
+                        <StackPanel Orientation="Vertical">
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    7. Отключите все сигналы и звуки, которые могут Вас потревожить:
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    телефоны, смартфоны, все мессенджеры, будильники, таймеры.
+                                </Run>
+                            </Label>
                         </StackPanel>
-                    </Button>
-                    <StackPanel Orientation="Vertical">
-                        <Label Grid.Column="1" Margin="20,0,0,0">
-                            <Run FontWeight="Bold" FontSize="23">
-                                Отключите все сигналы и звуки, которые могут Вас потревожить:
-                            </Run>
-                        </Label>
-                        <Label Grid.Column="1" Margin="20,0,0,0">
-                            <Run FontWeight="Bold" FontSize="23">
-                                телефоны, смартфоны, все мессенджеры, будильники, таймеры.
-                            </Run>
-                        </Label>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Height="50"  Margin="35,10,0,10" >
-                    <Button x:Name="btn8" Height="28" VerticalAlignment="Top" Margin="0,10" Click="btn8_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
+                    <StackPanel Orientation="Horizontal" Height="50" Margin="0,10">
+                        <Button x:Name="btn8" Height="28" VerticalAlignment="Top" Margin="0,10" Click="btn8_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Button>
+                        <StackPanel Orientation="Vertical">
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    8. Попросите близких людей не тревожить вас во время занятий.
+                                </Run>
+                            </Label>
                         </StackPanel>
-                    </Button>
-                    <Label Grid.Column="1" Margin="20,0,0,0">
-                        <Run FontWeight="Bold" FontSize="23">
-                            Попросите близких людей не тревожить вас во время занятий.
-                        </Run>
-                    </Label>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Height="140"  Margin="35,10,0,10" >
-                    <Button x:Name="btn9" Height="28" VerticalAlignment="Top" Margin="0,10" Click="btn9_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
-                        </StackPanel>
-                    </Button>
-                    <StackPanel Orientation="Vertical">
-                        <Label Grid.Column="1" Margin="20,0,0,0">
-                            <Run FontWeight="Bold" FontSize="23">
-                                Изучите правильную постановку рук на клавиатуре, в инструкции и пособии.
-                            </Run>
-                        </Label>
-                        <Label Grid.Column="1" Margin="20,0,0,0">
-                            <Run FontWeight="Bold" FontSize="23">
-                                Потренируйтесь и убедитесь, что вы хорошо устанавливаете руки на клавиатуре
-                            </Run>
-                        </Label>
-                        <Label Grid.Column="1" Margin="20,0,0,0">
-                            <Run FontWeight="Bold" FontSize="23">
-                                на клавишах "ФЫВА" и "ОЛДЖ", кисти рук нависают над клавиатурой.
-                            </Run>
-                        </Label>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="140"  Margin="0,10,0,10" >
+                        <Button x:Name="btn9" Height="28" VerticalAlignment="Top" Margin="0,10" Click="btn9_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Button>
+                        <StackPanel Orientation="Vertical">
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    9. Изучите правильную постановку рук на клавиатуре, в инструкции и пособии.
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    Потренируйтесь и убедитесь, что вы хорошо устанавливаете руки на клавиатуре
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="12,0,0,0">
+                                <Run FontWeight="Bold" FontSize="{Binding ElementName=CurrentPresenter,Path=ActHeight, 
+                                     Converter={StaticResource MathConverter},
+                                     ConverterParameter=@VALUE/20, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                    на клавишах "ФЫВА" и "ОЛДЖ", кисти рук нависают над клавиатурой.
+                                </Run>
+                            </Label>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="ToFirstViewBtn" VerticalAlignment="Bottom" Margin="0,10,20,20" Width="135" Height="28" HorizontalAlignment="Right" Click="ToFirstView_Click">
+                        <Run FontSize="15" FontWeight="Bold">К обучению</Run>
+                    </Button>
                 </StackPanel>
-                <Button x:Name="ToFirstViewBtn" VerticalAlignment="Bottom" Margin="0,10,20,20" Width="135" Height="28" HorizontalAlignment="Right" Click="ToFirstView_Click">
-                    <Run FontSize="15" FontWeight="Bold">К обучению</Run>
-                </Button>
             </StackPanel>
-        </StackPanel>
-    </ScrollViewer>
+        </Grid>
+    </WrapPanel>
 </UserControl>

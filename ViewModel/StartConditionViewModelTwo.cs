@@ -1,9 +1,18 @@
 ﻿using System;
 using System.ComponentModel;
+using NewSkills.Controller;
+using NewSkills.ViewModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Data;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace NewSkills.ViewModel
 {
-    class StartConditionViewModelTwo : INotifyPropertyChanged
+    class StartConditionViewModelTwo : UserControl
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 

@@ -86,9 +86,8 @@ namespace NewSkills.View
                 {
                     if (UtilController.ThirtyMinutesPauseCountDown == 0)
                     {
-                        UtilController.ThirtyMinutesPauseCountDown = 27;
-                        UtilController.PauseTime = 27;
-
+                        UtilController.ThirtyMinutesPauseCountDown = 30;
+                        UtilController.PauseTime = 30;
                     }
 
                     UtilController.ThirtyMinutesPauseCountDown--;
@@ -144,7 +143,6 @@ namespace NewSkills.View
                         }
                         else
                         {
-
                             UtilController.getProgressInPercent(typingText, StreamReaderController.WholeSampleText, false);//считать проценты для прогресса
 
                             char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
@@ -161,7 +159,6 @@ namespace NewSkills.View
                                 {
                                     voiceMessages(nextLetterWrapper.voicePath);
                                 }
-
 
                                 image.Source = getImagePathFromProperty(nextLetterClass.getPicture(nextLetterToShow)); ;
 
@@ -286,6 +283,8 @@ namespace NewSkills.View
         //*и вернуть эту букву.
         private char nextLetter(string inputText, string sampleText)
         {
+            
+
             if (inputText.Substring(0, inputText.Length) == sampleText.Substring(0, inputText.Length))
             {
                 if (inputText.Length < sampleText.Length)
@@ -296,7 +295,18 @@ namespace NewSkills.View
                 }
                 else
                 {
-                    exampleText.Text = streamReaderController.file[1];
+
+                    exampleText.Text = streamReaderController.file[fileLine];
+
+                    if (fileLine == fileLength) {
+                        CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow);
+                        congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                        congratulationWindow.Owner = Application.Current.MainWindow;
+                        congratulationWindow.Show();
+                        congratulationWindow.loadVideo();
+                        mainWindow.RunTimer = false;
+                        mainWindow.progress.Content = "100";
+                    }
                     return streamReaderController.file[fileLine].First();
                 }
             }
