@@ -262,9 +262,6 @@
     <Resource Include="Resources\profile_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\close_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\letter_0.png" />
   </ItemGroup>
   <ItemGroup>
@@ -582,7 +579,6 @@
     <Resource Include="Resources\instructionOff.png" />
     <EmbeddedResource Include="Resources\instructionSound.wav" />
     <Resource Include="Resources\instruction.png" />
-    <Resource Include="Resources\svitolk129.png" />
     <Resource Include="Resources\soundOff.png" />
     <Resource Include="Resources\soundOn.png" />
     <Resource Include="icon.ico" />
@@ -774,7 +770,6 @@
     <EmbeddedResource Include="Resources\audio_pereryv_5_minut_32.wav.wav" />
     <EmbeddedResource Include="Resources\audio_wavpereryv_zakonchen_34.wav.wav" />
     <EmbeddedResource Include="Resources\audio_zvuk_vokzala_31.wav.wav" />
-    <Resource Include="Resources\dalee.png" />
     <Content Include="Resources\Einstein1.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

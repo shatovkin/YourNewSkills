@@ -1,9 +1,13 @@
 ﻿using NewSkills.Controller;
 using NewSkills.ViewModel;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Windows.Data;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace NewSkills.View
 {
@@ -20,12 +24,12 @@ namespace NewSkills.View
         bool btn6Bool = false;
 
 
-        bool btn1Controll = false;
-        bool btn2Controll = false;
-        bool btn3Controll = false;
-        bool btn4Controll = false;
-        bool btn5Controll = false;
-        bool btn6Controll = false;
+        bool btn1Controll = true;
+        bool btn2Controll = true;
+        bool btn3Controll = true;
+        bool btn4Controll = true;
+        bool btn5Controll = true;
+        bool btn6Controll = true;
 
 
         Label progress;
@@ -34,11 +38,13 @@ namespace NewSkills.View
         public StartConditionView(Label progress, MainWindow mainWindow)
         {
             InitializeComponent();
+
+            DataContext = this;
+            this.DataContext = Application.Current.MainWindow;
+
             this.progress = progress;
             this.mainWindow = mainWindow;
             BtnForward.IsEnabled = false;
-            double width = System.Windows.Application.Current.MainWindow.Width;
-            this.MaxWidth = width;
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -183,6 +189,266 @@ namespace NewSkills.View
             {
                 BtnForward.IsEnabled = false;
             }
+        }
+
+        public static readonly DependencyProperty ActHeightProperty =
+           DependencyProperty.Register("ActHeight", typeof(double), typeof(StartConditionView), new
+               PropertyMetadata(((double)0), new PropertyChangedCallback(OnActHeightChanged)));
+        public static readonly DependencyProperty ActWidthProperty =
+            DependencyProperty.Register("ActWidth", typeof(double), typeof(StartConditionView), new
+                PropertyMetadata(((double)0), new PropertyChangedCallback(OnActWidthChanged)));
+
+
+        public double ActHeight
+        {
+            get { return (double)GetValue(ActHeightProperty); }
+            set { SetValue(ActHeightProperty, value); }
+        }
+        public double ActWidth
+        {
+            get { return (double)GetValue(ActWidthProperty); }
+            set { SetValue(ActWidthProperty, value); }
+        }
+
+        private static void OnActHeightChanged(DependencyObject d,
+            DependencyPropertyChangedEventArgs e)
+        {
+            StartConditionView StartConditionView_ = d as StartConditionView;
+            StartConditionView_.OnActHeightChanged(e);
+        }
+
+
+        private static void OnActWidthChanged(DependencyObject d,
+            DependencyPropertyChangedEventArgs e)
+        {
+            StartConditionView StartConditionView_ = d as StartConditionView;
+            StartConditionView_.OnActWidthChanged(e);
+        }
+
+
+        private void OnActHeightChanged(DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+        private void OnActWidthChanged(DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
+        private void StartConditionView_OnSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ActHeight = e.NewSize.Height;
+            ActWidth = e.NewSize.Width;
+        }
+    }
+    public static class ActualSizeBehavior
+    {
+        public static readonly DependencyProperty ActualSizeProperty =
+            DependencyProperty.RegisterAttached("ActualSize",
+                                                typeof(bool),
+                                                typeof(ActualSizeBehavior),
+                                                new UIPropertyMetadata(false, OnActualSizeChanged));
+        public static bool GetActualSize(DependencyObject obj)
+        {
+            return (bool)obj.GetValue(ActualSizeProperty);
+        }
+        public static void SetActualSize(DependencyObject obj, bool value)
+        {
+            obj.SetValue(ActualSizeProperty, value);
+        }
+        private static void OnActualSizeChanged(DependencyObject dpo,
+                                                DependencyPropertyChangedEventArgs e)
+        {
+            FrameworkElement element = dpo as FrameworkElement;
+            if ((bool)e.NewValue == true)
+            {
+                element.SizeChanged += element_SizeChanged;
+            }
+            else
+            {
+                element.SizeChanged -= element_SizeChanged;
+            }
+        }
+
+        static void element_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            FrameworkElement element = sender as FrameworkElement;
+            SetActualWidth(element, element.ActualWidth);
+            SetActualHeight(element, element.ActualHeight);
+        }
+
+        private static readonly DependencyProperty ActualWidthProperty =
+            DependencyProperty.RegisterAttached("ActualWidth", typeof(double), typeof(ActualSizeBehavior));
+        public static void SetActualWidth(DependencyObject element, double value)
+        {
+            element.SetValue(ActualWidthProperty, value);
+        }
+        public static double GetActualWidth(DependencyObject element)
+        {
+            return (double)element.GetValue(ActualWidthProperty);
+        }
+
+        private static readonly DependencyProperty ActualHeightProperty =
+            DependencyProperty.RegisterAttached("ActualHeight", typeof(double), typeof(ActualSizeBehavior));
+        public static void SetActualHeight(DependencyObject element, double value)
+        {
+            element.SetValue(ActualHeightProperty, value);
+        }
+        public static double GetActualHeight(DependencyObject element)
+        {
+            return (double)element.GetValue(ActualHeightProperty);
+        }
+    }
+
+    // Does a math equation on the bound value.
+    // Use @VALUE in your mathEquation as a substitute for bound value
+    // Operator order is parenthesis first, then Left-To-Right (no operator precedence)
+    public class MathConverter : IValueConverter
+    {
+        private static readonly char[] _allOperators = new[] { '+', '-', '*', '/', '%', '(', ')' };
+
+        private static readonly List<string> _grouping = new List<string> { "(", ")" };
+        private static readonly List<string> _operators = new List<string> { "+", "-", "*", "/", "%" };
+
+        #region IValueConverter Members
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Parse value into equation and remove spaces
+            var mathEquation = parameter as string;
+            mathEquation = mathEquation.Replace(" ", "");
+            mathEquation = mathEquation.Replace("@VALUE", value.ToString());
+
+            // Validate values and get list of numbers in equation
+            var numbers = new List<double>();
+            double tmp;
+
+            foreach (string s in mathEquation.Split(_allOperators))
+            {
+                if (s != string.Empty)
+                {
+                    if (double.TryParse(s, out tmp))
+                    {
+                        numbers.Add(tmp);
+                    }
+                    else
+                    {
+                        // Handle Error - Some non-numeric, operator, or grouping character found in string
+                        throw new InvalidCastException();
+                    }
+                }
+            }
+
+            // Begin parsing method
+            EvaluateMathString(ref mathEquation, ref numbers, 0);
+
+            // After parsing the numbers list should only have one value - the total
+            return numbers[0];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        // Evaluates a mathematical string and keeps track of the results in a List<double> of numbers
+        private void EvaluateMathString(ref string mathEquation, ref List<double> numbers, int index)
+        {
+            // Loop through each mathemtaical token in the equation
+            string token = GetNextToken(mathEquation);
+
+            while (token != string.Empty)
+            {
+                // Remove token from mathEquation
+                mathEquation = mathEquation.Remove(0, token.Length);
+
+                // If token is a grouping character, it affects program flow
+                if (_grouping.Contains(token))
+                {
+                    switch (token)
+                    {
+                        case "(":
+                            EvaluateMathString(ref mathEquation, ref numbers, index);
+                            break;
+
+                        case ")":
+                            return;
+                    }
+                }
+
+                // If token is an operator, do requested operation
+                if (_operators.Contains(token))
+                {
+                    // If next token after operator is a parenthesis, call method recursively
+                    string nextToken = GetNextToken(mathEquation);
+                    if (nextToken == "(")
+                    {
+                        EvaluateMathString(ref mathEquation, ref numbers, index + 1);
+                    }
+
+                    // Verify that enough numbers exist in the List<double> to complete the operation
+                    // and that the next token is either the number expected, or it was a ( meaning
+                    // that this was called recursively and that the number changed
+                    if (numbers.Count > (index + 1) &&
+                        (double.Parse(nextToken) == numbers[index + 1] || nextToken == "("))
+                    {
+                        switch (token)
+                        {
+                            case "+":
+                                numbers[index] = numbers[index] + numbers[index + 1];
+                                break;
+                            case "-":
+                                numbers[index] = numbers[index] - numbers[index + 1];
+                                break;
+                            case "*":
+                                numbers[index] = numbers[index] * numbers[index + 1];
+                                break;
+                            case "/":
+                                numbers[index] = numbers[index] / numbers[index + 1];
+                                break;
+                            case "%":
+                                numbers[index] = numbers[index] % numbers[index + 1];
+                                break;
+                        }
+                        numbers.RemoveAt(index + 1);
+                    }
+                    else
+                    {
+                        // Handle Error - Next token is not the expected number
+                        throw new FormatException("Next token is not the expected number");
+                    }
+                }
+
+                token = GetNextToken(mathEquation);
+            }
+        }
+
+        // Gets the next mathematical token in the equation
+        private string GetNextToken(string mathEquation)
+        {
+            // If we're at the end of the equation, return string.empty
+            if (mathEquation == string.Empty)
+            {
+                return string.Empty;
+            }
+
+            // Get next operator or numeric value in equation and return it
+            string tmp = "";
+            foreach (char c in mathEquation)
+            {
+                if (_allOperators.Contains(c))
+                {
+                    return (tmp == "" ? c.ToString() : tmp);
+                }
+                else
+                {
+                    tmp += c;
+                }
+            }
+
+            return tmp;
         }
     }
 }

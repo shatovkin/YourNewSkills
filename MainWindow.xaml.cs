@@ -9,6 +9,9 @@ using NewSkills.Controller;
 using System.Windows.Media.Imaging;
 using System.Media;
 using System.IO;
+using System.Collections.Generic;
+using System.Windows.Media;
+using System.Windows.Controls;
 
 namespace NewSkills
 {
@@ -54,6 +57,7 @@ namespace NewSkills
         public MainWindow()
         {
             InitializeComponent();
+            this.SizeChanged += MainWindow_SizeChanged;
 
             soundOn = Properties.Settings.Default.SoundOn;
             checkSoundContent();
@@ -504,5 +508,34 @@ namespace NewSkills
                 instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instructionOff" + ".png")), VerticalAlignment = VerticalAlignment.Center };
             }
         }
+
+
+        private List<Control> AllChildren(DependencyObject parent)
+        {
+            var list = new List<Control> { };
+            for (int count = 0; count < VisualTreeHelper.GetChildrenCount(parent); count++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, count);
+                if (child is Control)
+                {
+                    list.Add(child as Control);
+                }
+                list.AddRange(AllChildren(child));
+            }
+            return list;
+        }
+
+        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var allChildren = AllChildren(this);
+            var g = allChildren.Find(k => k.Name == "CurrentPresenter");
+            if (g != null)
+                g.RaiseEvent(e);
+
+            scroll.Width = e.NewSize.Width - 150;
+           // scroll.Height = e.NewSize.Height + 300;
+            stackPanelDockTop.Width = e.NewSize.Width;
+        }
+
     }
 }

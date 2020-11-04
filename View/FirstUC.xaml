@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NewSkills.View"
-             mc:Ignorable="d">
-    <StackPanel Margin="0,-105,-100,-100.2" VerticalAlignment="Center" HorizontalAlignment="Center" >
+             mc:Ignorable="d" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
         <Grid Height="65">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -13,7 +13,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label x:Name="label3" Grid.Column="0"/>
-            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="PowderBlue" Width="600" FontSize="16" Height="50" Grid.ColumnSpan="3" Margin="0,13,0,2" />
+            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="LightGray" Width="600" FontSize="16" Height="50" Grid.ColumnSpan="3" Margin="0,13,0,2" />
             <Label x:Name="label4" Content=""  Grid.Column="2"/>
         </Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0,10,0,0" HorizontalAlignment="Center" Height="90" >
