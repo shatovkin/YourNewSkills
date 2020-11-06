@@ -415,12 +415,6 @@
   <data name="success_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\success_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Einstein" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\einstein.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Einstein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\einstein.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="soundOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\soundoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1269,5 +1263,8 @@
   </data>
   <data name="instructionSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\instructionsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Einstein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\einstein1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

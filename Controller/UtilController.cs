@@ -12,7 +12,7 @@ namespace NewSkills.Controller
     {
         private static int rounds = 4;
         private static int sekWork = 60; 
-        private static int sekPause = 20; 
+        private static int sekPause = 5; 
 
         private static int thirtyMinutesPauseCountDown = 0;
         
@@ -28,7 +28,7 @@ namespace NewSkills.Controller
         public static int CommonRounds { get { return commonRounds; } set { commonRounds = value; } }
         public static int Rounds { get { return rounds; } set { rounds = value; } }
         public static string ProgessInPerCent { get { return progessInPerCent; } set { progessInPerCent = value; } }
-        private static int lettersSum = 0;
+        
         private static int endSum = 0;
         public static int EndSum { get { return endSum; } set { endSum = value; } }
         private static bool blockTextFieldAndTimer = false;
@@ -51,24 +51,11 @@ namespace NewSkills.Controller
 
         public static int ThirtyMinutesPauseCountDown { get { return thirtyMinutesPauseCountDown; } set { thirtyMinutesPauseCountDown = value; } }
 
-        public static void getProgressInPercent(string typingText, string wholeText, bool setToHundertPercent)
+        // высчитать кол-во процентов
+        public static int getProgressInPercent(int fileLineNumber, int fileLength)
         {
-            if (typingText.Length != 0)
-            {
-                lettersSum = typingText.Length;
-            }
-            else
-            {
-                endSum = endSum + lettersSum;
-            }
-
-            int percent = (endSum * 100) / wholeText.Length;
-            ProgessInPerCent = percent.ToString();
-
-            if (setToHundertPercent == true || BlockTextFieldAndTimer == true)
-            {
-                ProgessInPerCent = "100";
-            }
+           return ((fileLineNumber-1) * 100) / fileLength;
+           
         }
 
         public static void showPause(Label pauseLbl, string labelText)

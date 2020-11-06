@@ -770,10 +770,7 @@
     <EmbeddedResource Include="Resources\audio_pereryv_5_minut_32.wav.wav" />
     <EmbeddedResource Include="Resources\audio_wavpereryv_zakonchen_34.wav.wav" />
     <EmbeddedResource Include="Resources\audio_zvuk_vokzala_31.wav.wav" />
-    <Content Include="Resources\Einstein1.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <EmbeddedResource Include="Resources\Einstein.gif" />
+    <Resource Include="Resources\Einstein1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

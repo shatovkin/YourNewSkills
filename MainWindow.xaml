@@ -230,9 +230,6 @@
         <StackPanel Width="50"
                         HorizontalAlignment="Left"
                         Background="#87CEFA">
-            <Grid>
-                <Button x:Name="button" Content="Button" Height="100" Width="75"/>
-            </Grid>
             <!--add 3 buttons - Home, Profile and Settings-->
             <Button x:Name="Home"
                         Height="100"
@@ -245,7 +242,7 @@
                         Click="Home_Click"
                         >
                 <!--add image-->
-                <Image Source="Resources/letter_0.png"
+                <Image Source="Resources/home_icon.png"
                            Stretch="None">
                 </Image>
             </Button>
@@ -288,9 +285,7 @@
 
                   
         <!--add a header to the grid-->
-        <Grid Row="0" Height="50" Background="#d7b3a8"
-                  VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.RowSpan="2"
-                  >
+        <Grid Row="0" Height="50" Background="#d7b3a8" VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.RowSpan="2">
             <Grid Height="28">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -348,7 +343,7 @@
                 </Grid>
 
                 <ScrollViewer 
-                    HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  x:Name="scroll" 
+                    HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" x:Name="scroll" 
                    >
                     <StackPanel DockPanel.Dock="Top"  
                             CanVerticallyScroll="True"
@@ -370,7 +365,6 @@
                             </Button>
                         </StackPanel>
                         <ContentPresenter 
-                            Width ="1500"
                             Content="{Binding Content}"  x:Name="OutputView" />
                         <!--add the popup user control-->
                         <Popup x:Name="popup_uc"
@@ -381,13 +375,9 @@
                                 <!--<local:PopupUserControl x:Name="Header" Foreground="#E0FFFF"/>-->
                             </Grid>
                         </Popup>
-
-                        <Label x:Name="test" Content="" HorizontalContentAlignment="Center"
-                               FontSize="40"  HorizontalAlignment="Center" 
-                               VerticalAlignment="Top" Width="550"/>
                         <Label x:Name="pauseLbl" Content="" HorizontalContentAlignment="Center"
                                FontSize="40"  HorizontalAlignment="Center" 
-                               VerticalAlignment="Top" Width="538" Margin="130,57,93.6,0"/>
+                               VerticalAlignment="Top" Width="538" Margin="-20,57,93.6,0"/>
                     </StackPanel>
                 </ScrollViewer>
             </DockPanel>

@@ -24,12 +24,14 @@ namespace NewSkills.View
         {
             try
             {
-                Bitmap bitmap = new System.Drawing.Bitmap(Properties.Resources.Einstein);//it is in the memory now
+            
+                //Bitmap bitmap = new System.Drawing.Bitmap(Properties.Resources.Einstein1);//it is in the memory now
                 //var bitmapSource = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
                // imageEinstein.Source = bitmapSource;
             }
             catch (Exception e)
             {
+                MessageBox.Show("test:" + e.ToString());
                 string s = e.ToString();
             }
 

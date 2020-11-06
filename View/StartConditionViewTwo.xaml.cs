@@ -86,7 +86,7 @@ namespace NewSkills.View
         private void ToFirstView_Click(object sender, RoutedEventArgs e)
         {
             UtilController.WorkTime = UtilController.StartWorkTime;
-            FirstUC viewF = new FirstUC("inputText", progress, mainWindow);
+            FirstUC viewF = new FirstUC("inputText", mainWindow);
             FirstViewModel vmF = new FirstViewModel(mainWindow);
             viewF.DataContext = vmF;
             mainWindow.OutputView.Content = viewF;

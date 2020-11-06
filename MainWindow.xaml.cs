@@ -53,6 +53,7 @@ namespace NewSkills
         private bool anyKeyPressed = false;
         public bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; } }
         // End of Timer Variables
+        private SoundPlayer soundPlayer = new SoundPlayer();
 
         public MainWindow()
         {
@@ -61,12 +62,9 @@ namespace NewSkills
 
             soundOn = Properties.Settings.Default.SoundOn;
             checkSoundContent();
-            //this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight);
-            //this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth);
-            //Application.Current.MainWindow.WindowState = WindowState.Maximized;
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-
+           
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
@@ -188,7 +186,7 @@ namespace NewSkills
                 case ViewType.First:
                     menuVisibility(Visibility.Visible);
                     timeReset(Visibility.Visible);
-                    FirstUC viewF = new FirstUC("inputText", progress, this);
+                    FirstUC viewF = new FirstUC("inputText",this);
                     FirstViewModel vmF = new FirstViewModel(this);
                     viewF.DataContext = vmF;
                     this.OutputView.Content = viewF;
@@ -219,8 +217,7 @@ namespace NewSkills
 
         private void setTime(int time)
         {
-            progress.Content = UtilController.ProgessInPerCent;
-
+           
             if (time / 60 >= 10 && time % 60 >= 10)
             {
                 if (UtilController.ActivateWorkOrPause == false)
@@ -408,7 +405,7 @@ namespace NewSkills
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            FirstUC viewF = new FirstUC("inputText", progress, this);
+            FirstUC viewF = new FirstUC("inputText", this);
             FirstViewModel vmF = new FirstViewModel(this);
             viewF.DataContext = vmF;
             this.OutputView.Content = viewF;
@@ -491,24 +488,24 @@ namespace NewSkills
 
         private void instructionButton_Click(object sender, RoutedEventArgs e)
         {
-            SoundPlayer sp = new SoundPlayer();
-
             if (instructionOn == false)
             {
                 instructionOn = true;
                 instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instruction" + ".png")), VerticalAlignment = VerticalAlignment.Center };
-                sp.Stream = Properties.Resources.instructionSound;
-                sp.Play();
-
+                soundPlayer.Stream = Properties.Resources.instructionSound;
+                soundPlayer.Play();
             }
             else
             {
                 instructionOn = false;
-                sp.Stop();
+                soundPlayer.Stop();
                 instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instructionOff" + ".png")), VerticalAlignment = VerticalAlignment.Center };
             }
         }
 
+        public void stopSound() {
+            soundPlayer.Stop();
+        }
 
         private List<Control> AllChildren(DependencyObject parent)
         {
@@ -532,10 +529,8 @@ namespace NewSkills
             if (g != null)
                 g.RaiseEvent(e);
 
-            scroll.Width = e.NewSize.Width - 150;
-           // scroll.Height = e.NewSize.Height + 300;
+            scroll.Width = e.NewSize.Width;
             stackPanelDockTop.Width = e.NewSize.Width;
         }
-
     }
 }
