@@ -9,11 +9,8 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Media;
 using System.Windows;
-using System.Reflection;
 using System.Drawing;
 using System.Windows.Interop;
-using System.Windows.Media;
-using NewSkills.View;
 
 namespace NewSkills.View
 {
@@ -30,22 +27,21 @@ namespace NewSkills.View
         private StreamReaderController streamReaderController;
         public bool spaceButtonClicked = false;
         private string inputText;
-        private Label progressLabel;
         NextLetterService nextLetterClass = new NextLetterService();
         NextLetterService.NextLetterWrapper nextLetterWrapper = new NextLetterService.NextLetterWrapper();
 
-        private int fileLine = 1;
+        private int fileLineNumber = 1;
         private string[] wholeText;
         private int fileLength;
         private bool writeLetter = false;
         private int correctTextLenght = 0;
 
-        public FirstUC(string fileName, Label progressLabel, MainWindow mainWindow)
+        public FirstUC(string fileName, MainWindow mainWindow)
         {
             InitializeComponent();
 
             this.mainWindow = mainWindow;
-            this.progressLabel = progressLabel;
+            mainWindow.progress.Content = "0";
             fontVariantSettings = Properties.Settings.Default.FontVariant;
             this.inputText = fileName;
             streamReaderController = new StreamReaderController(fileName);
@@ -143,8 +139,7 @@ namespace NewSkills.View
                         }
                         else
                         {
-                            UtilController.getProgressInPercent(typingText, StreamReaderController.WholeSampleText, false);//считать проценты для прогресса
-
+                           
                             char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
                             char nextLetterToShow = nextLetter(typingText, sampleText);
 
@@ -159,9 +154,7 @@ namespace NewSkills.View
                                 {
                                     voiceMessages(nextLetterWrapper.voicePath);
                                 }
-
                                 image.Source = getImagePathFromProperty(nextLetterClass.getPicture(nextLetterToShow)); ;
-
                                 this.typingTextTxt.Text.Replace("|", " ");
                             }
                             else if (nextLetterToShow.ToString() == "|" && writeLetter == true)
@@ -176,22 +169,23 @@ namespace NewSkills.View
                     {
                         if (getCurrentLetter(typingText.Length, typingText, sampleText))
                         {
-                            if (fileLine != wholeText.Length)
+                            if (fileLineNumber != wholeText.Length)
                             {
-                                if (fileLine <= wholeText.Length - 1)
+                                if (fileLineNumber <= wholeText.Length - 1)
                                 {
-                                    this.exampleText.Text = wholeText[fileLine];
+                                    this.exampleText.Text = wholeText[fileLineNumber];
                                 }
 
                                 this.typingTextTxt.Text = "";
-                                fileLine++;
-                                fileLength--;
+                                fileLineNumber++;
+
+                                this.mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength).ToString();//считать проценты для прогресса
                             }
                             else
                             {
                                 UtilController.BlockTextFieldAndTimer = true;
                                 this.typingTextTxt.IsReadOnly = true;
-                                progressLabel.Content = "100";
+                                this.mainWindow.Content = "100";
                                 mainWindow.LoadView(ViewType.CongratulationView);
                             }
                         }
@@ -287,7 +281,7 @@ namespace NewSkills.View
 
             if (inputText.Substring(0, inputText.Length) == sampleText.Substring(0, inputText.Length))
             {
-                if (inputText.Length < sampleText.Length)
+                  if (inputText.Length < sampleText.Length)
                 {
                     char[] letter = sampleText.ToArray();
                     char toTypingLetter = letter[inputText.Length];
@@ -296,21 +290,34 @@ namespace NewSkills.View
                 else
                 {
 
-                    exampleText.Text = streamReaderController.file[fileLine];
+                    if (fileLineNumber < fileLength) {
+                        exampleText.Text = streamReaderController.file[fileLineNumber];
+                    }
 
-                    if (fileLine == fileLength) {
-                        CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow);
-                        congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                        congratulationWindow.Owner = Application.Current.MainWindow;
-                        congratulationWindow.Show();
-                        congratulationWindow.loadVideo();
+                     if (fileLineNumber == fileLength) {
+                        loadCongratulationVideo();
                         mainWindow.RunTimer = false;
                         mainWindow.progress.Content = "100";
                     }
-                    return streamReaderController.file[fileLine].First();
+                    return streamReaderController.file[fileLineNumber].First();
                 }
             }
             return '*';
+        }
+
+        private void loadCongratulationVideo() {
+            try
+            {
+                CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow);
+                congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                congratulationWindow.Owner = Application.Current.MainWindow;
+                congratulationWindow.Show();
+                congratulationWindow.loadVideo();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("congratulation3: " + e.ToString());
+            }
         }
 
         private void previewKeyDown(object sender, KeyEventArgs e)
@@ -345,7 +352,7 @@ namespace NewSkills.View
             {
                 if (lastLetterSpaceDirectionDescription.directionDescription == "LeftSpace")
                 {
-                    suggestionMessage.Text = " Пробел «space» – левой нулевым на месте";
+                    suggestionMessage.Text = " Пробел – левой нулевым на месте";
                     if (Properties.Settings.Default.SoundOn)
                     {
                         voiceMessages(Properties.Resources.audio_Probel_levoj11_wav);
@@ -354,7 +361,7 @@ namespace NewSkills.View
                 }
                 else
                 {
-                    suggestionMessage.Text = " Пробел «space» – правой нулевым на месте";
+                    suggestionMessage.Text = " Пробел – правой нулевым на месте";
                     if (Properties.Settings.Default.SoundOn)
                     {
                         voiceMessages(Properties.Resources.audio_Probel_pravoj11_wav);
@@ -367,7 +374,7 @@ namespace NewSkills.View
             {
                 if (lastLetterSpaceDirectionDescription.directionDescription == "LeftSpace")
                 {
-                    suggestionMessage.Text = " Пробел «space» – левой большим на месте";
+                    suggestionMessage.Text = " Пробел – левой большим на месте";
                     if (Properties.Settings.Default.SoundOn)
                     {
                         voiceMessages(Properties.Resources.audio_Probel_levoj21_wav);
@@ -377,7 +384,7 @@ namespace NewSkills.View
                 }
                 else
                 {
-                    suggestionMessage.Text = " Пробел «space» – правой большим на месте";
+                    suggestionMessage.Text = " Пробел – правой большим на месте";
                     if (Properties.Settings.Default.SoundOn)
                     {
                         voiceMessages(Properties.Resources.audio_Probel_pravoj21_wav);
@@ -399,6 +406,6 @@ namespace NewSkills.View
             Bitmap bitmap = new System.Drawing.Bitmap(resource);//it is in the memory now
             return Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(),
                 IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-        }
+        } 
     }
 }

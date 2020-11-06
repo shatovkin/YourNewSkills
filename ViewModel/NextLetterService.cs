@@ -147,7 +147,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Be11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_b:
-                    wrapper.letterDescription = "Буква 'б'[бэ] [бэ] правой 2-м вниз";
+                    wrapper.letterDescription = "Буква 'б'[бэ], правой 2-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_be12_wav;
                     return wrapper;
@@ -157,7 +157,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ve11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_w:
-                    wrapper.letterDescription = "Буква 'в'[вэ] левой 2-м на месте";
+                    wrapper.letterDescription = "Буква 'в'[вэ], левой 2-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ve12_wav;
                     return wrapper;
@@ -167,7 +167,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ge11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_g:
-                    wrapper.letterDescription = "Буква 'г'[гэ] правой 1-м вверх";
+                    wrapper.letterDescription = "Буква 'г'[гэ], правой 1-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ge12_wav;
                     return wrapper;
@@ -177,7 +177,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_De11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_d:
-                    wrapper.letterDescription = "Буква 'д'[дэ] правой 3-м на месте";
+                    wrapper.letterDescription = "Буква 'д'[дэ], правой 3-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_de12_wav;
                     return wrapper;
@@ -187,7 +187,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ye11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_e:
-                    wrapper.letterDescription = "Буква 'е'[йэ] левой 1-м направо вверх";
+                    wrapper.letterDescription = "Буква 'е'[йэ], левой 1-м направо вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ye12_wav;
                     return wrapper;
@@ -197,7 +197,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Yo11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_jo:
-                    wrapper.letterDescription = "Буква 'ё'[йо] левой 4-м вершина в угол";
+                    wrapper.letterDescription = "Буква 'ё'[йо], левой 4-м вершина в угол";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_yo12_wav;
                     return wrapper;
@@ -207,7 +207,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Zhe11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_zg:
-                    wrapper.letterDescription = "Буква 'ж'[жэ] правой 4-м на месте";
+                    wrapper.letterDescription = "Буква 'ж'[жэ], правой 4-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_zhe12_wav;
                     return wrapper;
@@ -217,7 +217,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ze11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_z:
-                    wrapper.letterDescription = "Буква 'з'[зэ] правой 4-м вверх";
+                    wrapper.letterDescription = "Буква 'з'[зэ], правой 4-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ze12_wav;
                     return wrapper;
@@ -227,7 +227,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_I11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_i:
-                    wrapper.letterDescription = "Буква 'и'[и] левой 1-м направо вниз";
+                    wrapper.letterDescription = "Буква 'и'[и], левой 1-м направо вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_i12_wav;
                     return wrapper;
@@ -237,7 +237,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_I_kratnoe11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ii:
-                    wrapper.letterDescription = "Буква 'й'[ий краткое] левой 4-м вверх";
+                    wrapper.letterDescription = "Буква 'й'[ий краткое], левой 4-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_i_kratnoe12_wav;
                     return wrapper;
@@ -247,7 +247,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ka11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_k:
-                    wrapper.letterDescription = "Буква 'к'[ка] левой 1-м вверх";
+                    wrapper.letterDescription = "Буква 'к'[ка], левой 1-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ka12_wav;
                     return wrapper;
@@ -257,7 +257,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_El_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_l:
-                    wrapper.letterDescription = "Буква 'л'[эль] правой 2-м на месте";
+                    wrapper.letterDescription = "Буква 'л'[эль], правой 2-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_el_12_wav;
                     return wrapper;
@@ -267,7 +267,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Em11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_m:
-                    wrapper.letterDescription = "Буква 'м'[эм] левой 1-м вниз";
+                    wrapper.letterDescription = "Буква 'м'[эм], левой 1-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_em12_wav;
                     return wrapper;
@@ -277,7 +277,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_En11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_n:
-                    wrapper.letterDescription = "Буква 'н'[эн] правой 1-м налево вверх";
+                    wrapper.letterDescription = "Буква 'н'[эн], правой 1-м налево вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_en12_wav;
                     return wrapper;
@@ -287,7 +287,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_О11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_o:
-                    wrapper.letterDescription = "Буква 'о'[о] правой 1-м на месте";
+                    wrapper.letterDescription = "Буква 'о'[о], правой 1-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_o12_wav;
                     return wrapper;
@@ -297,7 +297,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Pe11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_p:
-                    wrapper.letterDescription = "Буква 'п'[пэ] левой 1-м направо на месте";
+                    wrapper.letterDescription = "Буква 'п'[пэ], левой 1-м направо на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_pe12_wav;
                     return wrapper;
@@ -307,7 +307,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Er11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_r:
-                    wrapper.letterDescription = "Буква 'р'[эр] правой 1-м налево на месте";
+                    wrapper.letterDescription = "Буква 'р'[эр], правой 1-м налево на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_er12_wav;
                     return wrapper;
@@ -317,17 +317,17 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Es11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_s:
-                    wrapper.letterDescription = "Буква 'с'[эс] левой 2-м вниз";
+                    wrapper.letterDescription = "Буква 'с'[эс], левой 2-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_es12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_T:
-                    wrapper.letterDescription = "ЗЗаглавная буква 'Т'[Тэ], левой шифт, правой 1-м налево вниз";
+                    wrapper.letterDescription = "Заглавная буква 'Т'[Тэ], левой шифт, правой 1-м налево вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Te11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_t:
-                    wrapper.letterDescription = "Буква 'т'[тэ] правой 1-м налево вниз";
+                    wrapper.letterDescription = "Буква 'т'[тэ], правой 1-м налево вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_te12_wav;
                     return wrapper;
@@ -337,7 +337,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_U11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_y:
-                    wrapper.letterDescription = "Буква 'у'[у] левой 2-м вверх";
+                    wrapper.letterDescription = "Буква 'у'[у], левой 2-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_u12_wav;
                     return wrapper;
@@ -347,7 +347,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ef11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_f:
-                    wrapper.letterDescription = "Буква 'ф'[эф] левой 4-м на месте";
+                    wrapper.letterDescription = "Буква 'ф'[эф], левой 4-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ef12_wav;
                     return wrapper;
@@ -357,7 +357,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ha11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_x:
-                    wrapper.letterDescription = "Буква 'х'[ха] правой 4-м направо вверх";
+                    wrapper.letterDescription = "Буква 'х'[ха], правой 4-м направо вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ha12_wav;
                     return wrapper;
@@ -367,7 +367,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ce11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ze:
-                    wrapper.letterDescription = "Буква 'ц'[цэ] левой 3-м вверх";
+                    wrapper.letterDescription = "Буква 'ц'[цэ], левой 3-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ce12_wav;
                     return wrapper;
@@ -377,7 +377,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Che11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ch:
-                    wrapper.letterDescription = "Буква 'ч'[че] левой 3-м вниз";
+                    wrapper.letterDescription = "Буква 'ч'[че], левой 3-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_che12_wav;
                     return wrapper;
@@ -387,7 +387,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Sha11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_sh:
-                    wrapper.letterDescription = "Буква 'ш'[ша] правой 2-м вверх";
+                    wrapper.letterDescription = "Буква 'ш'[ша], правой 2-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_sha12_wav;
                     return wrapper;
@@ -397,22 +397,22 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Shcha11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_sche:
-                    wrapper.letterDescription = "Буква 'щ'[ща] правой 3-м вверх";
+                    wrapper.letterDescription = "Буква 'щ'[ща], правой 3-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_shcha12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_HARD:
-                    wrapper.letterDescription = "Буква 'ъ'[твёрдый знак] правой 4-м направо в угол";
+                    wrapper.letterDescription = "Буква 'ъ'[твёрдый знак], правой 4-м направо в угол";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_tvyordyj_znak11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_bl:
-                    wrapper.letterDescription = "Буква 'ы'[ы] левой 3-м на месте";
+                    wrapper.letterDescription = "Буква 'ы'[ы], левой 3-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_y12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Soft:
-                    wrapper.letterDescription = "Буква 'ь'[мягкий знак] правой 1-м вниз";
+                    wrapper.letterDescription = "Буква 'ь'[мягкий знак], правой 1-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_myagkij_znak11_wav;
                     return wrapper;
@@ -422,7 +422,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_E11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ee:
-                    wrapper.letterDescription = "Буква 'э'[э] правой 4-м направо на месте";
+                    wrapper.letterDescription = "Буква 'э'[э], правой 4-м направо на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_e12_wav;
                     return wrapper;
@@ -432,7 +432,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Yu11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_you:
-                    wrapper.letterDescription = "Буква 'ю'[йу] правой 3-м вниз";
+                    wrapper.letterDescription = "Буква 'ю'[йу], правой 3-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_yu12_wav;
                     return wrapper;
@@ -442,62 +442,62 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ya11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ja:
-                    wrapper.letterDescription = "Буква 'я'[йа] левой 4-м вниз";
+                    wrapper.letterDescription = "Буква 'я'[йа], левой 4-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ya12_wav;
                     return wrapper;
                 case (char)alphabet.Letter_1:
-                    wrapper.letterDescription = "Цифра '1'[один] левой 4-м вершина";
+                    wrapper.letterDescription = "Цифра '1'[один], левой 4-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_odin11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_2:
-                    wrapper.letterDescription = "Цифра '2'[два] левой 3-м вершина";
+                    wrapper.letterDescription = "Цифра '2'[два], левой 3-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_dva11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_3:
-                    wrapper.letterDescription = "Цифра '3'[три] левой 2-м вершина";
+                    wrapper.letterDescription = "Цифра '3'[три], левой 2-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_tri11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_4:
-                    wrapper.letterDescription = "Цифра '4'[четыре] левой 1-м вершина";
+                    wrapper.letterDescription = "Цифра '4'[четыре], левой 1-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_chetyre11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_5:
-                    wrapper.letterDescription = "Цифра '5'[пять] левой 1-м направо вершина";
+                    wrapper.letterDescription = "Цифра '5'[пять], левой 1-м направо вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_pyat_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_6:
-                    wrapper.letterDescription = "Цифра '6'[шесть] правой 1-м налево вершина";
+                    wrapper.letterDescription = "Цифра '6'[шесть], правой 1-м налево вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_shest_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_7:
-                    wrapper.letterDescription = "Цифра '7'[семь] правой 1-м вершина";
+                    wrapper.letterDescription = "Цифра '7'[семь], правой 1-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_sem_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_8:
-                    wrapper.letterDescription = "Цифра '8'[восемь] правой 2-м вершина";
+                    wrapper.letterDescription = "Цифра '8'[восемь], правой 2-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_vosem_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_9:
-                    wrapper.letterDescription = "Цифра '9'[девять] правой 3-м вершина";
+                    wrapper.letterDescription = "Цифра '9'[девять], правой 3-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_devyat_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_0:
-                    wrapper.letterDescription = "Цифра '0'[ноль] правой 4-м вершина";
+                    wrapper.letterDescription = "Цифра '0'[ноль], правой 4-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_nol_11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Comma:
-                    wrapper.letterDescription = "',' [Запятая] левой шифт, правой 4-м вниз";
+                    wrapper.letterDescription = "',' [Запятая], левой шифт, правой 4-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zapyataya11_wav;
                     return wrapper;
@@ -507,12 +507,12 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Tochka11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Score:
-                    wrapper.letterDescription = "'-'[Дефис] правой 4-м направо вершина";
+                    wrapper.letterDescription = "'-'[Дефис], правой 4-м направо вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Defis11_wav;
                     return wrapper;
                 case (char)alphabet.Letter_UnderScore:
-                    wrapper.letterDescription = "'_'[Нижнее подчёркивание], шифт левой 4-м налево вниз";
+                    wrapper.letterDescription = "'_'[Нижнее подчёркивание], левой шифт, 4-м налево вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Nizhnee_podchyorkivanie11_wav;
                     return wrapper;
@@ -595,7 +595,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Be21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_b:
-                    wrapper.letterDescription = "Буква 'б'[бэ] [бэ] правой средним вниз";
+                    wrapper.letterDescription = "Буква 'б'[бэ], правой средним вниз";
                     //wrapper.letterDescription =  "'б'  Правая - 2-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_be22_wav;
@@ -607,7 +607,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ve21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_w:
-                    wrapper.letterDescription = "Буква 'в'[вэ] левой средним на месте";
+                    wrapper.letterDescription = "Буква 'в'[вэ], левой средним на месте";
                     //wrapper.letterDescription =  "'в'  Левая - 2-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ve22_wav;
@@ -619,7 +619,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ge21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_g:
-                    wrapper.letterDescription = "Буква 'г'[гэ] правой указательным вверх";
+                    wrapper.letterDescription = "Буква 'г'[гэ], правой указательным вверх";
                     //wrapper.letterDescription =  "'г'  Правая - 1-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ge22_wav;
@@ -631,7 +631,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_De21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_d:
-                    wrapper.letterDescription = "Буква 'д'[дэ] правой безымянным на месте";
+                    wrapper.letterDescription = "Буква 'д'[дэ], правой безымянным на месте";
                     //wrapper.letterDescription =  "'д'  Правая - 3-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_de22_wav;
@@ -643,7 +643,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ye21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_e:
-                    wrapper.letterDescription = "Буква 'е'[йэ] левой указательным направо вверх";
+                    wrapper.letterDescription = "Буква 'е'[йэ], левой указательным направо вверх";
                     //wrapper.letterDescription = "'е' Левая - 1-м направо вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ye22_wav;
@@ -655,7 +655,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Yo21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_jo:
-                    wrapper.letterDescription = "Буква 'ё'[йо] левой мизинцем вершина в угол";
+                    wrapper.letterDescription = "Буква 'ё'[йо], левой мизинцем вершина в угол";
                     //wrapper.letterDescription = "'ё' Левая - 1-м направо вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_yo22_wav;
@@ -667,7 +667,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Zhe21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_zg:
-                    wrapper.letterDescription = "Буква 'ж'[жэ] правой мизинцем на месте";
+                    wrapper.letterDescription = "Буква 'ж'[жэ], правой мизинцем на месте";
                     //wrapper.letterDescription = "'ж'  Правая - 4-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_zhe22_wav;
@@ -679,7 +679,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ze21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_z:
-                    wrapper.letterDescription = "Буква 'з'[зэ] правой мизинцем вверх";
+                    wrapper.letterDescription = "Буква 'з'[зэ], правой мизинцем вверх";
                     //wrapper.letterDescription = "'з'  Правая - 4-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ze22_wav;
@@ -691,7 +691,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_I21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_i:
-                    wrapper.letterDescription = "Буква 'и'[и] левой указательным направо вниз";
+                    wrapper.letterDescription = "Буква 'и'[и], левой указательным направо вниз";
                     //wrapper.letterDescription = "'и'  Левая - 1-м направо вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_i22_wav;
@@ -703,7 +703,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_I_kratnoe21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ii:
-                    wrapper.letterDescription = "Буква 'й'[ий краткое] левой мизинцем вверх";
+                    wrapper.letterDescription = "Буква 'й'[ий краткое], левой мизинцем вверх";
                     //wrapper.letterDescription = "'й'  Левая - 4-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_i_kratnoe22_wav;
@@ -715,7 +715,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ka21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_k:
-                    wrapper.letterDescription = "Буква 'к'[ка] левой указательным вверх";
+                    wrapper.letterDescription = "Буква 'к'[ка], левой указательным вверх";
                     //wrapper.letterDescription = "'к'  Левая - 1-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ka22_wav;
@@ -727,7 +727,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_El_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_l:
-                    wrapper.letterDescription = "Буква 'л'[эль] правой средним на месте";
+                    wrapper.letterDescription = "Буква 'л'[эль], правой средним на месте";
                     //wrapper.letterDescription = "'л'  Правая - 2-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_el_22_wav;
@@ -739,7 +739,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Em21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_m:
-                    wrapper.letterDescription = "Буква 'м'[эм] левой указательным вниз";
+                    wrapper.letterDescription = "Буква 'м'[эм], левой указательным вниз";
                     //wrapper.letterDescription = "'м'  Левая - 1-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_em22_wav;
@@ -751,7 +751,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_En21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_n:
-                    wrapper.letterDescription = "Буква 'н'[эн] правой указательным налево вверх";
+                    wrapper.letterDescription = "Буква 'н'[эн], правой указательным налево вверх";
                     //wrapper.letterDescription = "'н'  Правая - 1-м налево вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_en22_wav;
@@ -763,7 +763,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_О21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_o:
-                    wrapper.letterDescription = "Буква 'о'[о] правой указательным на месте";
+                    wrapper.letterDescription = "Буква 'о'[о], правой указательным на месте";
                     //wrapper.letterDescription = "'о'  Правая - 1-м на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_o22_wav;
@@ -775,7 +775,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Pe21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_p:
-                    wrapper.letterDescription = "Буква 'п'[пэ] левой указательным направо на месте";
+                    wrapper.letterDescription = "Буква 'п'[пэ], левой указательным направо на месте";
                     //wrapper.letterDescription = "'п'  Левая - 1-м направо на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_pe22_wav;
@@ -787,7 +787,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Er21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_r:
-                    wrapper.letterDescription = "Буква 'р'[эр] правой указательным налево на месте";
+                    wrapper.letterDescription = "Буква 'р'[эр], правой указательным налево на месте";
                     //wrapper.letterDescription = "'р'  Правая - 1-м налево на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_er22_wav;
@@ -799,7 +799,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Es21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_s:
-                    wrapper.letterDescription = "Буква 'с'[эс] левой средним вниз";
+                    wrapper.letterDescription = "Буква 'с'[эс], левой средним вниз";
                     //wrapper.letterDescription = "'с'  Левая - 2-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_es22_wav;
@@ -811,7 +811,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Te21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_t:
-                    wrapper.letterDescription = "Буква 'т'[тэ] правой указательным налево вниз";
+                    wrapper.letterDescription = "Буква 'т'[тэ], правой указательным налево вниз";
                     //wrapper.letterDescription = "'т'  Правая - 1-м налево вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_te22_wav;
@@ -823,7 +823,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_U21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_y:
-                    wrapper.letterDescription = "Буква 'у'[у] левой средним вверх";
+                    wrapper.letterDescription = "Буква 'у'[у], левой средним вверх";
                     //wrapper.letterDescription = "'у'  Левая - 2-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_u22_wav;
@@ -835,7 +835,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ef21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_f:
-                    wrapper.letterDescription = "Буква 'ф'[эф] левой мизинцем на месте";
+                    wrapper.letterDescription = "Буква 'ф'[эф], левой мизинцем на месте";
                     //wrapper.letterDescription = "'ф'  Левая - 4-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ef12_wav;
@@ -847,7 +847,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ha21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_x:
-                    wrapper.letterDescription = "Буква 'х'[ха] правой мизинцем направо вверх";
+                    wrapper.letterDescription = "Буква 'х'[ха], правой мизинцем направо вверх";
                     //wrapper.letterDescription = "'х'  Правая - 4-м направо вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ha22_wav;
@@ -859,7 +859,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ce21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ze:
-                    wrapper.letterDescription = "Буква 'ц'[цэ] левой безымянным вверх";
+                    wrapper.letterDescription = "Буква 'ц'[цэ], левой безымянным вверх";
                     //wrapper.letterDescription = "'ц'  Левая - 3-м вверх";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ce22_wav;
@@ -871,7 +871,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Che21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ch:
-                    wrapper.letterDescription = "Буква 'ч'[че] левой безымянным вниз";
+                    wrapper.letterDescription = "Буква 'ч'[че], левой безымянным вниз";
                     //wrapper.letterDescription = "'ч'  Левая - 3-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_che22_wav;
@@ -883,7 +883,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Sha21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_sh:
-                    wrapper.letterDescription = "Буква 'ш'[ша] правой средним вверх";
+                    wrapper.letterDescription = "Буква 'ш'[ша], правой средним вверх";
                     //wrapper.letterDescription = "'ш'  Правая - 2-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_sha22_wav;
@@ -895,37 +895,37 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Shcha21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_sche:
-                    wrapper.letterDescription = "Буква 'щ'[ща] правой безымянным вверх";
+                    wrapper.letterDescription = "Буква 'щ'[ща], правой безымянным вверх";
                     //wrapper.letterDescription = "'щ'  Правая - 3-м вверх";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_shcha22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_HARD:
-                    wrapper.letterDescription = "Буква 'ъ'[твёрдый знак] правой мизинцем направо в угол";
+                    wrapper.letterDescription = "Буква 'ъ'[твёрдый знак], правой мизинцем направо в угол";
                     //wrapper.letterDescription = "'ъ'  Правая - 4-м направо в угол";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_tvyordyj_znak22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_bl:
-                    wrapper.letterDescription = "Буква 'ы'[ы] левой безымянным на месте";
+                    wrapper.letterDescription = "Буква 'ы'[ы], левой безымянным на месте";
                     //wrapper.letterDescription = "'ы'  Левая - 3-м на месте";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_y22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Soft:
-                    wrapper.letterDescription = "Буква 'ь'[мягкий знак] правой указательным вниз";
+                    wrapper.letterDescription = "Буква 'ь'[мягкий знак], правой указательным вниз";
                     //wrapper.letterDescription = "'ь'  Правая - 1-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_myagkij_znak22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_EE:
-                    wrapper.letterDescription = "Заглавная буква 'Э'[Э] левой шифт, правой мизинцем направо на месте";
+                    wrapper.letterDescription = "Заглавная буква 'Э'[Э], левой шифт, правой мизинцем направо на месте";
                     //wrapper.letterDescription = "'Э'  Шифт + Правая - 4-м направо на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_E21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ee:
-                    wrapper.letterDescription = "Буква 'э'[э] правой мизинцем направо на месте";
+                    wrapper.letterDescription = "Буква 'э'[э], правой мизинцем направо на месте";
                     //wrapper.letterDescription = "'э'  Правая - 4-м направо на месте";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_e22_wav;
@@ -937,7 +937,7 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Yu21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_you:
-                    wrapper.letterDescription = "Буква 'ю'[йу] правой безымянным вниз";
+                    wrapper.letterDescription = "Буква 'ю'[йу], правой безымянным вниз";
                     //wrapper.letterDescription = "'ю'  Правая - 3-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_yu22_wav;
@@ -949,85 +949,85 @@ namespace NewSkills.ViewModel
                     wrapper.voicePath = Properties.Resources.audio_Zaglavnaya_Ya21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_ja:
-                    wrapper.letterDescription = "Буква 'я'[йа] левой мизинцем вниз";
+                    wrapper.letterDescription = "Буква 'я'[йа], левой мизинцем вниз";
                     //wrapper.letterDescription = "'я'  Левая - 4-м вниз";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Bukva_ya22_wav;
                     return wrapper;
                 case (char)alphabet.Letter_1:
-                    wrapper.letterDescription = "Цифра '1'[один] левой мизинцем вершина";
+                    wrapper.letterDescription = "Цифра '1'[один], левой мизинцем вершина";
                     //wrapper.letterDescription = "'1'  Левая - 4-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_odin21;
                     return wrapper;
                 case (char)alphabet.Letter_2:
-                    wrapper.letterDescription = "Цифра '2'[два] левой безымянным вершина";
+                    wrapper.letterDescription = "Цифра '2'[два], левой безымянным вершина";
                     //wrapper.letterDescription = "'2'  Левая - 3-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_dva21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_3:
-                    wrapper.letterDescription = "Цифра '3'[три] левой средним вершина";
+                    wrapper.letterDescription = "Цифра '3'[три], левой средним вершина";
                     //wrapper.letterDescription = "'3'  Левая - 2-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_tri21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_4:
-                    wrapper.letterDescription = "Цифра '4'[четыре] левой указательным вершина";
+                    wrapper.letterDescription = "Цифра '4'[четыре], левой указательным вершина";
                     //wrapper.letterDescription = "'4'  Левая - 1-м вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_chetyre21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_5:
-                    wrapper.letterDescription = "Цифра '5'[пять] левой указательным направо вершина";
+                    wrapper.letterDescription = "Цифра '5'[пять], левой указательным направо вершина";
                     //wrapper.letterDescription = "'5'  Левая - 1-м направо вершина";
                     wrapper.directionDescription = "RightSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_pyat_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_6:
-                    wrapper.letterDescription = "Цифра '6'[шесть] правой указательным налево вершина";
+                    wrapper.letterDescription = "Цифра '6'[шесть], правой указательным налево вершина";
                     //wrapper.letterDescription = "'6'  Правая - 1-м налево вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_shest_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_7:
-                    wrapper.letterDescription = "Цифра '7'[семь] правой указательным вершина";
+                    wrapper.letterDescription = "Цифра '7'[семь], правой указательным вершина";
                     //wrapper.letterDescription = "'7'  Правая - 1-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_sem_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_8:
-                    wrapper.letterDescription = "Цифра '8'[восемь] правой средним вершина";
+                    wrapper.letterDescription = "Цифра '8'[восемь], правой средним вершина";
                     //wrapper.letterDescription = "'8'  Правая - 2-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_vosem_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_9:
-                    wrapper.letterDescription = "Цифра '9'[девять] правой безымянным вершина";
+                    wrapper.letterDescription = "Цифра '9'[девять], правой безымянным вершина";
                     //wrapper.letterDescription = "'9'  Правая - 3-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_devyat_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_0:
-                    wrapper.letterDescription = "Цифра '0'[ноль] правой мизинцем вершина";
+                    wrapper.letterDescription = "Цифра '0'[ноль], правой мизинцем вершина";
                     //wrapper.letterDescription = "'0'  Правая - 4-м вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Cifra_nol_21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Comma:
-                    wrapper.letterDescription = "',' [Запятая] левой шифт, правой мизинцем вниз";
+                    wrapper.letterDescription = "',' [Запятая], левой шифт, правой мизинцем вниз";
                     //wrapper.letterDescription = "'Запятая'  Шифт + Правая - 4-м вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Zapyataya21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Punkt:
-                    wrapper.letterDescription = "'.'[Точка] правой мизинцем вниз";
-                    //wrapper.letterDescription = "'.'[Точка] правой мизинцем вниз";
+                    wrapper.letterDescription = "'.'[Точка], правой мизинцем вниз";
+                    //wrapper.letterDescription = "'.'[Точка], правой мизинцем вниз";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Tochka21_wav;
                     return wrapper;
                 case (char)alphabet.Letter_Score:
-                    wrapper.letterDescription = "'-'[Дефис] правой мизинцем направо вершина";
+                    wrapper.letterDescription = "'-'[Дефис], правой мизинцем направо вершина";
                     //wrapper.letterDescription = "' Тире '  Правая - 4-м направо вершина";
                     wrapper.directionDescription = "LeftSpace";
                     wrapper.voicePath = Properties.Resources.audio_Defis21_wav;

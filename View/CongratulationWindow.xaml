@@ -8,6 +8,10 @@
         mc:Ignorable="d"
         Title="CongratulationWindow" WindowStyle="None">
     <Grid>
-        <Image x:Name="imageEinstein" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Resources/Einstein1.gif"/>
+        <Label HorizontalAlignment="Center" FontSize="16">Поздравляем ! Уже завтра вы сможете печатать по новому !</Label>
+        <StackPanel VerticalAlignment="Bottom" Margin="0,40,0,0" >
+            <Image x:Name="imageEinstein" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Resources/Einstein1.gif"/>
+        </StackPanel>
+        
     </Grid>
 </Window>
