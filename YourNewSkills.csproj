@@ -541,7 +541,7 @@
     <Resource Include="Resources\keyBoard.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\inputText.txt">
+    <EmbeddedResource Include="Resources\inputText3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -553,9 +553,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\letter_underscore.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\success_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -771,6 +768,16 @@
     <EmbeddedResource Include="Resources\audio_wavpereryv_zakonchen_34.wav.wav" />
     <EmbeddedResource Include="Resources\audio_zvuk_vokzala_31.wav.wav" />
     <Resource Include="Resources\Einstein1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\inputText1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\inputText2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

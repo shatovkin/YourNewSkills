@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows;
+﻿using System.Windows;
 
 
 namespace NewSkills.View
@@ -11,30 +9,11 @@ namespace NewSkills.View
     public partial class CongratulationWindow : Window
     {
         MainWindow mainWindow;
-    
 
         public CongratulationWindow(MainWindow mainWindow)
         {
             InitializeComponent();
-
             this.mainWindow = mainWindow;
-        }
-
-        public void loadVideo()
-        {
-            try
-            {
-            
-                //Bitmap bitmap = new System.Drawing.Bitmap(Properties.Resources.Einstein1);//it is in the memory now
-                //var bitmapSource = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-               // imageEinstein.Source = bitmapSource;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("test:" + e.ToString());
-                string s = e.ToString();
-            }
-
         }
     }
 }

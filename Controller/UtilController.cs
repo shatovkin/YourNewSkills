@@ -11,8 +11,8 @@ namespace NewSkills.Controller
     class UtilController
     {
         private static int rounds = 4;
-        private static int sekWork = 60; 
-        private static int sekPause = 5; 
+        private static int sekWork = 300; 
+        private static int sekPause = 15; 
 
         private static int thirtyMinutesPauseCountDown = 0;
         

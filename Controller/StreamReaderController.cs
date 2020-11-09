@@ -19,7 +19,22 @@ namespace NewSkills.Controller
         public static string WholeSampleText { get; set; }
         public StreamReaderController(string fileName)
         {
-            string sampleText = getFileContent("inputText", "txt");
+
+            string sampleText = "";
+
+            if (Properties.Settings.Default.TypingText == 0)
+            {
+                sampleText = getFileContent("inputText1", "txt");
+            }
+            else if (Properties.Settings.Default.TypingText == 1)
+            {
+                sampleText = getFileContent("inputText2", "txt");
+            }
+            else if (Properties.Settings.Default.TypingText == 2)
+            {
+                sampleText = getFileContent("inputText3", "txt");
+            }
+
             WholeSampleText = sampleText;
             file = sampleText.Split('\n');
         }

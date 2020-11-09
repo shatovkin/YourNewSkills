@@ -58,5 +58,17 @@ namespace NewSkills.Properties {
                 this["SoundOn"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int TypingText {
+            get {
+                return ((int)(this["TypingText"]));
+            }
+            set {
+                this["TypingText"] = value;
+            }
+        }
     }
 }

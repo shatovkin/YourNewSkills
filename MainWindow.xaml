@@ -32,8 +32,8 @@
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#d7b3a8"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#d7b3a8"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <!--#endregion-->
 
@@ -138,12 +138,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#d0ad95"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#d0ad95"/>
+                                <Setter Property="Background" TargetName="border" Value="#3A6180"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#3A6180"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#d0ad95"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#d0ad95"/>
+                                <Setter Property="Background" TargetName="border" Value="#3A6180"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#3A6180"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -231,7 +231,7 @@
                         HorizontalAlignment="Left"
                         Background="#87CEFA">
             <!--add 3 buttons - Home, Profile and Settings-->
-            <Button x:Name="Home"
+            <!--<Button x:Name="Home"
                         Height="100"
                         Focusable="False"
                         Background="Transparent"
@@ -241,11 +241,11 @@
                         MouseLeave="Home_MouseLeave"
                         Click="Home_Click"
                         >
-                <!--add image-->
+                --><!--add image--><!--
                 <Image Source="Resources/home_icon.png"
                            Stretch="None">
                 </Image>
-            </Button>
+            </Button>-->
 
             <!--<Button x:Name="Profile"
                         Height="100"
@@ -265,7 +265,7 @@
 
                 </Button>-->
 
-            <Button x:Name="Settings"
+            <!--<Button x:Name="Settings"
                         Focusable="False"
                         Height="100"
                         Background="Transparent"
@@ -275,12 +275,12 @@
                         MouseEnter="Settings_MouseEnter" 
                         MouseLeave="Settings_MouseLeave"
                         Click="Settings_Click">
-                <!--add image-->
+                --><!--add image--><!--
 
                 <Image Source="Resources/settings_icon.png"
                            Stretch="None">
                 </Image>
-            </Button>
+            </Button>-->
         </StackPanel>
 
                   
@@ -337,6 +337,39 @@
 
                 <Grid   DockPanel.Dock="Left" Width="50"   
                         Background="#d7b3a8">
+                    
+                        <!--add 3 buttons - Home, Profile and Settings-->
+                        <Button x:Name="Home"
+                        Height="100"
+                        Focusable="False"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="0,-100,0,20" Style="{DynamicResource HomeBtnStyle}" 
+                        MouseEnter="Home_MouseEnter" 
+                        MouseLeave="Home_MouseLeave"
+                        Click="Home_Click"
+                        >
+                            <!--add image-->
+                            <Image Source="Resources/home_icon.png"
+                           Stretch="None">
+                            </Image>
+                        </Button>
+                    <Button x:Name="Settings"
+                        Focusable="False"
+                        Height="100"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="0,50,0,0"
+                        Style="{DynamicResource SettingsBtnStyle}" 
+                        MouseEnter="Settings_MouseEnter" 
+                        MouseLeave="Settings_MouseLeave"
+                        Click="Settings_Click">
+                        <!--add image-->
+
+                        <Image Source="Resources/settings_icon.png"
+                           Stretch="None">
+                        </Image>
+                    </Button>
                 </Grid>
                 <Grid   DockPanel.Dock="Right" Width="50"   
                         Background="#d7b3a8">
@@ -377,7 +410,7 @@
                         </Popup>
                         <Label x:Name="pauseLbl" Content="" HorizontalContentAlignment="Center"
                                FontSize="40"  HorizontalAlignment="Center" 
-                               VerticalAlignment="Top" Width="538" Margin="-20,57,93.6,0"/>
+                               VerticalAlignment="Top" Width="538" Margin="-80,57,93.6,0"/>
                     </StackPanel>
                 </ScrollViewer>
             </DockPanel>
