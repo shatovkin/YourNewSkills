@@ -14,35 +14,38 @@ namespace NewSkills.View
         public SettingsView(MainWindow main)
         {
             InitializeComponent();
-            successImage.Visibility = Visibility.Collapsed;
-            this.main = main; 
-        }
-
-        private void saveSettings_Click(object sender, RoutedEventArgs e)
-        {
-            int selectedComboBoxValue = styleComboBox.SelectedIndex;
 
             //Set Progress to 0 
             UtilController.ProgessInPerCent = "0";
-            UtilController.EndSum = 0; 
+            UtilController.EndSum = 0;
 
-            Properties.Settings.Default.FontVariant = selectedComboBoxValue;
-            Properties.Settings.Default.Save();
-            successImage.Visibility = Visibility.Visible;
-            
+            main.Home.IsEnabled = true; 
+            main.RunTimer = false;
+            this.main = main; 
+
         }
 
         private void styleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (successImage != null) {
-                successImage.Visibility = Visibility.Collapsed;
-            }
+            Properties.Settings.Default.FontVariant = styleComboBox.SelectedIndex;
+            Properties.Settings.Default.Save();
+        }
+
+
+        private void typingTextComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Properties.Settings.Default.TypingText = typingTextComboBox.SelectedIndex;
+            Properties.Settings.Default.Save();
         }
 
         private void styleComboBox_Loaded(object sender, RoutedEventArgs e)
         {
             styleComboBox.SelectedIndex = Properties.Settings.Default.FontVariant;
-           
+        }
+
+        private void typingTextComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            typingTextComboBox.SelectedIndex = Properties.Settings.Default.TypingText;
         }
     }
 }

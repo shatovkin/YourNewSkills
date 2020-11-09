@@ -215,7 +215,8 @@ namespace NewSkills.View
             mainWindow.OutputView.Content = viewF;
             mainWindow.timerTxt.Visibility = Visibility.Visible;
             mainWindow.Home.Visibility = Visibility.Visible;
-          
+            mainWindow.Home.IsEnabled = false;
+
             mainWindow.Settings.Visibility = Visibility.Visible;
             mainWindow.CommonTime = 0;
             mainWindow.RunTimer = true;

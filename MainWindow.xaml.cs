@@ -209,7 +209,6 @@ namespace NewSkills
                     congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                     congratulationWindow.Owner = Application.Current.MainWindow;
                     congratulationWindow.Show();
-                    congratulationWindow.loadVideo();
                     break;
 
             }
@@ -409,6 +408,7 @@ namespace NewSkills
             FirstViewModel vmF = new FirstViewModel(this);
             viewF.DataContext = vmF;
             this.OutputView.Content = viewF;
+            this.runTimer = true;
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)

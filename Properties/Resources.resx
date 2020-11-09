@@ -121,9 +121,6 @@
   <data name="home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inputText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inputText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="keyBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyBoard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -411,9 +408,6 @@
   </data>
   <data name="settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="success_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\success_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="soundOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\soundoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1266,5 +1260,20 @@
   </data>
   <data name="Einstein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\einstein1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inputText1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\inputtext1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="inputText2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\inputtext2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="inputText3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\inputtext3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="audio_Bukva_te22_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_bukva_te22.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="audio_Skobka_otkryvaetsya21_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\audio_skobka_otkryvaetsya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

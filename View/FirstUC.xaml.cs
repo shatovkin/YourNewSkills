@@ -42,6 +42,7 @@ namespace NewSkills.View
 
             this.mainWindow = mainWindow;
             mainWindow.progress.Content = "0";
+            mainWindow.Home.IsEnabled = false;
             fontVariantSettings = Properties.Settings.Default.FontVariant;
             this.inputText = fileName;
             streamReaderController = new StreamReaderController(fileName);
@@ -139,7 +140,6 @@ namespace NewSkills.View
                         }
                         else
                         {
-                           
                             char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
                             char nextLetterToShow = nextLetter(typingText, sampleText);
 
@@ -255,9 +255,8 @@ namespace NewSkills.View
                     return false;
                 }
             }
-            catch (Exception e)
-            {
-                MessageBox.Equals(e, e);
+            catch (Exception)
+            { 
                 if (typingTextLenght == -1)
                 {
                     correctTextLenght = typingTextLenght + 1;
@@ -312,11 +311,10 @@ namespace NewSkills.View
                 congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 congratulationWindow.Owner = Application.Current.MainWindow;
                 congratulationWindow.Show();
-                congratulationWindow.loadVideo();
             }
             catch (Exception e)
             {
-                MessageBox.Show("congratulation3: " + e.ToString());
+                MessageBox.Show("Ошибка поздравления: " + e.ToString());
             }
         }
 
