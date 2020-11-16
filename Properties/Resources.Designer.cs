@@ -61,6 +61,16 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap achtung {
+            get {
+                object obj = ResourceManager.GetObject("achtung", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_a12_wav {
@@ -2605,8 +2615,8 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized string similar to в нашем случае нужно сесть за стол
         ///переговоров обеим сторонам родителям и
-        ///детям цель переговоров смена ролевой пары
-        ///после смены дети начинают помогать
+        ///детям цель переговоров смена ролевой 
+        ///пары после смены дети начинают помогать
         ///родителям и родители начинают принимать
         ///помощь предмет переговоров ролевой
         ///перечень каждой стороны обе стороны
@@ -2616,7 +2626,7 @@ namespace NewSkills.Properties {
         ///самочувствием заботами и нуждами своих
         ///родителей а они в свою очередь ждут
         ///звонка не навязывают ему свою
-        ///помощь с готовностью гово [rest of string was truncated]&quot;;.
+        ///помощь с готовностью гов [rest of string was truncated]&quot;;.
         /// </summary>
         public static string inputText1 {
             get {
@@ -2625,19 +2635,20 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ворота между сознательными ощущениями
-        ///и подсознанием - это внимание. Когда вы
-        ///переключаете свое внимание с 
-        ///источника раздражения на другой, события,
-        ///оказывающиеся в центре вашего внимания,
-        ///начинают осознаваться, в то время как те,
-        ///которые теперь оставлены без внимания,
-        ///уходят в тень, осознаются меньше. Если бы
+        ///   Looks up a localized string similar to ворота между сознательными ощущениями
+        ///и подсознанием это внимание когда вы
+        ///переключаете свое внимание с одного
+        ///источника раздражения на другой события
+        ///оказывающиеся в центре вашего внимания
+        ///начинают осознаваться в то время как те
+        ///которые теперь оставлены без внимания
+        ///уходят в тень осознаются меньше если бы
         ///мы не обладали способностью ограничивать
-        ///количество информации в нашем сознании,
-        ///то не могли бы действовать из-за
+        ///количество информации в нашем сознании
+        ///то не могли бы действовать из за
         ///захлестнувшего нас океана событий и
-        ///ощущений. Например, в этот момент вы        /// [rest of string was truncated]&quot;;.
+        ///ощущений например в этот момент вы
+        ///можете  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string inputText2 {
             get {

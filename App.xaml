@@ -4,5 +4,7 @@
              xmlns:local="clr-namespace:NewSkills"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
