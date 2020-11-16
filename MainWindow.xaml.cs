@@ -64,7 +64,15 @@ namespace NewSkills
             checkSoundContent();
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-           
+
+
+            string language = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
+
+            if (language != "ru-RU")
+            {
+                System.Windows.Forms.InputLanguage.CurrentInputLanguage = System.Windows.Forms.InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
+            }
+
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;

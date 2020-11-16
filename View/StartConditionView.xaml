@@ -20,12 +20,12 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="50,0,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="150,0,0,0" >
+                    <Label Grid.Column="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left">
+                        <Run FontWeight="Bold" FontSize="21">Выполните все требования</Run>
+                    </Label>
+                </StackPanel>
                 <StackPanel Focusable="False">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="150,0,0,0">
-                        <Label Grid.Column="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left">
-                            <Run FontWeight="Bold" FontSize="21">Выполните все требования</Run>
-                        </Label>
-                    </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="50"  Margin="0,10,0,10" >
                         <Button x:Name="btn1" Height="28" VerticalAlignment="Top" Click="btn1_Click" Margin="0,5">
                             <StackPanel Orientation="Horizontal">
@@ -73,7 +73,7 @@
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    легче пройти обучение, (желательно потренироваться): "самогипноз, «пальминг»,
+                                    легче пройти обучение, (желательно потренироваться): «самогипноз», «пальминг»,
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
@@ -102,7 +102,7 @@
                             </Label>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Height="80">
+                    <StackPanel Orientation="Horizontal" Height="50">
                         <Button x:Name="btn5" Height="28" VerticalAlignment="Top" Click="btn5_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
@@ -121,7 +121,7 @@
                             </Label>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Height="80">
+                    <StackPanel Orientation="Horizontal" Height="80" Margin="0,10,0,0">
                         <Button x:Name="btn6" Height="28" VerticalAlignment="Top" Click="btn6_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
@@ -197,7 +197,7 @@
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    на клавишах "ФЫВА" и "ОЛДЖ", кисти рук нависают над клавиатурой.
+                                    на клавишах "Ф,Ы,В,А" и "О,Л,Д,Ж", кисти рук нависают над клавиатурой.
                                 </Run>
                             </Label>
                         </StackPanel>

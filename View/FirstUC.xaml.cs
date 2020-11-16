@@ -11,6 +11,7 @@ using System.Media;
 using System.Windows;
 using System.Drawing;
 using System.Windows.Interop;
+using Tulpep.NotificationWindow;
 
 namespace NewSkills.View
 {
@@ -48,7 +49,10 @@ namespace NewSkills.View
             streamReaderController = new StreamReaderController(fileName);
 
             wholeText = streamReaderController.file;
+
             suggestionMessage.Text = nextLetterClass.getLetter(wholeText[0].First(), fontVariantSettings).letterDescription;
+            image.Source = getImagePathFromProperty(nextLetterClass.getPicture(wholeText[0].First()));
+
             fileLength = wholeText.Length;
             exampleText.Text = streamReaderController.file[0];
             timer = new DispatcherTimer();
@@ -83,8 +87,8 @@ namespace NewSkills.View
                 {
                     if (UtilController.ThirtyMinutesPauseCountDown == 0)
                     {
-                        UtilController.ThirtyMinutesPauseCountDown = 30;
-                        UtilController.PauseTime = 30;
+                        UtilController.ThirtyMinutesPauseCountDown = 1800;
+                        UtilController.PauseTime = 1800;
                     }
 
                     UtilController.ThirtyMinutesPauseCountDown--;
@@ -120,6 +124,13 @@ namespace NewSkills.View
                 {
                     string typingText = this.typingTextTxt.Text.Trim().Replace(" ", "|");
                     string sampleText = this.exampleText.Text.Trim().Replace(" ", "|");
+
+                    if (typingText.Length > sampleText.Length)
+                    {
+                        string typingText2 = this.typingTextTxt.Text; 
+                        this.typingTextTxt.Text = typingText2.Substring(0, sampleText.Length - 1);
+                        this.typingTextTxt.CaretIndex = sampleText.Length - 1;
+                    }
 
                     if (spaceButtonClicked == true)
                     {
@@ -165,7 +176,7 @@ namespace NewSkills.View
                         }
                     }
 
-                    if (typingText.Length == sampleText.Length)
+                    if (typingText.Length == sampleText.Length && (typingText == sampleText))
                     {
                         if (getCurrentLetter(typingText.Length, typingText, sampleText))
                         {
@@ -404,6 +415,16 @@ namespace NewSkills.View
             Bitmap bitmap = new System.Drawing.Bitmap(resource);//it is in the memory now
             return Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(),
                 IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-        } 
+        }
+
+
+        private void showWindowsPopup()
+        {
+            var popupNotifier = new PopupNotifier();
+            popupNotifier.TitleText = "Примечание";
+            popupNotifier.ContentText = "Переключите раскладку клавиатуры на русский язык";
+            popupNotifier.Image = Properties.Resources.achtung;
+            popupNotifier.Popup();
+        }
     }
 }
