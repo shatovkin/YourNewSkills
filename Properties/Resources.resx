@@ -1276,7 +1276,7 @@
   <data name="audio_Skobka_otkryvaetsya21_wav1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\audio_skobka_otkryvaetsya21.wav.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="achtung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\achtung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="book_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\book_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

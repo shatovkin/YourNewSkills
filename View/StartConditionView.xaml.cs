@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Collections.Generic;
 using System.Globalization;
 
+
 namespace NewSkills.View
 {
     /// <summary>
@@ -48,6 +49,10 @@ namespace NewSkills.View
 
             this.progress = progress;
             this.mainWindow = mainWindow;
+            this.mainWindow.Home.Visibility = Visibility.Hidden;
+            this.mainWindow.Books.Visibility = Visibility.Hidden;
+            this.mainWindow.Settings.Visibility = Visibility.Hidden;
+
             BtnForward.IsEnabled = false;
         }
 
@@ -205,7 +210,7 @@ namespace NewSkills.View
         {
             mainWindow.stopSound(); // stop sound instruction
             mainWindow.instructionButton.Visibility = Visibility.Hidden;
-
+            
             UtilController.WorkTime = UtilController.StartWorkTime;
             FirstUC viewF = new FirstUC("inputText",mainWindow);
             FirstViewModel vmF = new FirstViewModel(mainWindow);
@@ -215,6 +220,7 @@ namespace NewSkills.View
             mainWindow.OutputView.Content = viewF;
             mainWindow.timerTxt.Visibility = Visibility.Visible;
             mainWindow.Home.Visibility = Visibility.Visible;
+            this.mainWindow.Books.Visibility = Visibility.Visible;
             mainWindow.Home.IsEnabled = false;
 
             mainWindow.Settings.Visibility = Visibility.Visible;
@@ -366,55 +372,12 @@ namespace NewSkills.View
     // Does a math equation on the bound value.
     // Use @VALUE in your mathEquation as a substitute for bound value
     // Operator order is parenthesis first, then Left-To-Right (no operator precedence)
-    public class MathConverter : IValueConverter
+    public class MathConverter
     {
         private static readonly char[] _allOperators = new[] { '+', '-', '*', '/', '%', '(', ')' };
 
         private static readonly List<string> _grouping = new List<string> { "(", ")" };
         private static readonly List<string> _operators = new List<string> { "+", "-", "*", "/", "%" };
-
-        #region IValueConverter Members
-
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            // Parse value into equation and remove spaces
-            var mathEquation = parameter as string;
-            mathEquation = mathEquation.Replace(" ", "");
-            mathEquation = mathEquation.Replace("@VALUE", value.ToString());
-
-            // Validate values and get list of numbers in equation
-            var numbers = new List<double>();
-            double tmp;
-
-            foreach (string s in mathEquation.Split(_allOperators))
-            {
-                if (s != string.Empty)
-                {
-                    if (double.TryParse(s, out tmp))
-                    {
-                        numbers.Add(tmp);
-                    }
-                    else
-                    {
-                        // Handle Error - Some non-numeric, operator, or grouping character found in string
-                        throw new InvalidCastException();
-                    }
-                }
-            }
-
-            // Begin parsing method
-            EvaluateMathString(ref mathEquation, ref numbers, 0);
-
-            // After parsing the numbers list should only have one value - the total
-            return numbers[0];
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
         // Evaluates a mathematical string and keeps track of the results in a List<double> of numbers
         private void EvaluateMathString(ref string mathEquation, ref List<double> numbers, int index)

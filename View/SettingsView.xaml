@@ -2,30 +2,38 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:NewSkills.View"
-             mc:Ignorable="d">
+             xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+             mc:Ignorable="d" Margin="50">
     <StackPanel>
         <Grid Height="200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Label x:Name="suggestions" Content="Выбор подсказок:" Width="150" Grid.Column="0"/>
-                <ComboBox Name="styleComboBox" Width="350" Grid.Column="0" SelectionChanged="styleComboBox_SelectionChanged" Loaded="styleComboBox_Loaded">
-                    <ComboBoxItem Name="variant2">Цифровое обозначение пальцев (по умолчанию)</ComboBoxItem>
-                    <ComboBoxItem Name="variant3">Текствое обозначение пальцев (Вариант 1)</ComboBoxItem>
+                <Label x:Name="suggestions" FontSize="16" Content="Выбор подсказок:" Width="150" Grid.Column="0"/>
+                <ComboBox x:Name="styleComboBox" FontSize="16" Width="400" Grid.Column="0" SelectionChanged="styleComboBox_SelectionChanged" Loaded="styleComboBox_Loaded">
+                    <ComboBoxItem x:Name="variant2" Content="Цифровое обозначение пальцев(по умолчанию)"/>
+                    <ComboBoxItem x:Name="variant3" Content="Текствое обозначение пальцев"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0,40" >
-                <Label x:Name="textSuggestions" Width="150" Content="Выбор текста:" Grid.Column="1" HorizontalAlignment="Left"/>
-                <ComboBox Name="typingTextComboBox" Loaded="typingTextComboBox_Loaded" Width="350" Grid.Column="1" HorizontalAlignment="Right" SelectionChanged="typingTextComboBox_SelectionChanged">
-                    <ComboBoxItem >Основной текст для печати</ComboBoxItem>
-                    <ComboBoxItem >Полный текст</ComboBoxItem>
-                    <ComboBoxItem >Алфавит</ComboBoxItem>
+                <Label x:Name="textSuggestions" FontSize="16" Width="150" Content="Выбор текста:" Grid.Column="1" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="typingTextComboBox" FontSize="16" Loaded="typingTextComboBox_Loaded" Width="400" Grid.Column="1" HorizontalAlignment="Right" SelectionChanged="typingTextComboBox_SelectionChanged">
+                    <ComboBoxItem Content="1. Базовый текст" />
+                    <ComboBoxItem Content="2. Основной текст" />
+                    <ComboBoxItem Content="3. Алфавит" />
                 </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Label x:Name="background" FontSize="16" Margin="0,80,0,85" Content="Цвет фона:" Width="150" Grid.Column="1"/>
+                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBackground" Margin="0,80" Width="200" SelectedColorChanged="ColorPickerBackground_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Label x:Name="borderColorLabel" FontSize="16" Margin="0,120,0,45" Content="Цвет бортиков:" Width="150"/>
+                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки"  x:Name="ColorPickerBorder" Margin="0,130,0,35" Width="200" SelectedColorChanged="ColorPickerBorder_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
             </StackPanel>
         </Grid>
     </StackPanel>
