@@ -1,6 +1,8 @@
 ﻿using NewSkills.Controller;
+using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace NewSkills.View
 {
@@ -11,7 +13,7 @@ namespace NewSkills.View
     {
         private MainWindow main; 
 
-        public SettingsView(MainWindow main)
+        public SettingsView(MainWindow main, System.Windows.Media.Brush background)
         {
             InitializeComponent();
 
@@ -46,6 +48,27 @@ namespace NewSkills.View
         private void typingTextComboBox_Loaded(object sender, RoutedEventArgs e)
         {
             typingTextComboBox.SelectedIndex = Properties.Settings.Default.TypingText;
+        }
+
+        private void ColorPickerBackground_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
+        {
+            SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
+                            e.NewValue.Value.G, e.NewValue.Value.B));
+
+            this.Background = sb;
+            main.scroll.Background = sb;
+            
+        }
+
+        private void ColorPickerBorder_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
+        {
+            SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
+                           e.NewValue.Value.G, e.NewValue.Value.B));
+
+            main.leftBorder.Background = sb;
+            main.rightBorder.Background = sb;
+            main.topBorder.Background = sb;
+            main.bottomBorder.Background = sb;
         }
     }
 }

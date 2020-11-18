@@ -3,15 +3,21 @@ using NewSkills.Controller;
 using System.IO;
 using System.Windows;
 using System.Drawing;
+using System.Collections.Generic;
+using System.Windows.Media.Imaging;
+using System.Windows.Interop;
 
 namespace NewSkills.ViewModel
 {
     public class NextLetterService
     {
-        public string returnLetter { get; set; }
-        public string returPicturePath { get; set; }
-
+       
+        public static List<NextImage> LoadedImages { get; set; }
         StreamReaderController controller = new StreamReaderController("logs");
+
+        public NextLetterService() {
+            getPictureSource();
+        }
 
         enum alphabet
         {
@@ -1107,193 +1113,121 @@ namespace NewSkills.ViewModel
             throw new NotImplementedException();
         }
 
+        public List<NextImage> getPictureSource() {
 
-        public Bitmap getPicture(char letter)
+            LoadedImages = new List<NextImage>();
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_a1), letter: 'А'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_a2), letter: 'а'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_b1), letter: 'Б'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_b2), letter: 'б'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_v1), letter: 'В'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_v2), letter: 'в'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_g1), letter: 'Г'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_g2), letter: 'г'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_d1), letter: 'Д'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_d2), letter: 'д'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_e1), letter: 'Е'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_e2), letter: 'е'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_jo1), letter: 'Ё'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_jo2), letter: 'ё'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_zg1), letter: 'Ж'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_zg2), letter: 'ж'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_z1), letter: 'З'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_z2), letter: 'з'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_i1), letter: 'И'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_i2), letter: 'и'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_j1), letter: 'Й'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_j2), letter: 'й'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_k1), letter: 'К'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_k2), letter: 'к'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_l1), letter: 'Л'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_l2), letter: 'л'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_m1), letter: 'М'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_m2), letter: 'м'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_n1), letter: 'Н'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_n2), letter: 'н'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_o1), letter: 'О'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_o2), letter: 'о'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_p1), letter: 'П'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_p2), letter: 'п'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_r1), letter: 'Р'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_r2), letter: 'р'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_s1), letter: 'С'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_s2), letter: 'с'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_t1), letter: 'Т'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_t2), letter: 'т'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_u1), letter: 'У'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_u2), letter: 'у'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_f1), letter: 'Ф'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_f2), letter: 'ф'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_h1), letter: 'Х'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_h2), letter: 'х'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ze1), letter: 'Ц'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ze2), letter: 'ц'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ch1), letter: 'Ч'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ch2), letter: 'ч'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_sh1), letter: 'Ш'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_sh2), letter: 'ш'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_sche1), letter: 'Щ'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_sche2), letter: 'Щ'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_hard), letter: 'ъ'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_bsign), letter: 'ь'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ee1), letter: 'Э'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ee2), letter: 'э'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ju1), letter: 'Ю'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ju2), letter: 'ю'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ja1), letter: 'Я'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ja2), letter: 'я'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_1), letter: '1'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_2), letter: '2'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_3), letter: '3'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_4), letter: '4'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_5), letter: '5'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_6), letter: '6'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_7), letter: '7'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_8), letter: '8'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_9), letter: '9'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_0), letter: '0'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_comma), letter: ','));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_point), letter: '.'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_1sign), letter: '!'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_7sign), letter: '?'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_2sign), letter: '"'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_underscore), letter: '_'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_score), letter: '-'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_semicolon), letter: ';'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_6sign), letter: ':'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_9sign), letter: '('));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_0sign), letter: ')'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_5sign), letter: '%'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_3sign), letter: '№'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_8sign), letter: '*'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_8sign), letter: '*'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_space), letter: '|'));
+            return LoadedImages; 
+        }
+
+        private BitmapSource getImagePathFromProperty(Bitmap resource)
         {
-            switch (letter)
-            {
-                case (char)alphabet.Letter_А:
-                    return Properties.Resources.letter_a1;
-                case (char)alphabet.Letter_a:
-                    return Properties.Resources.letter_a2;
-                case (char)alphabet.Letter_B:
-                    return Properties.Resources.letter_b1;
-                case (char)alphabet.Letter_b:
-                    return Properties.Resources.letter_b2;
-                case (char)alphabet.Letter_W:
-                    return Properties.Resources.letter_v1;                   
-                case (char)alphabet.Letter_w:
-                    return Properties.Resources.letter_v2;
-                case (char)alphabet.Letter_G:
-                    return Properties.Resources.letter_g1;
-                case (char)alphabet.Letter_g:
-                    return Properties.Resources.letter_g2;
-                case (char)alphabet.Letter_D:
-                    return Properties.Resources.letter_d1;
-                case (char)alphabet.Letter_d:
-                    return Properties.Resources.letter_d2;
-                case (char)alphabet.Letter_E:
-                    return Properties.Resources.letter_e1;
-                case (char)alphabet.Letter_e:
-                    return Properties.Resources.letter_e2;
-                case (char)alphabet.Letter_JO:
-                    return Properties.Resources.letter_jo1;
-                case (char)alphabet.Letter_jo:
-                    return Properties.Resources.letter_jo2;
-                case (char)alphabet.Letter_ZG:
-                    return Properties.Resources.letter_zg1;
-                case (char)alphabet.Letter_zg:
-                    return Properties.Resources.letter_zg2;
-                case (char)alphabet.Letter_Z:
-                    return Properties.Resources.letter_z1;
-                case (char)alphabet.Letter_z:
-                    return Properties.Resources.letter_z2;
-                case (char)alphabet.Letter_I:
-                    return Properties.Resources.letter_i1;
-                case (char)alphabet.Letter_i:
-                    return Properties.Resources.letter_i2;
-                case (char)alphabet.Letter_II:
-                    return Properties.Resources.letter_j1;
-                case (char)alphabet.Letter_ii:
-                    return Properties.Resources.letter_j2;
-                case (char)alphabet.Letter_K:
-                    return Properties.Resources.letter_k1;
-                case (char)alphabet.Letter_k:
-                    return Properties.Resources.letter_k2;
-                case (char)alphabet.Letter_L:
-                    return Properties.Resources.letter_l1;
-                case (char)alphabet.Letter_l:
-                    return Properties.Resources.letter_l2;
-                case (char)alphabet.Letter_M:
-                    return Properties.Resources.letter_m1;
-                case (char)alphabet.Letter_m:
-                    return Properties.Resources.letter_m2;
-                case (char)alphabet.Letter_N:
-                    return Properties.Resources.letter_n1;
-                case (char)alphabet.Letter_n:
-                    return Properties.Resources.letter_n2;
-                case (char)alphabet.Letter_O:
-                    return Properties.Resources.letter_o1;
-                case (char)alphabet.Letter_o:
-                    return Properties.Resources.letter_o2;
-                case (char)alphabet.Letter_P:
-                    return Properties.Resources.letter_p1;
-                case (char)alphabet.Letter_p:
-                    return Properties.Resources.letter_p2;
-                case (char)alphabet.Letter_R:
-                    return Properties.Resources.letter_r1;
-                case (char)alphabet.Letter_r:
-                    return Properties.Resources.letter_r2;
-                case (char)alphabet.Letter_S:
-                    return Properties.Resources.letter_s1;
-                case (char)alphabet.Letter_s:
-                    return Properties.Resources.letter_s2;
-                case (char)alphabet.Letter_T:
-                    return Properties.Resources.letter_t1;
-                case (char)alphabet.Letter_t:
-                    return Properties.Resources.letter_t2;
-                case (char)alphabet.Letter_Y:
-                    return Properties.Resources.letter_u1;
-                case (char)alphabet.Letter_y:
-                    return Properties.Resources.letter_u2;
-                case (char)alphabet.Letter_F:
-                    return Properties.Resources.letter_f1;
-                case (char)alphabet.Letter_f:
-                    return Properties.Resources.letter_f2;
-                case (char)alphabet.Letter_X:
-                    return Properties.Resources.letter_x1;
-                case (char)alphabet.Letter_x:
-                    return Properties.Resources.letter_x2;
-                case (char)alphabet.Letter_ZE:
-                    return Properties.Resources.letter_ze1;
-                case (char)alphabet.Letter_ze:
-                    return Properties.Resources.letter_ze2;
-                case (char)alphabet.Letter_CH:
-                    return Properties.Resources.letter_ch1;
-                case (char)alphabet.Letter_ch:
-                    return Properties.Resources.letter_ch2;
-                case (char)alphabet.Letter_Sh:
-                    return Properties.Resources.letter_sh1;
-                case (char)alphabet.Letter_sh:
-                    return Properties.Resources.letter_sh2;
-                case (char)alphabet.Letter_SCHe:
-                    return Properties.Resources.letter_sche1;
-                case (char)alphabet.Letter_sche:
-                    return Properties.Resources.letter_sche2;
-                case (char)alphabet.Letter_HARD:
-                    return Properties.Resources.letter_hard;
-                case (char)alphabet.Letter_bl:
-                    return Properties.Resources.letter_bl;
-                case (char)alphabet.Letter_Soft:
-                    return Properties.Resources.letter_bsign;
-                case (char)alphabet.Letter_EE:
-                    return Properties.Resources.letter_ee1;
-                case (char)alphabet.Letter_ee:
-                    return Properties.Resources.letter_ee2;
-                case (char)alphabet.Letter_You:
-                    return Properties.Resources.letter_ju1;
-                case (char)alphabet.Letter_you:
-                    return Properties.Resources.letter_ju2;
-                case (char)alphabet.Letter_JA:
-                    return Properties.Resources.letter_ja1;
-                case (char)alphabet.Letter_ja:
-                    return Properties.Resources.letter_ja2;
-                case (char)alphabet.Letter_1:
-                    return Properties.Resources.letter_1;
-                case (char)alphabet.Letter_2:
-                    return Properties.Resources.letter_2;
-                case (char)alphabet.Letter_3:
-                    return Properties.Resources.letter_3;
-                case (char)alphabet.Letter_4:
-                    return Properties.Resources.letter_4;
-                case (char)alphabet.Letter_5:
-                    return Properties.Resources.letter_5;
-                case (char)alphabet.Letter_6:
-                    return Properties.Resources.letter_6;
-                case (char)alphabet.Letter_7:
-                    return Properties.Resources.letter_7;
-                case (char)alphabet.Letter_8:
-                    return Properties.Resources.letter_8;
-                case (char)alphabet.Letter_9:
-                    return Properties.Resources.letter_9;
-                case (char)alphabet.Letter_0:
-                    return Properties.Resources.letter_0;
-                case (char)alphabet.Letter_ExclamationMark:
-                    return Properties.Resources.letter_1sign;
-                case (char)alphabet.Letter_Quotes:
-                    return Properties.Resources.letter_2sign;
-                case (char)alphabet.Letter_Number:
-                    return Properties.Resources.letter_3sign;
-                case (char)alphabet.Letter_Semicolon:
-                    return Properties.Resources.letter_4sign;
-                case (char)alphabet.Letter_Percent:
-                    return Properties.Resources.letter_5sign;
-                case (char)alphabet.Letter_Colon:
-                    return Properties.Resources.letter_6sign;
-                case (char)alphabet.Letter_QuestionMark:
-                    return Properties.Resources.letter_7sign;
-                case (char)alphabet.Letter_Stern:
-                    return Properties.Resources.letter_8sign;
-                case (char)alphabet.Letter_BracketLeft:
-                    return Properties.Resources.letter_9sign;
-                case (char)alphabet.Letter_BrackertRight:
-                    return Properties.Resources.letter_0sign;
-                case (char)alphabet.Letter_Comma:
-                    return Properties.Resources.letter_comma;
-                case (char)alphabet.Letter_Punkt:
-                    return Properties.Resources.letter_point;
-                case (char)alphabet.Letter_Score:
-                    return Properties.Resources.letter_underscore;
-                case (char)alphabet.Letter_UnderScore:
-                    return Properties.Resources.letter_score;
-            }
-            return Properties.Resources.letter_a1;
+            BitmapSource bitmapSource = Imaging.CreateBitmapSourceFromHBitmap(resource.GetHbitmap(),
+                IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            return bitmapSource;
         }
 
         public class NextLetterWrapper{
             public string letterDescription;
             public string directionDescription;
             public UnmanagedMemoryStream voicePath;
+        }
+
+        public class NextImage {
+            public BitmapSource imageSource;
+            public char letter;
+
+            public NextImage(BitmapSource imageSource, char letter) {
+                this.imageSource = imageSource;
+                this.letter = letter;
+            }
         }
    }
 }

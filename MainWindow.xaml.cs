@@ -176,23 +176,13 @@ namespace NewSkills
             switch (typeView)
             {
                 case ViewType.StartConditionView:
-                    menuVisibility(Visibility.Hidden);
                     timeReset(Visibility.Hidden);
                     StartConditionView conditionViewStart = new StartConditionView(progress, this);
                     StartConditionViewModel startCond = new StartConditionViewModel(this);
                     conditionViewStart.DataContext = startCond;
                     this.OutputView.Content = conditionViewStart;
                     break;
-                case ViewType.StartConditionViewFirst:
-                    menuVisibility(Visibility.Hidden);
-                    timeReset(Visibility.Hidden);
-                    StarConditionalViewFirst conditionViewFirst = new StarConditionalViewFirst();
-                    StartConditionViewModelFirst startCondFirst = new StartConditionViewModelFirst(this);
-                    conditionViewFirst.DataContext = startCondFirst;
-                    this.OutputView.Content = conditionViewFirst;
-                    break;
                 case ViewType.First:
-                    menuVisibility(Visibility.Visible);
                     timeReset(Visibility.Visible);
                     FirstUC viewF = new FirstUC("inputText",this);
                     FirstViewModel vmF = new FirstViewModel(this);
@@ -200,10 +190,10 @@ namespace NewSkills
                     this.OutputView.Content = viewF;
 
                     break;
-                case ViewType.Settings:
-                    SettingsView viewS = new SettingsView(this);
-                    this.OutputView.Content = viewS;
-                    break;
+                //case ViewType.Settings:
+                //    SettingsView viewS = new SettingsView(this, System.Windows.Media.Brush background);
+                //    this.OutputView.Content = viewS;
+                //    break;
                 case ViewType.LicenseView:
                     menuVisibility(Visibility.Hidden);
                     timeReset(Visibility.Hidden);
@@ -421,7 +411,13 @@ namespace NewSkills
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsView viewS = new SettingsView(this);
+            SettingsView viewS = new SettingsView(this,this.Background);
+            this.OutputView.Content = viewS;
+        }
+
+        private void Books_Click(object sender, RoutedEventArgs e)
+        {
+            BooksView viewS = new BooksView(this);
             this.OutputView.Content = viewS;
         }
 
@@ -437,7 +433,7 @@ namespace NewSkills
         private void menuVisibility(Visibility Visibility)
         {
             Home.Visibility = Visibility;
-            // Profile.Visibility = Visibility;
+            Books.Visibility = Visibility;
             Settings.Visibility = Visibility;
         }
 

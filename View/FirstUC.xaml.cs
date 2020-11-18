@@ -12,6 +12,8 @@ using System.Windows;
 using System.Drawing;
 using System.Windows.Interop;
 using Tulpep.NotificationWindow;
+using System.Collections.Generic;
+using static NewSkills.ViewModel.NextLetterService;
 
 namespace NewSkills.View
 {
@@ -51,8 +53,8 @@ namespace NewSkills.View
             wholeText = streamReaderController.file;
 
             suggestionMessage.Text = nextLetterClass.getLetter(wholeText[0].First(), fontVariantSettings).letterDescription;
-            image.Source = getImagePathFromProperty(nextLetterClass.getPicture(wholeText[0].First()));
-
+            image.Source = getImage(wholeText[0].First());
+            
             fileLength = wholeText.Length;
             exampleText.Text = streamReaderController.file[0];
             timer = new DispatcherTimer();
@@ -165,7 +167,9 @@ namespace NewSkills.View
                                 {
                                     voiceMessages(nextLetterWrapper.voicePath);
                                 }
-                                image.Source = getImagePathFromProperty(nextLetterClass.getPicture(nextLetterToShow)); ;
+
+                                image.Source = getImage(nextLetterToShow);
+
                                 this.typingTextTxt.Text.Replace("|", " ");
                             }
                             else if (nextLetterToShow.ToString() == "|" && writeLetter == true)
@@ -206,7 +210,7 @@ namespace NewSkills.View
                             this.typingTextTxt.Select(typingTextTxt.Text.Length, typingTextTxt.Text.Length); //Поставить курсор на последнее место
                         }
                     }
-
+                 
                 } while (fileLength == 0);
             }
             catch (Exception exception)
@@ -215,6 +219,12 @@ namespace NewSkills.View
                 // streamReaderController.writeLogs(this.GetType().Name, exception);
             }
         }
+
+        public void getPictureCollection()
+        {
+            List<BitmapSource> list = new List<BitmapSource>();
+        }
+
 
         private char lastLetterBeforeClickSpace(string typingText)
         {
@@ -355,7 +365,8 @@ namespace NewSkills.View
         private void popUpToClickSpace(char lastLetter)
         {
             NextLetterService.NextLetterWrapper lastLetterSpaceDirectionDescription = nextLetterClass.getLetter(lastLetter, fontVariantSettings);
-            image.Source = getImagePathFromProperty(Properties.Resources.letter_space);
+
+            image.Source = getImage('|');
 
             if (fontVariantSettings == 0)
             {
@@ -410,21 +421,9 @@ namespace NewSkills.View
             sp.Play();
         }
 
-        private BitmapSource getImagePathFromProperty(Bitmap resource)
-        {
-            Bitmap bitmap = new System.Drawing.Bitmap(resource);//it is in the memory now
-            return Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(),
-                IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-        }
-
-
-        private void showWindowsPopup()
-        {
-            var popupNotifier = new PopupNotifier();
-            popupNotifier.TitleText = "Примечание";
-            popupNotifier.ContentText = "Переключите раскладку клавиатуры на русский язык";
-            popupNotifier.Image = Properties.Resources.achtung;
-            popupNotifier.Popup();
+        private BitmapSource getImage(char lastLetter) {
+            BitmapSource bs =  NextLetterService.LoadedImages.Find(x => x.letter == lastLetter).imageSource;
+            return bs; 
         }
     }
 }

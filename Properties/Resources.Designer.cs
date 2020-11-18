@@ -61,16 +61,6 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap achtung {
-            get {
-                object obj = ResourceManager.GetObject("achtung", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_a12_wav {
@@ -2569,6 +2559,16 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_zvuk_vokzala_31_wav {
             get {
                 return ResourceManager.GetStream("audio_zvuk_vokzala_31_wav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap book_icon {
+            get {
+                object obj = ResourceManager.GetObject("book_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
