@@ -33,12 +33,29 @@ namespace NewSkills.View
             Properties.Settings.Default.Save();
         }
 
-
         private void typingTextComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Properties.Settings.Default.TypingText = typingTextComboBox.SelectedIndex;
+            Properties.Settings.Default.CurrentInputTextName = returnTextName(typingTextComboBox.SelectedIndex);
             Properties.Settings.Default.Save();
         }
+
+        private string returnTextName(int selectedIndex) {
+
+            if (selectedIndex == 0)
+            {
+                return "inputText1";
+            }
+            else if (selectedIndex == 1)
+            {
+                return "inputText2";
+            }
+            else if (selectedIndex == 2) {
+                return "inputText3";
+            }
+            return ""; 
+        }
+
 
         private void styleComboBox_Loaded(object sender, RoutedEventArgs e)
         {
@@ -57,7 +74,6 @@ namespace NewSkills.View
 
             this.Background = sb;
             main.scroll.Background = sb;
-            
         }
 
         private void ColorPickerBorder_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)

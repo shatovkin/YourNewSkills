@@ -2613,6 +2613,16 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconDen {
+            get {
+                object obj = ResourceManager.GetObject("iconDen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to в нашем случае нужно сесть за стол
         ///переговоров обеим сторонам родителям и
         ///детям цель переговоров смена ролевой 
@@ -2621,7 +2631,7 @@ namespace NewSkills.Properties {
         ///помощь предмет переговоров ролевой
         ///перечень каждой стороны обе стороны
         ///должны прийти к согласию о том что
-        ///например ребенок звонит родителям раз в
+        ///например ребёнок звонит родителям раз в
         ///неделю и интересуется здоровьем
         ///самочувствием заботами и нуждами своих
         ///родителей а они в свою очередь ждут
@@ -2637,7 +2647,7 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ворота между сознательными ощущениями
         ///и подсознанием это внимание когда вы
-        ///переключаете свое внимание с одного
+        ///переключаете своё внимание с одного
         ///источника раздражения на другой события
         ///оказывающиеся в центре вашего внимания
         ///начинают осознаваться в то время как те
@@ -2645,7 +2655,7 @@ namespace NewSkills.Properties {
         ///уходят в тень осознаются меньше если бы
         ///мы не обладали способностью ограничивать
         ///количество информации в нашем сознании
-        ///то не могли бы действовать из за
+        ///то не могли бы действовать из-за
         ///захлестнувшего нас океана событий и
         ///ощущений например в этот момент вы
         ///можете  [rest of string was truncated]&quot;;.
@@ -3634,6 +3644,16 @@ namespace NewSkills.Properties {
         public static System.Drawing.Bitmap letter_zg2 {
             get {
                 object obj = ResourceManager.GetObject("letter_zg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap mailBild {
+            get {
+                object obj = ResourceManager.GetObject("mailBild", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

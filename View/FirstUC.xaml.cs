@@ -33,40 +33,77 @@ namespace NewSkills.View
         NextLetterService nextLetterClass = new NextLetterService();
         NextLetterService.NextLetterWrapper nextLetterWrapper = new NextLetterService.NextLetterWrapper();
 
-        private int fileLineNumber = 1;
+        private int fileLineNumber;
         private string[] wholeText;
         private int fileLength;
         private bool writeLetter = false;
         private int correctTextLenght = 0;
-
+        private string fileName;
         public FirstUC(string fileName, MainWindow mainWindow)
         {
             InitializeComponent();
 
             this.mainWindow = mainWindow;
-            mainWindow.progress.Content = "0";
+
             mainWindow.Home.IsEnabled = false;
             fontVariantSettings = Properties.Settings.Default.FontVariant;
-            this.inputText = fileName;
+            this.fileName = fileName;
+            this.inputText = this.fileName;
             streamReaderController = new StreamReaderController(fileName);
 
+            fileLineNumber = returnWriteLine(this.fileName);
             wholeText = streamReaderController.file;
 
-            suggestionMessage.Text = nextLetterClass.getLetter(wholeText[0].First(), fontVariantSettings).letterDescription;
-            image.Source = getImage(wholeText[0].First());
-            
+            suggestionMessage.Text = nextLetterClass.getLetter(wholeText[fileLineNumber].First(), fontVariantSettings).letterDescription;
+            image.Source = getImage(wholeText[fileLineNumber].First());
+
             fileLength = wholeText.Length;
-            exampleText.Text = streamReaderController.file[0];
+            exampleText.Text = streamReaderController.file[fileLineNumber];
+
+            mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength).ToString();//считать проценты для прогресса
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
         }
 
-        private char getFirstLetter(string[] wholeText)
+        // cчитываем из памяти какая строка была последней при печати.
+        private int returnWriteLine(string fileName)
         {
-            char firstLine = wholeText[0].First();
-            return firstLine;
+            if (fileName == "inputText1")
+            {
+                return Properties.Settings.Default.InputText1;
+            }
+            else if (fileName == "inputText2")
+            {
+                return Properties.Settings.Default.InputText2;
+            }
+            else if (fileName == "inputText3")
+            {
+
+                return Properties.Settings.Default.InputText3;
+            }
+
+            return 0;
+        }
+
+        //Записываем при смене строки, какая строка по счету
+        private void writeStopLine(string fileName, int lineNumber)
+        {
+
+            if (fileName == "inputText1")
+            {
+                Properties.Settings.Default.InputText1 = lineNumber;
+            }
+            else if (fileName == "inputText2")
+            {
+                Properties.Settings.Default.InputText2 = lineNumber;
+            }
+            else if (fileName == "inputText3")
+            {
+                Properties.Settings.Default.InputText3 = lineNumber;
+            }
+            Properties.Settings.Default.Save();
         }
 
         // ежесекундый запуск метода, для таймера
@@ -109,7 +146,8 @@ namespace NewSkills.View
                         UtilController.CommonRounds--;
                         UtilController.DoSoundPause5 = false;
 
-                        if (UtilController.CommonRounds != 0) {
+                        if (UtilController.CommonRounds != 0)
+                        {
                             voiceMessages(Properties.Resources.audio_pereryv_5_minut_32_wav);
                         }
                     }
@@ -129,7 +167,7 @@ namespace NewSkills.View
 
                     if (typingText.Length > sampleText.Length)
                     {
-                        string typingText2 = this.typingTextTxt.Text; 
+                        string typingText2 = this.typingTextTxt.Text;
                         this.typingTextTxt.Text = typingText2.Substring(0, sampleText.Length - 1);
                         this.typingTextTxt.CaretIndex = sampleText.Length - 1;
                     }
@@ -169,7 +207,6 @@ namespace NewSkills.View
                                 }
 
                                 image.Source = getImage(nextLetterToShow);
-
                                 this.typingTextTxt.Text.Replace("|", " ");
                             }
                             else if (nextLetterToShow.ToString() == "|" && writeLetter == true)
@@ -182,6 +219,8 @@ namespace NewSkills.View
 
                     if (typingText.Length == sampleText.Length && (typingText == sampleText))
                     {
+                        fileLineNumber++;
+
                         if (getCurrentLetter(typingText.Length, typingText, sampleText))
                         {
                             if (fileLineNumber != wholeText.Length)
@@ -192,8 +231,8 @@ namespace NewSkills.View
                                 }
 
                                 this.typingTextTxt.Text = "";
-                                fileLineNumber++;
-
+                               
+                                writeStopLine(fileName, fileLineNumber);
                                 this.mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength).ToString();//считать проценты для прогресса
                             }
                             else
@@ -210,7 +249,7 @@ namespace NewSkills.View
                             this.typingTextTxt.Select(typingTextTxt.Text.Length, typingTextTxt.Text.Length); //Поставить курсор на последнее место
                         }
                     }
-                 
+
                 } while (fileLength == 0);
             }
             catch (Exception exception)
@@ -277,7 +316,7 @@ namespace NewSkills.View
                 }
             }
             catch (Exception)
-            { 
+            {
                 if (typingTextLenght == -1)
                 {
                     correctTextLenght = typingTextLenght + 1;
@@ -297,11 +336,11 @@ namespace NewSkills.View
         //*и вернуть эту букву.
         private char nextLetter(string inputText, string sampleText)
         {
-            
+
 
             if (inputText.Substring(0, inputText.Length) == sampleText.Substring(0, inputText.Length))
             {
-                  if (inputText.Length < sampleText.Length)
+                if (inputText.Length < sampleText.Length)
                 {
                     char[] letter = sampleText.ToArray();
                     char toTypingLetter = letter[inputText.Length];
@@ -310,11 +349,13 @@ namespace NewSkills.View
                 else
                 {
 
-                    if (fileLineNumber < fileLength) {
+                    if (fileLineNumber < fileLength)
+                    {
                         exampleText.Text = streamReaderController.file[fileLineNumber];
                     }
 
-                     if (fileLineNumber == fileLength) {
+                    if (fileLineNumber == fileLength)
+                    {
                         loadCongratulationVideo();
                         mainWindow.RunTimer = false;
                         mainWindow.progress.Content = "100";
@@ -325,10 +366,11 @@ namespace NewSkills.View
             return '*';
         }
 
-        private void loadCongratulationVideo() {
+        private void loadCongratulationVideo()
+        {
             try
             {
-                CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow);
+                CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow, fileName);
                 congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 congratulationWindow.Owner = Application.Current.MainWindow;
                 congratulationWindow.Show();
@@ -421,9 +463,10 @@ namespace NewSkills.View
             sp.Play();
         }
 
-        private BitmapSource getImage(char lastLetter) {
-            BitmapSource bs =  NextLetterService.LoadedImages.Find(x => x.letter == lastLetter).imageSource;
-            return bs; 
+        private BitmapSource getImage(char lastLetter)
+        {
+            BitmapSource bs = NextLetterService.LoadedImages.Find(x => x.letter == lastLetter).imageSource;
+            return bs;
         }
     }
 }

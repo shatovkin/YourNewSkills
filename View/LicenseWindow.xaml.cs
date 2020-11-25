@@ -2,21 +2,12 @@
 using System.Windows.Controls;
 using NewSkills.Controller;
 using System.Management;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Xml;
-using System.Web;
-using System.Xml.Serialization;
-using System.Xml.Linq;
-using System.Text;
-using System;
 using System.IO;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
-using System.ComponentModel;
+
 
 namespace NewSkills.View
 {
@@ -40,10 +31,6 @@ namespace NewSkills.View
             GetCPUId();
 
 
-        }
-
-        public LicenseWindow()
-        {
         }
 
         private void licenseCodeOne_ChangeEvent(object sender, TextChangedEventArgs e)

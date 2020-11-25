@@ -70,5 +70,53 @@ namespace NewSkills.Properties {
                 this["TypingText"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText1 {
+            get {
+                return ((int)(this["InputText1"]));
+            }
+            set {
+                this["InputText1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText2 {
+            get {
+                return ((int)(this["InputText2"]));
+            }
+            set {
+                this["InputText2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText3 {
+            get {
+                return ((int)(this["InputText3"]));
+            }
+            set {
+                this["InputText3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("inputText1")]
+        public string CurrentInputTextName {
+            get {
+                return ((string)(this["CurrentInputTextName"]));
+            }
+            set {
+                this["CurrentInputTextName"] = value;
+            }
+        }
     }
 }

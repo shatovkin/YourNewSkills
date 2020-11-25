@@ -6,7 +6,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:NewSkills.View"
         mc:Ignorable="d"
-        Title="CongratulationWindow" WindowStyle="None">
+        Title="CongratulationWindow" WindowStyle="SingleBorderWindow">
     <Grid>
         <Label HorizontalAlignment="Center" FontSize="16">Поздравляем ! Уже завтра вы сможете печатать по новому !</Label>
         <StackPanel VerticalAlignment="Bottom" Margin="0,40,0,0" >

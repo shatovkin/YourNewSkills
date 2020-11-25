@@ -14,5 +14,17 @@
     <Setting Name="TypingText" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="InputText1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="InputText2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="InputText3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CurrentInputTextName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">inputText1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
