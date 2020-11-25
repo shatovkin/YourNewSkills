@@ -65,11 +65,11 @@
                                 <Setter Property="Background" TargetName="border" Value="#3A6180"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="#3A6180"/>
                             </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
+                            <!--<Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
                                 <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                            </Trigger>
+                            </Trigger>-->
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -241,7 +241,9 @@
                         MouseLeave="Home_MouseLeave"
                         Click="Home_Click"
                         >
-                --><!--add image--><!--
+                -->
+            <!--add image-->
+            <!--
                 <Image Source="Resources/home_icon.png"
                            Stretch="None">
                 </Image>
@@ -275,7 +277,9 @@
                         MouseEnter="Settings_MouseEnter" 
                         MouseLeave="Settings_MouseLeave"
                         Click="Settings_Click">
-                --><!--add image--><!--
+                -->
+            <!--add image-->
+            <!--
 
                 <Image Source="Resources/settings_icon.png"
                            Stretch="None">
@@ -283,7 +287,7 @@
             </Button>-->
         </StackPanel>
 
-                  
+
         <!--add a header to the grid-->
         <Grid Row="0" Height="50" Background="#d7b3a8" Name="topBorder" VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.RowSpan="2">
             <Grid Height="28">
@@ -298,6 +302,7 @@
                            Grid.Column="1" HorizontalAlignment="Right"/>
                 <Label x:Name="timerTxt" Content="00:00:00"  FontWeight="Bold" 
                            Grid.Column="2" HorizontalAlignment="Right" FontSize="14"/>
+                
             </Grid>
             <!--add a header title-->
             <TextBlock Text=""
@@ -322,9 +327,9 @@
 
                 <Grid   DockPanel.Dock="Left" Width="50"   
                         Background="#d7b3a8" Name="leftBorder">
-                    
-                        <!--add 3 buttons - Home, Profile and Settings-->
-                        <Button x:Name="Home"
+
+                    <!--add 3 buttons - Home, Profile and Settings-->
+                    <Button x:Name="Home"
                         Height="100"
                         Focusable="False"
                         Background="Transparent"
@@ -334,11 +339,11 @@
                         MouseLeave="Home_MouseLeave"
                         Click="Home_Click"
                         >
-                            <!--add image-->
-                            <Image Source="Resources/home_icon.png"
+                        <!--add image-->
+                        <Image Source="Resources/home_icon.png"
                            Stretch="None">
-                            </Image>
-                        </Button>
+                        </Image>
+                    </Button>
                     <Button x:Name="Books"
                         Focusable="False"
                         Height="100"
@@ -368,6 +373,22 @@
                         <!--add image-->
 
                         <Image Source="Resources/settings_icon.png"
+                           Stretch="None">
+                        </Image>
+                    </Button>
+                    <Button x:Name="Support"
+                        Focusable="False"
+                        Height="100"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="0,150,0,0"
+                        Style="{DynamicResource SettingsBtnStyle}" 
+                        MouseEnter="Settings_MouseEnter" 
+                        MouseLeave="Settings_MouseLeave"
+                        Click="emailView_Click">
+                        <!--add image-->
+
+                        <Image Source="Resources/mailBild.png"
                            Stretch="None">
                         </Image>
                     </Button>

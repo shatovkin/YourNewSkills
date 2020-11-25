@@ -184,7 +184,7 @@ namespace NewSkills
                     break;
                 case ViewType.First:
                     timeReset(Visibility.Visible);
-                    FirstUC viewF = new FirstUC("inputText",this);
+                    FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, this);
                     FirstViewModel vmF = new FirstViewModel(this);
                     viewF.DataContext = vmF;
                     this.OutputView.Content = viewF;
@@ -203,7 +203,7 @@ namespace NewSkills
                     lw.Show();
                     break;
                 case ViewType.CongratulationView:
-                    CongratulationWindow congratulationWindow = new CongratulationWindow(this);
+                    CongratulationWindow congratulationWindow = new CongratulationWindow(this,"inputText1");
                     congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                     congratulationWindow.Owner = Application.Current.MainWindow;
                     congratulationWindow.Show();
@@ -402,7 +402,7 @@ namespace NewSkills
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            FirstUC viewF = new FirstUC("inputText", this);
+            FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, this);
             FirstViewModel vmF = new FirstViewModel(this);
             viewF.DataContext = vmF;
             this.OutputView.Content = viewF;
@@ -535,6 +535,14 @@ namespace NewSkills
 
             scroll.Width = e.NewSize.Width;
             stackPanelDockTop.Width = e.NewSize.Width;
+        }
+
+        private void emailView_Click(object sender, RoutedEventArgs e)
+        {
+            EmailView view = new EmailView();
+            view.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            view.Owner = Application.Current.MainWindow;
+            view.Show();
         }
     }
 }

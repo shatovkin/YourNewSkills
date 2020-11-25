@@ -1195,13 +1195,12 @@ namespace NewSkills.ViewModel
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_2sign), letter: '"'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_underscore), letter: '_'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_score), letter: '-'));
-            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_semicolon), letter: ';'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_4sign), letter: ';'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_6sign), letter: ':'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_9sign), letter: '('));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_0sign), letter: ')'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_5sign), letter: '%'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_3sign), letter: '№'));
-            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_8sign), letter: '*'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_8sign), letter: '*'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_space), letter: '|'));
             return LoadedImages; 

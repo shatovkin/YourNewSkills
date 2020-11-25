@@ -212,7 +212,7 @@ namespace NewSkills.View
             mainWindow.instructionButton.Visibility = Visibility.Hidden;
             
             UtilController.WorkTime = UtilController.StartWorkTime;
-            FirstUC viewF = new FirstUC("inputText",mainWindow);
+            FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, mainWindow);
             FirstViewModel vmF = new FirstViewModel(mainWindow);
             viewF.DataContext = vmF;
 
