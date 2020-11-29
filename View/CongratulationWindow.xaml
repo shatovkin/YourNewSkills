@@ -6,12 +6,13 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:NewSkills.View"
         mc:Ignorable="d"
-        Title="CongratulationWindow" WindowStyle="SingleBorderWindow">
+        Title="" WindowStyle="SingleBorderWindow" Closing="MainForm_Closing">
     <Grid>
-        <Label HorizontalAlignment="Center" FontSize="16">Поздравляем ! Уже завтра вы сможете печатать по новому !</Label>
+        <StackPanel Orientation="Vertical">
+            <Label HorizontalAlignment="Center" FontSize="16">Поздравляем ! Уже завтра вы сможете печатать по новому !</Label>
+        </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Margin="0,40,0,0" >
             <Image x:Name="imageEinstein" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Resources/Einstein1.gif"/>
         </StackPanel>
-        
     </Grid>
 </Window>

@@ -19,7 +19,7 @@ namespace NewSkills.ViewModel
         public MainViewModel(IMainWindowsCodeBehind codeBehind)
         {
             if (codeBehind == null) throw new ArgumentNullException(nameof(codeBehind));
-
+            
             _MainCodeBehind = codeBehind;
         }
     }

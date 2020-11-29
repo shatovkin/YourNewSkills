@@ -9,10 +9,10 @@
         VerticalAlignment="Center"
         VerticalContentAlignment="Center"
         x:Name="CurrentPresenter" 
-        SizeChanged="StartConditionView_OnSizeChanged">
+        >
 
     <UserControl.Resources>
-        <local:MathConverter x:Key="MathConverter" />
+     
     </UserControl.Resources>
     <WrapPanel>
         <Grid HorizontalAlignment="Stretch">

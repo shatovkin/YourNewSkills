@@ -55,7 +55,12 @@ namespace NewSkills.Controller
         // высчитать кол-во процентов
         public static int getProgressInPercent(int fileLineNumber, int fileLength)
         {
-           return ((fileLineNumber-1) * 100) / fileLength;
+            int percent = ((fileLineNumber) * 100) / fileLength;
+            if (percent < 0) {
+                percent = percent * -1;
+            }
+
+           return percent;
            
         }
 

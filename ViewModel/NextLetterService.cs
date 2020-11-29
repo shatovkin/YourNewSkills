@@ -1193,8 +1193,8 @@ namespace NewSkills.ViewModel
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_1sign), letter: '!'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_7sign), letter: '?'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_2sign), letter: '"'));
-            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_underscore), letter: '_'));
-            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_score), letter: '-'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_score), letter: '_'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_underscore), letter: '-'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_4sign), letter: ';'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_6sign), letter: ':'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_9sign), letter: '('));

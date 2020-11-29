@@ -161,7 +161,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CongratulationModel.cs" />
-    <Compile Include="ViewModel\FirstViewModel.cs" />
+    <Compile Include="ViewModel\FirstView.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\NextLetterService.cs" />
@@ -186,9 +186,6 @@
     </Compile>
     <Compile Include="View\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\StartConditionViewTwo.xaml.cs">
-      <DependentUpon>StartConditionViewTwo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\StartConditionView.xaml.cs">
       <DependentUpon>StartConditionView.xaml</DependentUpon>
@@ -232,10 +229,6 @@
     <Page Include="View\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\StartConditionViewTwo.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\StartConditionView.xaml">
       <SubType>Designer</SubType>
