@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:NewSkills.View"
         mc:Ignorable="d"
         Title="" Height="300" Width="600"
-         WindowStyle="SingleBorderWindow">
+        WindowStyle="SingleBorderWindow">
     <Grid Margin="0,0,-0.4,-0.4">
         <Label x:Name="lableActivation" Foreground="Black" Content="Активация программы" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Width="347" Margin="116,10,0,0"/>
         <Label x:Name="messageLabel" Foreground="Red" Content="Лицензионный ключ не верен, попробуйте еще раз" HorizontalAlignment="Left" Visibility="Hidden"  VerticalAlignment="Top" Width="347" Margin="116,55,0,0"/>

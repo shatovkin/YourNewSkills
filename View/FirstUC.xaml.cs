@@ -83,14 +83,12 @@ namespace NewSkills.View
 
                 return Properties.Settings.Default.InputText3;
             }
-
             return 0;
         }
 
         //Записываем при смене строки, какая строка по счету
         private void writeStopLine(string fileName, int lineNumber)
         {
-
             if (fileName == "inputText1")
             {
                 Properties.Settings.Default.InputText1 = lineNumber;
@@ -114,7 +112,6 @@ namespace NewSkills.View
             if (UtilController.ActivateWorkOrPause == false && UtilController.BlockTextFieldAndTimer == false)
             {
                 typingTextTxt.IsReadOnly = false;
-
                 UtilController.DoSoundPause5 = true;
                 UtilController.DoSoundPause30 = true;
             }
@@ -237,10 +234,22 @@ namespace NewSkills.View
                             }
                             else
                             {
-                                UtilController.BlockTextFieldAndTimer = true;
-                                this.typingTextTxt.IsReadOnly = true;
-                                this.mainWindow.Content = "100";
-                                mainWindow.LoadView(ViewType.CongratulationView);
+                                try
+                                {
+                                  
+                                    mainWindow.RunTimer = false;
+                                    //UtilController.BlockTextFieldAndTimer = true;
+                                    //this.typingTextTxt.IsReadOnly = true;
+                                    mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength);
+                                    CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow,fileName);
+                                    congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                                    congratulationWindow.Owner = Application.Current.MainWindow;
+                                    congratulationWindow.Show();
+                                }
+                                catch (Exception er)
+                                {
+                                    MessageBox.Show("test"+er.ToString());
+                                }
                             }
                         }
                         else
@@ -258,12 +267,6 @@ namespace NewSkills.View
                 // streamReaderController.writeLogs(this.GetType().Name, exception);
             }
         }
-
-        public void getPictureCollection()
-        {
-            List<BitmapSource> list = new List<BitmapSource>();
-        }
-
 
         private char lastLetterBeforeClickSpace(string typingText)
         {
@@ -336,48 +339,39 @@ namespace NewSkills.View
         //*и вернуть эту букву.
         private char nextLetter(string inputText, string sampleText)
         {
-
-
-            if (inputText.Substring(0, inputText.Length) == sampleText.Substring(0, inputText.Length))
-            {
-                if (inputText.Length < sampleText.Length)
-                {
-                    char[] letter = sampleText.ToArray();
-                    char toTypingLetter = letter[inputText.Length];
-                    return toTypingLetter;
-                }
-                else
-                {
-
-                    if (fileLineNumber < fileLength)
-                    {
-                        exampleText.Text = streamReaderController.file[fileLineNumber];
-                    }
-
-                    if (fileLineNumber == fileLength)
-                    {
-                        loadCongratulationVideo();
-                        mainWindow.RunTimer = false;
-                        mainWindow.progress.Content = "100";
-                    }
-                    return streamReaderController.file[fileLineNumber].First();
-                }
-            }
-            return '*';
-        }
-
-        private void loadCongratulationVideo()
-        {
             try
             {
-                CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow, fileName);
-                congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                congratulationWindow.Owner = Application.Current.MainWindow;
-                congratulationWindow.Show();
+                if (inputText.Substring(0, inputText.Length) == sampleText.Substring(0, inputText.Length))
+                {
+                    if (inputText.Length < sampleText.Length)
+                    {
+                        char[] letter = sampleText.ToArray();
+                        char toTypingLetter = letter[inputText.Length];
+                        return toTypingLetter;
+                    }
+                    else
+                    {
+                        if (fileLineNumber < fileLength)
+                        {
+                            exampleText.Text = streamReaderController.file[fileLineNumber];
+                        }
+
+                        if (fileLineNumber == fileLength)
+                        {
+                            mainWindow.RunTimer = false;
+                            mainWindow.progress.Content = "100";
+
+                        }
+                        return streamReaderController.file[fileLineNumber].First();
+                    }
+                }
+                return '*';
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ошибка поздравления: " + e.ToString());
+
+                MessageBox.Show("exception:" + e.ToString());
+                return '*';
             }
         }
 
