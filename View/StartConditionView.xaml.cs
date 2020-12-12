@@ -52,6 +52,7 @@ namespace NewSkills.View
             this.mainWindow.Home.Visibility = Visibility.Hidden;
             this.mainWindow.Books.Visibility = Visibility.Hidden;
             this.mainWindow.Settings.Visibility = Visibility.Hidden;
+            this.mainWindow.soundButton.Visibility = Visibility.Hidden;
 
             BtnForward.IsEnabled = false;
         }

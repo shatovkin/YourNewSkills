@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewSkills", "YourNewSki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseServiceWebApp", "..\LicenseServiceWebApp\LicenseServiceWebApp.csproj", "{C1C0AEE4-D13F-41A2-8425-35C4CF67CEA4}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "newskills", "..\newskills\newskills.vdproj", "{149CCB33-2D1E-41D4-B78D-2B47D8E8CC9C}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "newskills", "..\newskills\newskills.vdproj", "{EECF89B5-FA98-45D4-8BE3-683821FFCE0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +24,8 @@ Global
 		{C1C0AEE4-D13F-41A2-8425-35C4CF67CEA4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{C1C0AEE4-D13F-41A2-8425-35C4CF67CEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C0AEE4-D13F-41A2-8425-35C4CF67CEA4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{149CCB33-2D1E-41D4-B78D-2B47D8E8CC9C}.Debug|Any CPU.ActiveCfg = Debug
-		{149CCB33-2D1E-41D4-B78D-2B47D8E8CC9C}.Release|Any CPU.ActiveCfg = Release
+		{EECF89B5-FA98-45D4-8BE3-683821FFCE0A}.Debug|Any CPU.ActiveCfg = Debug
+		{EECF89B5-FA98-45D4-8BE3-683821FFCE0A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
