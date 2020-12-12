@@ -20,9 +20,12 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="50,0,0,0">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,0,0,0" >
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="50,0,0,0" >
                     <Label Grid.Column="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left">
-                        <Run FontWeight="Bold" FontSize="21">Выполнение заданий позволит вам начать обучение</Run>
+                        <Run FontWeight="Bold" FontSize="21">Выполните задания и отметьте галочками в окошках около каждого пункта.</Run>
+                    </Label>
+                    <Label Grid.Column="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left">
+                        <Run FontWeight="Bold" FontSize="21">После чего нажмите на кнопку далее.</Run>
                     </Label>
                 </StackPanel>
                 <StackPanel Focusable="False">

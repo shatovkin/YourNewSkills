@@ -39,6 +39,7 @@ namespace NewSkills.View
         private bool writeLetter = false;
         private int correctTextLenght = 0;
         private string fileName;
+        SoundPlayer sp; 
         public FirstUC(string fileName, MainWindow mainWindow)
         {
             InitializeComponent();
@@ -236,10 +237,8 @@ namespace NewSkills.View
                             {
                                 try
                                 {
-                                  
+                                    stopSound(sp);
                                     mainWindow.RunTimer = false;
-                                    //UtilController.BlockTextFieldAndTimer = true;
-                                    //this.typingTextTxt.IsReadOnly = true;
                                     mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength);
                                     CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow,fileName);
                                     congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -264,8 +263,12 @@ namespace NewSkills.View
             catch (Exception exception)
             {
                 MessageBox.Equals(exception, exception);
-                // streamReaderController.writeLogs(this.GetType().Name, exception);
             }
+        }
+
+        private void stopSound(SoundPlayer sp)
+        {
+            sp.Stop();
         }
 
         private char lastLetterBeforeClickSpace(string typingText)
@@ -362,15 +365,13 @@ namespace NewSkills.View
                             mainWindow.progress.Content = "100";
 
                         }
-                        return streamReaderController.file[fileLineNumber].First();
+                        return streamReaderController.file[fileLineNumber+1].First();
                     }
                 }
                 return '*';
             }
             catch (Exception e)
             {
-
-                MessageBox.Show("exception:" + e.ToString());
                 return '*';
             }
         }
@@ -452,7 +453,7 @@ namespace NewSkills.View
 
         private void voiceMessages(UnmanagedMemoryStream resourcesPath)
         {
-            SoundPlayer sp = new SoundPlayer();
+            sp = new SoundPlayer();
             sp.Stream = resourcesPath;
             sp.Play();
         }

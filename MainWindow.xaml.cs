@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows.Controls;
 using System.Diagnostics;
+using Tulpep.NotificationWindow;
+using System.Drawing;
 
 namespace NewSkills
 {
@@ -155,6 +157,15 @@ namespace NewSkills
             if (e.Key == Key.Space)
             {
                 anyKeyPressed = true;
+            }else if (Keyboard.IsKeyToggled(Key.CapsLock)) {
+                showPopUp("Capslock", "Активирована кнопка 'Capslock' \n\n Для выключения нажмите 'Capslock' еще раз");
+            }
+
+            string language = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
+
+            if (language != "ru-RU")
+            {
+                System.Windows.Forms.InputLanguage.CurrentInputLanguage = System.Windows.Forms.InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
             }
         }
 
@@ -183,7 +194,6 @@ namespace NewSkills
             {
                 MessageBox.Show("Congratulation:" + ex.ToString());
             }
-
         }
 
         public void LoadView(ViewType typeView)
@@ -552,6 +562,38 @@ namespace NewSkills
             view.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             view.Owner = Application.Current.MainWindow;
             view.Show();
+        }
+
+        private void showPopUp(string titel, string message) {
+
+            var popupNotifier = new PopupNotifier();
+            popupNotifier.TitleText = titel;
+            popupNotifier.ContentText = message;
+            popupNotifier.ContentFont = new System.Drawing.Font("Arial", 16F);
+            popupNotifier.HeaderColor = System.Drawing.Color.FromArgb(252, 164, 2);
+            popupNotifier.BodyColor = System.Drawing.Color.FromArgb(153, 204, 255);
+            popupNotifier.Size = new System.Drawing.Size(500, 150);
+            popupNotifier.Scroll = true;
+            popupNotifier.Popup();
+
+
+            //PopupNotifier popup = new PopupNotifier();
+            //popup.Image = Properties.Resources.icons8_brake_warning_25px_1;
+            //popup.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            //popup.Size = new Size(400, 100);
+            //popup.ShowGrip = false;
+            //popup.HeaderHeight = 20;
+            //popup.TitlePadding = new Padding(3);
+            //popup.ContentPadding = new Padding(3);
+            //popup.ImagePadding = new Padding(8);
+            //popup.AnimationDuration = 1000;
+            //popup.AnimationInterval = 1;
+            //popup.HeaderColor = Color.FromArgb(252, 164, 2);
+            //popup.Scroll = true;
+            //popup.ShowCloseButton = false;
+            //popup.TitleText = "CRITICAL ITEM(S)";
+            //popup.ContentText = critical;
+            //popup.Popup();
         }
     }
 }

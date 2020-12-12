@@ -29,8 +29,6 @@ namespace NewSkills.View
 
             this.mainWindow = mainWindow;
             GetCPUId();
-
-
         }
 
         private void licenseCodeOne_ChangeEvent(object sender, TextChangedEventArgs e)
@@ -104,7 +102,6 @@ namespace NewSkills.View
 
         private void GetCPUId()
         {
-
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("select ProcessorId from Win32_Processor");
             foreach (ManagementObject mj in searcher.Get())
             {
