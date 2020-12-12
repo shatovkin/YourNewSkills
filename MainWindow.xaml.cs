@@ -68,6 +68,8 @@ namespace NewSkills
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
 
+            Properties.Settings.Default.StartConditionsAchieved = false;
+            Properties.Settings.Default.Save();
 
             string language = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
 
@@ -421,11 +423,21 @@ namespace NewSkills
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, this);
-            FirstView vmF = new FirstView(this);
-            viewF.DataContext = vmF;
-            this.OutputView.Content = viewF;
-            this.runTimer = true;
+            if (Properties.Settings.Default.StartConditionsAchieved == true)
+            {
+                FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, this);
+                FirstView vmF = new FirstView(this);
+                viewF.DataContext = vmF;
+                this.OutputView.Content = viewF;
+                this.runTimer = true;
+            }
+            else {
+                timeReset(Visibility.Hidden);
+                StartConditionView conditionViewStart = new StartConditionView(progress, this);
+                StartConditionViewModel startCond = new StartConditionViewModel(this);
+                conditionViewStart.DataContext = startCond;
+                this.OutputView.Content = conditionViewStart;
+            }
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)

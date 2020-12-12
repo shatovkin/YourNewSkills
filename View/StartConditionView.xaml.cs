@@ -49,9 +49,6 @@ namespace NewSkills.View
 
             this.progress = progress;
             this.mainWindow = mainWindow;
-            this.mainWindow.Home.Visibility = Visibility.Hidden;
-            this.mainWindow.Books.Visibility = Visibility.Hidden;
-            this.mainWindow.Settings.Visibility = Visibility.Hidden;
             this.mainWindow.soundButton.Visibility = Visibility.Hidden;
 
             BtnForward.IsEnabled = false;
@@ -211,7 +208,10 @@ namespace NewSkills.View
         {
             mainWindow.stopSound(); // stop sound instruction
             mainWindow.instructionButton.Visibility = Visibility.Hidden;
-            
+
+            Properties.Settings.Default.StartConditionsAchieved = true;
+            Properties.Settings.Default.Save();
+
             UtilController.WorkTime = UtilController.StartWorkTime;
             FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, mainWindow);
             FirstView vmF = new FirstView(mainWindow);
@@ -221,7 +221,6 @@ namespace NewSkills.View
             mainWindow.OutputView.Content = viewF;
             mainWindow.timerTxt.Visibility = Visibility.Visible;
             mainWindow.Home.Visibility = Visibility.Visible;
-            this.mainWindow.Books.Visibility = Visibility.Visible;
             mainWindow.Home.IsEnabled = false;
 
             mainWindow.Settings.Visibility = Visibility.Visible;

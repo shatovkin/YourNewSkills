@@ -16,8 +16,12 @@ namespace NewSkills.View
         {
             InitializeComponent();
             this.main = main;
-            main.Home.Visibility = Visibility.Visible;
-            main.Home.IsEnabled = true; 
+
+            if (Properties.Settings.Default.StartConditionsAchieved == true){
+                Properties.Settings.Default.Save();
+                main.Home.Visibility = Visibility.Visible;
+                main.Home.IsEnabled = true;
+            }
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
