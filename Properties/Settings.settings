@@ -26,5 +26,8 @@
     <Setting Name="CurrentInputTextName" Type="System.String" Scope="User">
       <Value Profile="(Default)">inputText1</Value>
     </Setting>
+    <Setting Name="StartConditionsAchieved" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

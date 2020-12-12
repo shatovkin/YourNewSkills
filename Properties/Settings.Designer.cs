@@ -118,5 +118,17 @@ namespace NewSkills.Properties {
                 this["CurrentInputTextName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartConditionsAchieved {
+            get {
+                return ((bool)(this["StartConditionsAchieved"]));
+            }
+            set {
+                this["StartConditionsAchieved"] = value;
+            }
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace NewSkills.View
             this.mainWindow = mainWindow;
 
             mainWindow.Home.IsEnabled = false;
+            mainWindow.soundButton.Visibility = Visibility.Visible;
             fontVariantSettings = Properties.Settings.Default.FontVariant;
             this.fileName = fileName;
             this.inputText = this.fileName;

@@ -408,12 +408,12 @@
                                >
                         <!--Контент-->
                         <StackPanel Orientation="Horizontal">
-                            <Button x:Name="soundButton" Click="soundButton_Click" ToolTip="Включить озвучку символов" HorizontalAlignment="Left" Margin="2,2" VerticalAlignment="Top" Width="30" Height="30">
+                            <Button x:Name="instructionButton" Click="instructionButton_Click" ToolTip="Прослушать инструкцию" HorizontalAlignment="Left" Margin="2,2" VerticalAlignment="Top" Width="30" Height="30">
                                 <StackPanel>
                                     <Image  Source="Resources/instructionOff.png"/>
                                 </StackPanel>
                             </Button>
-                            <Button x:Name="instructionButton" Click="instructionButton_Click" ToolTip="Прослушать инструкцию" HorizontalAlignment="Right" Margin="5,2" VerticalAlignment="Top" Width="30" Height="30">
+                            <Button x:Name="soundButton" Click="soundButton_Click" ToolTip="Включить озвучку символов" HorizontalAlignment="Right" Margin="5,2" VerticalAlignment="Top" Width="30" Height="30">
                                 <StackPanel>
                                     <Image  Source="Resources/soundOn.png"/>
                                 </StackPanel>

@@ -1174,6 +1174,7 @@ namespace NewSkills.ViewModel
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_bsign), letter: 'ь'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ee1), letter: 'Э'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ee2), letter: 'э'));
+            LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_bl), letter: 'ы'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ju1), letter: 'Ю'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ju2), letter: 'ю'));
             LoadedImages.Add(new NextImage(imageSource: getImagePathFromProperty(Properties.Resources.letter_ja1), letter: 'Я'));
