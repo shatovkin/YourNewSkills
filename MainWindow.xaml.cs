@@ -526,7 +526,7 @@ namespace NewSkills
             {
                 instructionOn = true;
                 instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instruction" + ".png")), VerticalAlignment = VerticalAlignment.Center };
-                soundPlayer.Stream = Properties.Resources.instructionSound;
+                soundPlayer.Stream = Properties.Resources.audio_instruciya_wav;
                 soundPlayer.Play();
             }
             else

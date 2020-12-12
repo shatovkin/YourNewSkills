@@ -72,15 +72,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_a12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_a12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_a22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_a22_wav", resourceCulture);
@@ -93,15 +84,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_be12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_be12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_be12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_be12_wav1", resourceCulture);
             }
         }
         
@@ -126,15 +108,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ce12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ce12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ce22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ce22_wav", resourceCulture);
@@ -147,15 +120,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_che12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_che12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_che12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_che12_wav1", resourceCulture);
             }
         }
         
@@ -180,15 +144,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_de12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_de12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_de22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_de22_wav", resourceCulture);
@@ -201,15 +156,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_e12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_e12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_e12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_e12_wav1", resourceCulture);
             }
         }
         
@@ -234,36 +180,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ef12_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Bukva_el12_wav {
             get {
-                return ResourceManager.GetStream("audio_Bukva_ef12_wav1", resourceCulture);
+                return ResourceManager.GetStream("audio_Bukva_el12_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_el_12_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Bukva_el22_wav {
             get {
-                return ResourceManager.GetStream("audio_Bukva_el_12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_el_12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_el_12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_el_22_wav {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_el_22_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Bukva_el22_wav", resourceCulture);
             }
         }
         
@@ -273,15 +201,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_em12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_em12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_em12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_em12_wav1", resourceCulture);
             }
         }
         
@@ -306,15 +225,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_en12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_en12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_en22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_en22_wav", resourceCulture);
@@ -327,15 +237,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_er12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_er12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_er12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_er12_wav1", resourceCulture);
             }
         }
         
@@ -360,15 +261,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_es12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_es12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_es22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_es22_wav", resourceCulture);
@@ -381,15 +273,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ge12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ge12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ge12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ge12_wav1", resourceCulture);
             }
         }
         
@@ -414,15 +297,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ha12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ha12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ha22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ha22_wav", resourceCulture);
@@ -432,27 +306,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_i_kratnoe12_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Bukva_i_kratkoe12_wav {
             get {
-                return ResourceManager.GetStream("audio_Bukva_i_kratnoe12_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Bukva_i_kratkoe12_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_i_kratnoe12_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Bukva_i_kratkoe22_wav {
             get {
-                return ResourceManager.GetStream("audio_Bukva_i_kratnoe12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_i_kratnoe22_wav {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_i_kratnoe22_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Bukva_i_kratkoe22_wav", resourceCulture);
             }
         }
         
@@ -462,15 +327,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_i12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_i12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_i12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_i12_wav1", resourceCulture);
             }
         }
         
@@ -495,15 +351,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ka12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ka12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ka22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ka22_wav", resourceCulture);
@@ -516,15 +363,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_myagkij_znak11_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_myagkij_znak11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_myagkij_znak11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_myagkij_znak11_wav1", resourceCulture);
             }
         }
         
@@ -549,15 +387,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_o12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_o12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_o22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_o22_wav", resourceCulture);
@@ -570,15 +399,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_pe12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_pe12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_pe12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_pe12_wav1", resourceCulture);
             }
         }
         
@@ -603,15 +423,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_sha12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_sha12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_sha22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_sha22_wav", resourceCulture);
@@ -624,15 +435,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_shcha12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_shcha12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_shcha12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_shcha12_wav1", resourceCulture);
             }
         }
         
@@ -657,15 +459,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_te12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_te12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_te22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_te22_wav", resourceCulture);
@@ -675,27 +468,9 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_te22_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_te22_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_tvyordyj_znak11_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_tvyordyj_znak11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_tvyordyj_znak11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_tvyordyj_znak11_wav1", resourceCulture);
             }
         }
         
@@ -720,15 +495,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_u12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_u12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_u22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_u22_wav", resourceCulture);
@@ -741,15 +507,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ve12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ve12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ve12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ve12_wav1", resourceCulture);
             }
         }
         
@@ -774,15 +531,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_y12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_y12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_y22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_y22_wav", resourceCulture);
@@ -795,15 +543,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ya12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ya12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ya12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ya12_wav1", resourceCulture);
             }
         }
         
@@ -828,15 +567,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ye12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ye12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ye22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ye22_wav", resourceCulture);
@@ -849,15 +579,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_yo12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_yo12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_yo12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_yo12_wav1", resourceCulture);
             }
         }
         
@@ -882,15 +603,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_yu12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_yu12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_yu22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_yu22_wav", resourceCulture);
@@ -903,15 +615,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Bukva_ze12_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_ze12_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_ze12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_ze12_wav1", resourceCulture);
             }
         }
         
@@ -936,15 +639,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Bukva_zhe12_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Bukva_zhe12_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Bukva_zhe22_wav {
             get {
                 return ResourceManager.GetStream("audio_Bukva_zhe22_wav", resourceCulture);
@@ -963,15 +657,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_chetyre11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_chetyre11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Cifra_chetyre21_wav {
             get {
                 return ResourceManager.GetStream("audio_Cifra_chetyre21_wav", resourceCulture);
@@ -981,27 +666,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_devyat_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_devyat11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_devyat_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_devyat11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_devyat_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_devyat21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_devyat_11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_devyat_21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_devyat_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_devyat21_wav", resourceCulture);
             }
         }
         
@@ -1017,15 +693,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_dva11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_dva11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Cifra_dva21_wav {
             get {
                 return ResourceManager.GetStream("audio_Cifra_dva21_wav", resourceCulture);
@@ -1035,27 +702,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_nol_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_nol11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_nol_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_nol11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_nol_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_nol21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_nol_11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_nol_21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_nol_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_nol21_wav", resourceCulture);
             }
         }
         
@@ -1071,15 +729,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_odin11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_odin11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Cifra_odin21 {
             get {
                 return ResourceManager.GetStream("audio_Cifra_odin21", resourceCulture);
@@ -1089,81 +738,54 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_pyat_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_pyat11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_pyat_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_pyat11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_pyat_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_pyat21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_pyat_11_wav1", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_pyat21_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_pyat_21_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_sem11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_pyat_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_sem11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_sem_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_sem21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_sem_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_sem21_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_sem_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_shest11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_sem_11_wav1", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_shest11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_sem_21_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_shest21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_sem_21_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_shest_11_wav {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_shest_11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_shest_11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_shest_11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_shest_21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_shest_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_shest21_wav", resourceCulture);
             }
         }
         
@@ -1179,15 +801,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_tri11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_tri11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Cifra_tri21_wav {
             get {
                 return ResourceManager.GetStream("audio_Cifra_tri21_wav", resourceCulture);
@@ -1197,27 +810,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_vosem_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_vosem11_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_vosem_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_vosem11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_vosem_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Cifra_vosem21_wav {
             get {
-                return ResourceManager.GetStream("audio_Cifra_vosem_11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Cifra_vosem_21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Cifra_vosem_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Cifra_vosem21_wav", resourceCulture);
             }
         }
         
@@ -1227,15 +831,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Defis11_wav {
             get {
                 return ResourceManager.GetStream("audio_Defis11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Defis11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Defis11_wav1", resourceCulture);
             }
         }
         
@@ -1260,15 +855,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Dvoetochie11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Dvoetochie11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Dvoetochie21_wav {
             get {
                 return ResourceManager.GetStream("audio_Dvoetochie21_wav", resourceCulture);
@@ -1278,18 +864,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Kavychki11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_instruciya_wav {
             get {
-                return ResourceManager.GetStream("audio_Kavychki11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_instruciya_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Kavychki11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Kavychki11_wav {
             get {
-                return ResourceManager.GetStream("audio_Kavychki11_wav1", resourceCulture);
+                return ResourceManager.GetStream("audio_Kavychki11_wav", resourceCulture);
             }
         }
         
@@ -1314,15 +900,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Nizhnee_podchyorkivanie11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Nizhnee_podchyorkivanie11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Nizhnee_podchyorkivanie21_wav {
             get {
                 return ResourceManager.GetStream("audio_Nizhnee_podchyorkivanie21_wav", resourceCulture);
@@ -1335,15 +912,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Nomer11_wav {
             get {
                 return ResourceManager.GetStream("audio_Nomer11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Nomer11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Nomer11_wav1", resourceCulture);
             }
         }
         
@@ -1386,15 +954,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Plyus11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Plyus11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Plyus21_wav {
             get {
                 return ResourceManager.GetStream("audio_Plyus21_wav", resourceCulture);
@@ -1407,15 +966,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Probel_levoj11_wav {
             get {
                 return ResourceManager.GetStream("audio_Probel_levoj11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Probel_levoj11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Probel_levoj11_wav1", resourceCulture);
             }
         }
         
@@ -1440,15 +990,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Probel_pravoj11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Probel_pravoj11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Probel_pravoj21_wav {
             get {
                 return ResourceManager.GetStream("audio_Probel_pravoj21_wav", resourceCulture);
@@ -1461,15 +1002,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Procent11_wav {
             get {
                 return ResourceManager.GetStream("audio_Procent11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Procent11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Procent11_wav1", resourceCulture);
             }
         }
         
@@ -1494,15 +1026,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Ravno11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Ravno11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Ravno21_wav {
             get {
                 return ResourceManager.GetStream("audio_Ravno21_wav", resourceCulture);
@@ -1521,15 +1044,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Skobka_otkryvaetsya11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Skobka_otkryvaetsya11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Skobka_otkryvaetsya21_wav {
             get {
                 return ResourceManager.GetStream("audio_Skobka_otkryvaetsya21_wav", resourceCulture);
@@ -1539,27 +1053,9 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Skobka_otkryvaetsya21_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Skobka_otkryvaetsya21_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Skobka_zakryvaetsya11_wav {
             get {
                 return ResourceManager.GetStream("audio_Skobka_zakryvaetsya11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Skobka_zakryvaetsya11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Skobka_zakryvaetsya11_wav1", resourceCulture);
             }
         }
         
@@ -1584,15 +1080,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Tochka_s_zapyatoj11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Tochka_s_zapyatoj11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Tochka_s_zapyatoj21_wav {
             get {
                 return ResourceManager.GetStream("audio_Tochka_s_zapyatoj21_wav", resourceCulture);
@@ -1611,15 +1098,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Tochka11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Tochka11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Tochka21_wav {
             get {
                 return ResourceManager.GetStream("audio_Tochka21_wav", resourceCulture);
@@ -1629,54 +1107,36 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Voprositel_nyj_znak11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Voprositelnyj_znak11_wav {
             get {
-                return ResourceManager.GetStream("audio_Voprositel_nyj_znak11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Voprositelnyj_znak11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Voprositel_nyj_znak11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Voprositelnyj_znak21_wav {
             get {
-                return ResourceManager.GetStream("audio_Voprositel_nyj_znak11_wav1", resourceCulture);
+                return ResourceManager.GetStream("audio_Voprositelnyj_znak21_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Voprositel_nyj_znak21_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Vosklicatelnyj_znak11_wav {
             get {
-                return ResourceManager.GetStream("audio_Voprositel_nyj_znak21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Vosklicatelnyj_znak11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Vosklicatel_nyj_znak11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Vosklicatelnyj_znak21_wav {
             get {
-                return ResourceManager.GetStream("audio_Vosklicatel_nyj_znak11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Vosklicatel_nyj_znak11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Vosklicatel_nyj_znak11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Vosklicatel_nyj_znak21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Vosklicatel_nyj_znak21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Vosklicatelnyj_znak21_wav", resourceCulture);
             }
         }
         
@@ -1701,15 +1161,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_A11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_A11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_A21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_A21_wav", resourceCulture);
@@ -1722,15 +1173,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Be11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Be11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Be11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Be11_wav1", resourceCulture);
             }
         }
         
@@ -1755,15 +1197,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ce11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ce11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ce21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ce21_wav", resourceCulture);
@@ -1776,15 +1209,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Che11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Che11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Che11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Che11_wav1", resourceCulture);
             }
         }
         
@@ -1809,15 +1233,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_De11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_De11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_De21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_De21_wav", resourceCulture);
@@ -1830,15 +1245,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_E11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_E11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_E11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_E11_wav1", resourceCulture);
             }
         }
         
@@ -1863,15 +1269,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ef11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ef11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ef21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ef21_wav", resourceCulture);
@@ -1881,27 +1278,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_El_11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_El11_wav {
             get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_El_11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Zaglavnaya_El11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_El_11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_El21_wav {
             get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_El_11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_El_21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_El_21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Zaglavnaya_El21_wav", resourceCulture);
             }
         }
         
@@ -1911,15 +1299,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Em11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Em11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Em11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Em11_wav1", resourceCulture);
             }
         }
         
@@ -1944,15 +1323,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_En11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_En11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_En21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_En21_wav", resourceCulture);
@@ -1965,15 +1335,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Er11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Er11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Er11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Er11_wav1", resourceCulture);
             }
         }
         
@@ -1998,15 +1359,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Es11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Es11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Es21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Es21_wav", resourceCulture);
@@ -2019,15 +1371,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ge11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ge11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ge11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ge11_wav1", resourceCulture);
             }
         }
         
@@ -2052,15 +1395,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ha11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ha11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ha21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ha21_wav", resourceCulture);
@@ -2070,27 +1404,18 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I_kratnoe11_wav {
+        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I_kratkoe11_wav {
             get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_I_kratnoe11_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Zaglavnaya_I_kratkoe11_wav", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I_kratnoe11_wav1 {
+        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I_kratkoe21_wav {
             get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_I_kratnoe11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I_kratnoe21_wav {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_I_kratnoe21_wav", resourceCulture);
+                return ResourceManager.GetStream("audio_Zaglavnaya_I_kratkoe21_wav", resourceCulture);
             }
         }
         
@@ -2100,15 +1425,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_I11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_I11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_I11_wav1", resourceCulture);
             }
         }
         
@@ -2133,15 +1449,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ka11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ka11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ka21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ka21_wav", resourceCulture);
@@ -2154,15 +1461,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Pe11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Pe11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Pe11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Pe11_wav1", resourceCulture);
             }
         }
         
@@ -2187,15 +1485,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Sha11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Sha11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Sha21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Sha21_wav", resourceCulture);
@@ -2208,15 +1497,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Shcha11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Shcha11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Shcha11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Shcha11_wav1", resourceCulture);
             }
         }
         
@@ -2241,15 +1521,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Te11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Te11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Te21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Te21_wav", resourceCulture);
@@ -2262,15 +1533,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_U11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_U11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_U11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_U11_wav1", resourceCulture);
             }
         }
         
@@ -2295,15 +1557,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ve11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ve11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ve21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ve21_wav", resourceCulture);
@@ -2316,15 +1569,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ya11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ya11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ya11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ya11_wav1", resourceCulture);
             }
         }
         
@@ -2349,15 +1593,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ye11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ye11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ye21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ye21_wav", resourceCulture);
@@ -2370,15 +1605,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Yo11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Yo11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Yo11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Yo11_wav1", resourceCulture);
             }
         }
         
@@ -2403,15 +1629,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Yu11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Yu11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Yu21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Yu21_wav", resourceCulture);
@@ -2424,15 +1641,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ze11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Ze11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Ze11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Ze11_wav1", resourceCulture);
             }
         }
         
@@ -2457,15 +1665,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Zhe11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_Zhe11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_Zhe21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_Zhe21_wav", resourceCulture);
@@ -2478,15 +1677,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_О11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zaglavnaya_О11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zaglavnaya_О11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zaglavnaya_О11_wav1", resourceCulture);
             }
         }
         
@@ -2511,15 +1701,6 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zapyataya11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zapyataya11_wav1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_Zapyataya21_wav {
             get {
                 return ResourceManager.GetStream("audio_Zapyataya21_wav", resourceCulture);
@@ -2532,15 +1713,6 @@ namespace NewSkills.Properties {
         public static System.IO.UnmanagedMemoryStream audio_Zvezdochka11_wav {
             get {
                 return ResourceManager.GetStream("audio_Zvezdochka11_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream audio_Zvezdochka11_wav1 {
-            get {
-                return ResourceManager.GetStream("audio_Zvezdochka11_wav1", resourceCulture);
             }
         }
         
@@ -2623,20 +1795,15 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to в нашем случае нужно сесть за стол
-        ///переговоров обеим сторонам родителям и
+        ///   Looks up a localized string similar to в нашем ч ы ы случае нужно сесть за стол
+        ///переговоров ч обеим сторонам родителям и
         ///детям цель переговоров смена ролевой 
         ///пары после смены дети начинают помогать
         ///родителям и родители начинают принимать
         ///помощь предмет переговоров ролевой
         ///перечень каждой стороны обе стороны
         ///должны прийти к согласию о том что
-        ///например ребёнок звонит родителям раз в
-        ///неделю и интересуется здоровьем
-        ///самочувствием заботами и нуждами своих
-        ///родителей а они в свою очередь ждут
-        ///звонка не навязывают ему свою
-        ///помощь с готовностью гов [rest of string was truncated]&quot;;.
+        ///например ребёнок звонит родителям раз в.
         /// </summary>
         public static string inputText1 {
             get {
@@ -2696,15 +1863,6 @@ namespace NewSkills.Properties {
             get {
                 object obj = ResourceManager.GetObject("instructionOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream instructionSound {
-            get {
-                return ResourceManager.GetStream("instructionSound", resourceCulture);
             }
         }
         

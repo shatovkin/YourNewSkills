@@ -10,21 +10,22 @@
     <Grid>
         <StackPanel Margin="50,50,0,0" Orientation="Vertical">
             <TextBlock Margin="0,0,0,20" FontSize="20">           
-                <Hyperlink NavigateUri="https://drive.google.com/file/d/1Hh0fDibDWJZJ_HWgcOihgDr17utNFYLl/view?usp=sharing" 
-                           RequestNavigate="Hyperlink_RequestNavigate">
+                <Hyperlink Name="hype1" RequestNavigate="Hyperlink_RequestNavigate" Click="Hyperlink_Click_1">
+                     <TextBlock x:Name="hyperlinkText1"/>
                     1. Инструкция по использованию тренажера 
                 </Hyperlink>
             </TextBlock>
             <TextBlock Margin="0,0,0,20"  FontSize="20">           
-                <Hyperlink NavigateUri="https://drive.google.com/file/d/189st3sqqAbKfnXjL68NKNIJVunabNmft/view?usp=sharing"
-                           RequestNavigate="Hyperlink_RequestNavigate">
+                <Hyperlink Name="hype2"
+                           RequestNavigate="Hyperlink_RequestNavigate" Click="Hyperlink_Click_2">
+                     <TextBlock x:Name="hyperlinkText2"/>
                     2. Ускоренное обучение слепой печати Программа "Newskills" 
                 </Hyperlink>
             </TextBlock>
 
             <TextBlock Margin="0,0,0,20"  FontSize="20">           
-                <Hyperlink NavigateUri="https://drive.google.com/file/d/1BM76lbhF_z_FJWvcyVn7KPAjf2sM5CaX/view?usp=sharing"
-                           RequestNavigate="Hyperlink_RequestNavigate">
+                <Hyperlink Name="hype3" RequestNavigate="Hyperlink_RequestNavigate" Click="Hyperlink_Click_3">
+                     <TextBlock  x:Name="hyperlinkText3"/>
                     3. Бадмаев. Психология и техника ускоренного обучения 
                 </Hyperlink>
             </TextBlock>
