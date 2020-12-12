@@ -241,3 +241,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 Resources/instructionSound.wav
+Resources/audio_instruciya.wav.wav

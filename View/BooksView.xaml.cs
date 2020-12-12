@@ -2,7 +2,11 @@
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using System.Windows;
-
+using System.Windows.Documents;
+using System;
+using NewSkills.Controller;
+using System.Net;
+using System.Xml;
 
 namespace NewSkills.View
 {
@@ -31,6 +35,27 @@ namespace NewSkills.View
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
             
+        }
+
+        private void Hyperlink_Click_1(object sender, RoutedEventArgs e)
+        {
+            hype1.NavigateUri = new Uri(getHyperLink("1"));
+        }
+
+        private void Hyperlink_Click_2(object sender, RoutedEventArgs e)
+        {
+            hype2.NavigateUri = new Uri(getHyperLink("2"));
+        }
+
+        private void Hyperlink_Click_3(object sender, RoutedEventArgs e)
+        {
+            hype3.NavigateUri = new Uri(getHyperLink("3"));
+        }
+
+        private string getHyperLink(string bookNumber) {
+            LicenseServiceController licenseController = new LicenseServiceController();
+            string link =  licenseController.getBookHyperLink(bookNumber);
+            return link;
         }
     }
 }
