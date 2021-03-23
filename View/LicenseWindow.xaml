@@ -10,7 +10,7 @@
         WindowStyle="SingleBorderWindow">
     <Grid Margin="0,0,-0.4,-0.4">
         <Label x:Name="lableActivation" Foreground="Black" Content="Активация программы" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Width="347" Margin="116,10,0,0"/>
-        <Label x:Name="messageLabel" Foreground="Red" Content="Лицензионный ключ не верен, попробуйте еще раз" HorizontalAlignment="Left" Visibility="Hidden"  VerticalAlignment="Top" Width="347" Margin="116,55,0,0"/>
+        <Label x:Name="messageLabel" Foreground="Red" Content="Лицензионный ключ не верен или деактивирован, попробуйте еще раз" HorizontalAlignment="Left" Visibility="Hidden"  VerticalAlignment="Top" Width="412" Margin="67,63,0,0"/>
         <TextBox x:Name="licenseCode1" MaxLength="4"  HorizontalAlignment="Left" PreviewTextInput="NumberValidationTextBox" Height="23" Margin="93,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Width="75" TextChanged="licenseCodeOne_ChangeEvent"/>
         <TextBox x:Name="licenseCode2" MaxLength="4"  HorizontalAlignment="Left" PreviewTextInput="NumberValidationTextBox" Height="23" Margin="191,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="licenseCodeTwo_ChangeEvent"/>
         <TextBox x:Name="licenseCode3" MaxLength="4"  HorizontalAlignment="Left" PreviewTextInput="NumberValidationTextBox" Height="23" Margin="289,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="licenseCodeThree_ChangeEvent"/>

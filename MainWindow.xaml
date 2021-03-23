@@ -13,7 +13,7 @@
         VerticalContentAlignment="Stretch"
         WindowState="Maximized"
         AllowsTransparency="False" 
-        Background="#d7b3a8">
+        Background="#FF516A7A">
     <Window.Resources>
 
         <!--#region Button Visual Style-->
@@ -32,8 +32,8 @@
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#d7b3a8"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#d7b3a8"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FF516A7A"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FF516A7A"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <!--#endregion-->
 
@@ -199,7 +199,7 @@
         <!--#endregion-->
 
     </Window.Resources>
-    <Grid Background="#f7f0ee">
+    <Grid Background="#FFD0D7DA">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -289,7 +289,7 @@
 
 
         <!--add a header to the grid-->
-        <Grid Row="0" Height="50" Background="#d7b3a8" Name="topBorder" VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.RowSpan="2">
+        <Grid Row="0" Height="50" Background="#FF516A7A" Name="topBorder" VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.RowSpan="2">
             <Grid Height="28">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -318,7 +318,7 @@
         <Grid Row="2" Height="50"
                   VerticalAlignment="Bottom"
                   Name="bottomBorder"
-                  Background="#d7b3a8">
+                  Background="#FF516A7A">
         </Grid>
 
         <Grid Row="1">
@@ -326,7 +326,7 @@
             <DockPanel Name="dockPanelMain">
 
                 <Grid   DockPanel.Dock="Left" Width="50"   
-                        Background="#d7b3a8" Name="leftBorder">
+                        Background="#FF516A7A" Name="leftBorder">
 
                     <!--add 3 buttons - Home, Profile and Settings-->
                     <Button x:Name="Home"
@@ -394,7 +394,7 @@
                     </Button>
                 </Grid>
                 <Grid   DockPanel.Dock="Right" Width="50" Name="rightBorder"  
-                        Background="#d7b3a8">
+                        Background="#FF516A7A">
                 </Grid>
 
                 <ScrollViewer 

@@ -14,24 +14,35 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>C:\Users\dsh\Desktop\newSkills\</PublishUrl>
+    <PublishUrl>ftp://yournewskills.ru/inetpub/ftproot/Application Files/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://software.yournewskills.ru/</InstallUrl>
+    <UpdateUrl>http://yournewskills.ru/</UpdateUrl>
+    <SupportUrl>http://newskills.berfect.de/</SupportUrl>
+    <ErrorReportUrl>http://newskills.berfect.de/</ErrorReportUrl>
+    <ProductName>newskills</ProductName>
+    <PublisherName>newskills</PublisherName>
+    <SuiteName>newskills</SuiteName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -62,10 +73,10 @@
     </Win32Resource>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>02A0F8102E214EA8BABF91111F438919914E558B</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BBF8611696AE3072122A6DACBB5B56B4B366FB86</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>NewSkills_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>YourNewSkills_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -261,6 +272,7 @@
     <None Include="Service References\LicenceServiceRef\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="YourNewSkills_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -1196,6 +1208,31 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\audio_Cifra_chetyre11.wav.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fingerNumbers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="NewSkills.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="WpfAnimatedGif.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

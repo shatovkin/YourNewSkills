@@ -9,10 +9,6 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Media;
 using System.Windows;
-using System.Drawing;
-using System.Windows.Interop;
-using Tulpep.NotificationWindow;
-using System.Collections.Generic;
 using static NewSkills.ViewModel.NextLetterService;
 
 namespace NewSkills.View
@@ -49,6 +45,7 @@ namespace NewSkills.View
             mainWindow.Home.IsEnabled = false;
             mainWindow.soundButton.Visibility = Visibility.Visible;
             fontVariantSettings = Properties.Settings.Default.FontVariant;
+            mainWindow.menuVisibility(Visibility.Visible);
             this.fileName = fileName;
             this.inputText = this.fileName;
             streamReaderController = new StreamReaderController(fileName);
@@ -391,6 +388,11 @@ namespace NewSkills.View
             if (UtilController.WorkTime == 0 && UtilController.PauseTime == 0 && UtilController.ActivateWorkOrPause == true)
             {
                 mainWindow.AnyKeyPressed = true;
+            }
+
+            if (e.Key == Key.Tab) {
+                e.Handled = true;
+                base.OnKeyDown(e);
             }
         }
 

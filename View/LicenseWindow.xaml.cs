@@ -18,7 +18,6 @@ namespace NewSkills.View
     {
         private MainWindow mainWindow;
         private static int inputLength = 4;
-        private string cpuId = "";
         [System.Runtime.InteropServices.DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
         public static object ManagementObjectServer { get; private set; }
@@ -72,16 +71,17 @@ namespace NewSkills.View
             if (checkInternetConnection())
             {
                 Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait; // set the cursor to loading spinner
-
                 LicenseServiceController licenseController = new LicenseServiceController();
                 int licenseNumber = licenseController.getLincenceRequest(licenseCode);
-                LicenseRequest request = getRequest(licenseCode, cpuId);
+                LicenseRequest request = getRequest(licenseCode, GetCPUId());
 
                 if (licenseNumber == request.ExcerciseNumber && request.LicenseExistence)
                 {
                     this.Hide();
                     mainWindow.LoadView(ViewType.StartConditionView);
+                    mainWindow.menuVisibility(Visibility.Visible);
                     Properties.Settings.Default.License = true;
+                    Properties.Settings.Default.LicenseKey = licenseCode;
                     Properties.Settings.Default.Save();
                     Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow; // set the cursor back to arrow
                 }
@@ -100,16 +100,18 @@ namespace NewSkills.View
             }
         }
 
-        private void GetCPUId()
+        public static string GetCPUId()
         {
+            string cpuId = "";
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("select ProcessorId from Win32_Processor");
             foreach (ManagementObject mj in searcher.Get())
             {
                 cpuId = System.Convert.ToString(mj["ProcessorId"]);
             }
+            return cpuId;
         }
 
-        private LicenseRequest getRequest(string licenseCode, string cpu)
+        public static LicenseRequest getRequest(string licenseCode, string cpu)
         {
             try
             {
@@ -117,7 +119,7 @@ namespace NewSkills.View
                 WebClient webClient = new WebClient();
                 webClient.QueryString.Add("licenseNumber", licenseCode);
                 webClient.QueryString.Add("cpuId", cpu);
-                var result = webClient.DownloadString("http://yournewskills.ru/LicenseService.asmx/getLincenseAndCPURequest");
+                var result = webClient.DownloadString("http://autorization.yournewskills.ru/LicenseService.asmx/getLincenseAndCPURequest");
 
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(result);
@@ -125,6 +127,7 @@ namespace NewSkills.View
                 var excerciseNumber = xmlDoc.GetElementsByTagName("ExcerciseNumber")[0].InnerText;
                 var licenseExistence = xmlDoc.GetElementsByTagName("LicenseExistence")[0].InnerText;
 
+               
                 LicenseRequest licenseRequest = new LicenseRequest();
                 licenseRequest.LicenseExistence = bool.Parse(licenseExistence);
                 licenseRequest.ExcerciseNumber = int.Parse(excerciseNumber);
@@ -149,7 +152,7 @@ namespace NewSkills.View
             return InternetGetConnectedState(out desc, 0);
         }
 
-        private class LicenseRequest
+        public class LicenseRequest
         {
             public int ExcerciseNumber { get; set; }
             public bool LicenseExistence { get; set; }

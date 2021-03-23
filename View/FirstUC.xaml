@@ -13,25 +13,25 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label x:Name="label3" Grid.Column="0"/>
-            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="#e6e6e6" Width="600" FontSize="20" Height="50" Grid.ColumnSpan="3" Margin="0,13,0,2" />
+            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="#e6e6e6" Width="600" FontSize="20" Height="50" Grid.ColumnSpan="3" Margin="97,14,0,1" />
             <Label x:Name="label4" Content=""  Grid.Column="2"/>
         </Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0,10,0,0" HorizontalAlignment="Center" Height="90" >
 
             <TextBlock HorizontalAlignment="Center" Name="exampleText" FontSize="28" Height="38" Width="600"></TextBlock>
 
-            <TextBox HorizontalAlignment="Center" AcceptsTab="False" Margin="0,5,4,0" MinHeight="42" FontSize="28" Text="{Binding InputText}" x:Name="typingTextTxt" TextChanged="typingTextChanged" 
+            <TextBox HorizontalAlignment="Center" AcceptsTab="False" TabIndex="-1" Margin="0,5,4,0" MinHeight="42" FontSize="28" Text="{Binding InputText}" x:Name="typingTextTxt" TextChanged="typingTextChanged" 
                      PreviewKeyDown="previewKeyDown" VerticalContentAlignment="Top" Height="38" RenderTransformOrigin="0.5,0.423" Width="600"/>
         </StackPanel>
         <Grid Height="230" Margin="0,5" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0"/>
-                <ColumnDefinition Width="0"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="650"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="label5" Content=""  Grid.Column="0" Width="0"/>
-            <Image x:Name="image"  Height="228" Width="450" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/letter_a1.png" Grid.ColumnSpan="3" />
-            <Label x:Name="label6" Content=""  Grid.Column="3" Width="0" />
+            <Label x:Name="label5" Content=""  Grid.Column="1" Margin="24,0,381,0"/>
+            <Image x:Name="image" Width="598" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/letter_a1.png" Grid.ColumnSpan="3" Margin="179,1,0,1" />
+            <Label x:Name="label6" Content=""  Grid.Column="2" Margin="72,0,69,0" />
         </Grid>
     </StackPanel>
 </UserControl>

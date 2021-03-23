@@ -1777,6 +1777,16 @@ namespace NewSkills.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap fingerNumbers {
+            get {
+                object obj = ResourceManager.GetObject("fingerNumbers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap home_icon {
             get {
                 object obj = ResourceManager.GetObject("home_icon", resourceCulture);
@@ -1795,15 +1805,20 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to в нашем ч ы ы случае нужно сесть за стол
-        ///переговоров ч обеим сторонам родителям и
+        ///   Looks up a localized string similar to в нашем случае нужно сесть за стол
+        ///переговоров обеим сторонам родителям и
         ///детям цель переговоров смена ролевой 
         ///пары после смены дети начинают помогать
         ///родителям и родители начинают принимать
         ///помощь предмет переговоров ролевой
         ///перечень каждой стороны обе стороны
         ///должны прийти к согласию о том что
-        ///например ребёнок звонит родителям раз в.
+        ///например ребёнок звонит родителям раз в
+        ///неделю и интересуется здоровьем
+        ///самочувствием заботами и нуждами своих
+        ///родителей а они в свою очередь ждут
+        ///звонка не навязывают ему свою
+        ///помощь с готовностью гов [rest of string was truncated]&quot;;.
         /// </summary>
         public static string inputText1 {
             get {

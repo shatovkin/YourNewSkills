@@ -26,6 +26,7 @@ namespace NewSkills.View
         bool btn7Bool = false;
         bool btn8Bool = false;
         bool btn9Bool = false;
+        bool btn10Bool = false;
 
         bool btn1Controll = true;
         bool btn2Controll = true;
@@ -36,6 +37,7 @@ namespace NewSkills.View
         bool btn7Controll = true;
         bool btn8Controll = true;
         bool btn9Controll = true;
+        bool btn10Controll = true;
 
         Label progress;
         MainWindow mainWindow;
@@ -203,6 +205,22 @@ namespace NewSkills.View
             makeButtonActive();
         }
 
+        private void btn10_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn10Bool == true)
+            {
+                btn10Bool = false;
+                btn10Controll = true;
+            }
+            else
+            {
+                btn10Bool = true;
+                btn10Controll = false;
+            }
+            checkSoundContent(btn10, btn10Bool);
+            makeButtonActive();
+        }
+
 
         private void BtnForward_Click(object sender, RoutedEventArgs e)
         {
@@ -250,7 +268,8 @@ namespace NewSkills.View
         public void makeButtonActive()
         {
             if (btn1Controll == false && btn2Controll == false && btn3Controll == false && btn4Controll == false &&
-                btn5Controll == false && btn6Controll == false && btn7Controll == false && btn8Controll == false && btn9Controll == false)
+                btn5Controll == false && btn6Controll == false && btn7Controll == false && btn8Controll == false &&
+                btn9Controll == false && btn10Controll == false)
             {
                 BtnForward.IsEnabled = true;
             }

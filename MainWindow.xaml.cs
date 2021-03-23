@@ -15,6 +15,7 @@ using System.Windows.Controls;
 using System.Diagnostics;
 using Tulpep.NotificationWindow;
 using System.Drawing;
+using static NewSkills.View.LicenseWindow;
 
 namespace NewSkills
 {
@@ -67,6 +68,8 @@ namespace NewSkills
             checkSoundContent();
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
+           
+            menuVisibility(Visibility.Hidden);
 
             Properties.Settings.Default.StartConditionsAchieved = false;
             Properties.Settings.Default.Save();
@@ -82,6 +85,23 @@ namespace NewSkills
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+        private bool checkLicenseByStart() {
+
+            Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait; // set the cursor to loading spinner
+
+            LicenseServiceController licenseController = new LicenseServiceController();
+            int licenseNumber = licenseController.getLincenceRequest(Properties.Settings.Default.LicenseKey);
+
+            if (licenseNumber != 0)
+            {
+                LicenseRequest request = LicenseWindow.getRequest(Properties.Settings.Default.LicenseKey, LicenseWindow.GetCPUId());
+                return request.LicenseExistence;
+            }
+            else {
+                return false; 
+            }
         }
 
         private void resetSettings()
@@ -182,13 +202,13 @@ namespace NewSkills
             this.DataContext = vm;
             try
             {
-                if (Properties.Settings.Default.License == false)
+                if (!checkLicenseByStart())
                 {
                     LoadView(ViewType.LicenseView);
                 }
                 else
                 {
-                    //LoadView(ViewType.StartConditionView);
+                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow; // set the cursor to loading spinner
                     LoadView(ViewType.StartConditionView);
                 }
             }
@@ -211,6 +231,7 @@ namespace NewSkills
                     break;
                 case ViewType.First:
                     timeReset(Visibility.Visible);
+                    menuVisibility(Visibility.Visible);
                     FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, this);
                     FirstView vmF = new FirstView(this);
                     viewF.DataContext = vmF;
@@ -226,6 +247,7 @@ namespace NewSkills
                     congratulationWindow.Show();
                     break;
                 case ViewType.LicenseView:
+                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow; // set the cursor to loading spinner
                     menuVisibility(Visibility.Hidden);
                     timeReset(Visibility.Hidden);
                     LicenseWindow lw = new LicenseWindow(this);
@@ -460,7 +482,7 @@ namespace NewSkills
         }
 
         // 0 - visible; 1 - hidden; 2 - collapsed
-        private void menuVisibility(Visibility Visibility)
+        public void menuVisibility(Visibility Visibility)
         {
             Home.Visibility = Visibility;
             Books.Visibility = Visibility;
@@ -584,28 +606,9 @@ namespace NewSkills
             popupNotifier.ContentFont = new System.Drawing.Font("Arial", 16F);
             popupNotifier.HeaderColor = System.Drawing.Color.FromArgb(252, 164, 2);
             popupNotifier.BodyColor = System.Drawing.Color.FromArgb(153, 204, 255);
-            popupNotifier.Size = new System.Drawing.Size(500, 150);
+            popupNotifier.Size = new System.Drawing.Size(500, 200);
             popupNotifier.Scroll = true;
             popupNotifier.Popup();
-
-
-            //PopupNotifier popup = new PopupNotifier();
-            //popup.Image = Properties.Resources.icons8_brake_warning_25px_1;
-            //popup.ContentFont = new System.Drawing.Font("Tahoma", 8F);
-            //popup.Size = new Size(400, 100);
-            //popup.ShowGrip = false;
-            //popup.HeaderHeight = 20;
-            //popup.TitlePadding = new Padding(3);
-            //popup.ContentPadding = new Padding(3);
-            //popup.ImagePadding = new Padding(8);
-            //popup.AnimationDuration = 1000;
-            //popup.AnimationInterval = 1;
-            //popup.HeaderColor = Color.FromArgb(252, 164, 2);
-            //popup.Scroll = true;
-            //popup.ShowCloseButton = false;
-            //popup.TitleText = "CRITICAL ITEM(S)";
-            //popup.ContentText = critical;
-            //popup.Popup();
         }
     }
 }

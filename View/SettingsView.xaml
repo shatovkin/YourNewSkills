@@ -33,7 +33,12 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="0">
                 <Label x:Name="borderColorLabel" FontSize="16" Margin="0,120,0,45" Content="Цвет рамки:" Width="150"/>
-                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки"  x:Name="ColorPickerBorder" Margin="0,130,0,35" Width="200" SelectedColorChanged="ColorPickerBorder_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
+                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBorder" Margin="0,130,0,35" Width="200" SelectedColorChanged="ColorPickerBorder_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="145,80,0,0" Width="60">
+                    <Button x:Name="button" Content="Светлый" Width="54" Margin="0,5,2,0" Height="24" />
+                    <Button x:Name="button_Copy" Content="Мягкий" Width="54" Height="24" Margin="0,5,2,0" />
+                    <Button x:Name="button_Copy1" Content="Темный" Width="54" Height="24" Margin="0,5,2,0"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
     </StackPanel>
