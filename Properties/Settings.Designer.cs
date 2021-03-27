@@ -130,5 +130,17 @@ namespace NewSkills.Properties {
                 this["StartConditionsAchieved"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" 7558-8457-3354-3517")]
+        public string LicenseKey {
+            get {
+                return ((string)(this["LicenseKey"]));
+            }
+            set {
+                this["LicenseKey"] = value;
+            }
+        }
     }
 }
