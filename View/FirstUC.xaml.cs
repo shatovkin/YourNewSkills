@@ -266,7 +266,9 @@ namespace NewSkills.View
 
         private void stopSound(SoundPlayer sp)
         {
-            sp.Stop();
+            if (sp != null) {
+                sp.Stop();
+            }
         }
 
         private char lastLetterBeforeClickSpace(string typingText)

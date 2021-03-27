@@ -13,7 +13,7 @@ namespace NewSkills.View
     {
         private MainWindow main; 
 
-        public SettingsView(MainWindow main, System.Windows.Media.Brush background)
+        public SettingsView(MainWindow main)
         {
             InitializeComponent();
 
@@ -23,7 +23,17 @@ namespace NewSkills.View
 
             main.Home.IsEnabled = true; 
             main.RunTimer = false;
-            this.main = main; 
+            this.main = main;
+
+            System.Windows.Media.Color colorBorder = new System.Windows.Media.Color();
+            colorBorder = System.Windows.Media.Color.FromRgb(81, 106, 122);
+
+            System.Windows.Media.Color colorBackground = new System.Windows.Media.Color();
+            colorBackground = System.Windows.Media.Color.FromRgb(208 , 215, 218);
+
+            this.ColorPickerBorder.SelectedColor = colorBorder;
+            this.ColorPickerBackground.SelectedColor = colorBackground;
+
 
         }
 
@@ -53,7 +63,19 @@ namespace NewSkills.View
             else if (selectedIndex == 2) {
                 return "inputText3";
             }
-            return ""; 
+            else if (selectedIndex == 3)
+            {
+                return "inputText4";
+            }
+            else if (selectedIndex == 4)
+            {
+                return "inputText5";
+            }
+            else if (selectedIndex == 5)
+            {
+                return "inputText6";
+            }
+            return "inputText1"; 
         }
 
 
@@ -69,22 +91,40 @@ namespace NewSkills.View
 
         private void ColorPickerBackground_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
         {
-            SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
-                            e.NewValue.Value.G, e.NewValue.Value.B));
+            try
+            {
+                SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
+                                           e.NewValue.Value.G, e.NewValue.Value.B));
 
-            this.Background = sb;
-            main.scroll.Background = sb;
+                this.Background = sb;
+                main.scroll.Background = sb;
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         private void ColorPickerBorder_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
         {
-            SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
+            try
+            {
+                SolidColorBrush sb = new SolidColorBrush(System.Windows.Media.Color.FromArgb(e.NewValue.Value.A, e.NewValue.Value.R,
                            e.NewValue.Value.G, e.NewValue.Value.B));
 
-            main.leftBorder.Background = sb;
-            main.rightBorder.Background = sb;
-            main.topBorder.Background = sb;
-            main.bottomBorder.Background = sb;
+                main.leftBorder.Background = sb;
+                main.rightBorder.Background = sb;
+                main.topBorder.Background = sb;
+                main.bottomBorder.Background = sb;
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

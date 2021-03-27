@@ -1827,6 +1827,28 @@ namespace NewSkills.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to в нашем случае нужно сесть за стол
+        ///переговоров обеим сторонам родителям и
+        ///детям цель переговоров смена ролевой 
+        ///пары после смены дети начинают помогать
+        ///родителям и родители начинают принимать
+        ///помощь предмет переговоров ролевой
+        ///перечень каждой стороны обе стороны
+        ///должны прийти к согласию о том что
+        ///например ребенок звонит родителям раз в
+        ///неделю и интересуется здоровьем
+        ///самочувствием заботами и нуждами своих
+        ///родителей а они в свою очередь ждут
+        ///звонка не навязывают ему свою
+        ///помощь с готовностью гов [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string inputText2 {
+            get {
+                return ResourceManager.GetString("inputText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ворота между сознательными ощущениями
         ///и подсознанием это внимание когда вы
         ///переключаете своё внимание с одного
@@ -1841,19 +1863,6 @@ namespace NewSkills.Properties {
         ///захлестнувшего нас океана событий и
         ///ощущений например в этот момент вы
         ///можете  [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string inputText2 {
-            get {
-                return ResourceManager.GetString("inputText2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to А а Б б В в Г г Д д Е е Ё ё Ж ж З з И и Й й К к 
-        ///Л л М м Н н О о П п Р р С с Т т У у Ф ф Х х Ц ц 
-        ///Ч ч Ш ш Щ щ ъ ы ь Э э Ю ю Я я 
-        ///1 2 3 4 5 6 7 8 9 0
-        ///, . ! ? &quot; _ - ; : ( ) % № *.
         /// </summary>
         public static string inputText3 {
             get {

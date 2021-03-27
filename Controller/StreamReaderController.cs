@@ -34,6 +34,18 @@ namespace NewSkills.Controller
             {
                 sampleText = getFileContent("inputText3", "txt");
             }
+            else if (Properties.Settings.Default.TypingText == 3)
+            {
+                sampleText = getFileContent("inputText4", "txt");
+            }
+            else if (Properties.Settings.Default.TypingText == 4)
+            {
+                sampleText = getFileContent("inputText5", "txt");
+            }
+            else if (Properties.Settings.Default.TypingText == 5)
+            {
+                sampleText = getFileContent("inputText6", "txt");
+            }
 
             WholeSampleText = sampleText;
             file = sampleText.Split('\n');

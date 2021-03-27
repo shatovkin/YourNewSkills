@@ -133,7 +133,7 @@ namespace NewSkills.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7558-8457-3354-3517")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" 7558-8457-3354-3517")]
         public string LicenseKey {
             get {
                 return ((string)(this["LicenseKey"]));

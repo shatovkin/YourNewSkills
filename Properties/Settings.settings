@@ -30,7 +30,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="LicenseKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">7558-8457-3354-3517</Value>
+      <Value Profile="(Default)"> 7558-8457-3354-3517</Value>
     </Setting>
   </Settings>
 </SettingsFile>

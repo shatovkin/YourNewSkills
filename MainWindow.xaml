@@ -404,7 +404,7 @@
                             CanVerticallyScroll="True"
                             CanHorizontallyScroll="True"
                             HorizontalAlignment="Left"
-                            x:Name="stackPanelDockTop"
+                            x:Name="stackPanelDockTop" Width="654"
                                >
                         <!--Контент-->
                         <StackPanel Orientation="Horizontal">

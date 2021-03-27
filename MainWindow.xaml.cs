@@ -464,7 +464,7 @@ namespace NewSkills
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsView viewS = new SettingsView(this, this.Background);
+            SettingsView viewS = new SettingsView(this);
             this.OutputView.Content = viewS;
         }
 
