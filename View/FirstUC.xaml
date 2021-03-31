@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NewSkills.View"
-             mc:Ignorable="d" VerticalAlignment="Center" HorizontalAlignment="Center">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,150,0" >
+             mc:Ignorable="d" VerticalAlignment="Top" HorizontalAlignment="Center">
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0">
         <Grid Height="65">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -21,7 +21,7 @@
             <TextBlock HorizontalAlignment="Center" Name="exampleText" FontSize="28" Height="38" Width="600"></TextBlock>
 
             <TextBox HorizontalAlignment="Center" AcceptsTab="False" TabIndex="-1" Margin="0,5,4,0" MinHeight="42" FontSize="28" Text="{Binding InputText}" x:Name="typingTextTxt" TextChanged="typingTextChanged" 
-                     PreviewKeyDown="previewKeyDown" VerticalContentAlignment="Top" Height="38" RenderTransformOrigin="0.5,0.423" Width="600"/>
+                     PreviewKeyDown="previewKeyDown" Focusable="True" VerticalContentAlignment="Top" Height="38" RenderTransformOrigin="0.5,0.423" Width="600"/>
         </StackPanel>
         <Grid Height="230" Margin="0,5" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>

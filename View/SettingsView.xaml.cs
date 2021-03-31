@@ -98,10 +98,11 @@ namespace NewSkills.View
 
                 this.Background = sb;
                 main.scroll.Background = sb;
+                Properties.Settings.Default.BackgroundColor = e.NewValue.Value.R + "," + e.NewValue.Value.G + "," + e.NewValue.Value.B; 
+                Properties.Settings.Default.Save();
             }
             catch (System.Exception)
             {
-
                 throw;
             }
            
@@ -118,13 +119,14 @@ namespace NewSkills.View
                 main.rightBorder.Background = sb;
                 main.topBorder.Background = sb;
                 main.bottomBorder.Background = sb;
+
+                Properties.Settings.Default.BorderColor = e.NewValue.Value.R + "," + e.NewValue.Value.G + "," + e.NewValue.Value.B;
+                Properties.Settings.Default.Save();
             }
             catch (System.Exception)
             {
-
                 throw;
             }
-            
         }
     }
 }

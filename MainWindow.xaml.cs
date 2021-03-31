@@ -16,6 +16,7 @@ using System.Diagnostics;
 using Tulpep.NotificationWindow;
 using System.Drawing;
 using static NewSkills.View.LicenseWindow;
+using System.Threading;
 
 namespace NewSkills
 {
@@ -55,7 +56,10 @@ namespace NewSkills
         private bool runTimer = false;
         public bool RunTimer { get { return runTimer; } set { runTimer = value; } }
         private bool anyKeyPressed = false;
-        public bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; } }
+        private bool confirmed = false;
+        public bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; }}
+        public bool ConfirmButtonClicked { get { return confirmed;} set { confirmed = value; }}
+
         // End of Timer Variables
         private SoundPlayer soundPlayer = new SoundPlayer();
 
@@ -64,15 +68,16 @@ namespace NewSkills
             InitializeComponent();
             this.SizeChanged += MainWindow_SizeChanged;
 
+            scroll.ScrollToHome();
             soundOn = Properties.Settings.Default.SoundOn;
             checkSoundContent();
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-           
+            this.restartButton.Visibility = Visibility.Visible;
             menuVisibility(Visibility.Hidden);
 
-            Properties.Settings.Default.StartConditionsAchieved = false;
-            Properties.Settings.Default.Save();
+
+            this.setSettingsPerDefault();
 
             string language = System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.Name;
 
@@ -85,6 +90,13 @@ namespace NewSkills
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+        private void setSettingsPerDefault() {
+            Properties.Settings.Default.StartConditionsAchieved = false;
+            Properties.Settings.Default.BackgroundColor = "208,215,218";
+            Properties.Settings.Default.BorderColor = "81,106,122";
+            Properties.Settings.Default.Save();
         }
 
         private bool checkLicenseByStart() {
@@ -179,7 +191,7 @@ namespace NewSkills
             if (e.Key == Key.Space)
             {
                 anyKeyPressed = true;
-            }else if (Keyboard.IsKeyToggled(Key.CapsLock)) {
+            }else if (Keyboard.IsKeyToggled(Key.CapsLock)) {  
                 showPopUp("Capslock", "Активирована кнопка 'Capslock' \n\n Для выключения нажмите 'Capslock' еще раз");
             }
 
@@ -489,7 +501,7 @@ namespace NewSkills
             Settings.Visibility = Visibility;
         }
 
-        private void timeReset(Visibility visibility)
+        public void timeReset(Visibility visibility)
         {
             if (visibility == Visibility.Hidden)
             {
@@ -514,6 +526,12 @@ namespace NewSkills
             }
         }
 
+       
+        private void StartNew_Click(object sender, RoutedEventArgs e)
+        {
+            CustomMessageBox customBox = new CustomMessageBox("Вы уверены, что хотите начать сначала ?", "Да", "Нет",this);
+            customBox.Show();
+        }
 
         private void setSoundImageContent(string soundOnUri, bool soundResourceSetting)
         {
@@ -600,12 +618,15 @@ namespace NewSkills
 
         private void showPopUp(string titel, string message) {
 
+            string[] backGroundColorArray = Properties.Settings.Default.BackgroundColor.Split(',');
+            string[] borderColorArray= Properties.Settings.Default.BorderColor.Split(',');
+
             var popupNotifier = new PopupNotifier();
             popupNotifier.TitleText = titel;
             popupNotifier.ContentText = message;
             popupNotifier.ContentFont = new System.Drawing.Font("Arial", 16F);
-            popupNotifier.HeaderColor = System.Drawing.Color.FromArgb(252, 164, 2);
-            popupNotifier.BodyColor = System.Drawing.Color.FromArgb(153, 204, 255);
+            popupNotifier.HeaderColor = System.Drawing.Color.FromArgb(int.Parse(borderColorArray[0]), int.Parse(borderColorArray[1]), int.Parse(borderColorArray[2]));
+            popupNotifier.BodyColor = System.Drawing.Color.FromArgb(int.Parse(backGroundColorArray[0]), int.Parse(backGroundColorArray[1]), int.Parse(backGroundColorArray[2]));
             popupNotifier.Size = new System.Drawing.Size(500, 200);
             popupNotifier.Scroll = true;
             popupNotifier.Popup();

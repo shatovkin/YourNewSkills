@@ -41,15 +41,19 @@ namespace NewSkills.View
             InitializeComponent();
 
             this.mainWindow = mainWindow;
-
             mainWindow.Home.IsEnabled = false;
             mainWindow.soundButton.Visibility = Visibility.Visible;
-            fontVariantSettings = Properties.Settings.Default.FontVariant;
             mainWindow.menuVisibility(Visibility.Visible);
+            mainWindow.restartButton.Visibility = Visibility.Visible;
+
+            mainWindow.scroll.ScrollToHome();
+            //mainWindow.restartButton.Visibility = Visibility.Visible;
+            fontVariantSettings = Properties.Settings.Default.FontVariant;
+
+           
             this.fileName = fileName;
             this.inputText = this.fileName;
             streamReaderController = new StreamReaderController(fileName);
-
             fileLineNumber = returnWriteLine(this.fileName);
             wholeText = streamReaderController.file;
 
