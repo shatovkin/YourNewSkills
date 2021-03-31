@@ -32,5 +32,11 @@
     <Setting Name="LicenseKey" Type="System.String" Scope="User">
       <Value Profile="(Default)"> 7558-8457-3354-3517</Value>
     </Setting>
+    <Setting Name="BackgroundColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BorderColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -9,8 +9,8 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="ThreeDBorderWindow"
         HorizontalAlignment="Left" 
-        VerticalAlignment="Stretch"
-        VerticalContentAlignment="Stretch"
+        VerticalAlignment="Top"
+        VerticalContentAlignment="Top"
         WindowState="Maximized"
         AllowsTransparency="False" 
         Background="#FF516A7A">
@@ -397,14 +397,12 @@
                         Background="#FF516A7A">
                 </Grid>
 
-                <ScrollViewer 
-                    HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" x:Name="scroll" 
-                   >
+                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" x:Name="scroll">
                     <StackPanel DockPanel.Dock="Top"
                             CanVerticallyScroll="True"
                             CanHorizontallyScroll="True"
                             HorizontalAlignment="Left"
-                            x:Name="stackPanelDockTop" Width="654"
+                            x:Name="stackPanelDockTop" Width="654" Height="1600"
                                >
                         <!--Контент-->
                         <StackPanel Orientation="Horizontal">
@@ -418,6 +416,10 @@
                                     <Image  Source="Resources/soundOn.png"/>
                                 </StackPanel>
                             </Button>
+                            <StackPanel VerticalAlignment="Bottom" Margin="850,0,0,-450" Height="30" HorizontalAlignment="Right">
+                                <Button x:Name="restartButton" Click="StartNew_Click" ToolTip="Включить озвучку символов" 
+                                    HorizontalAlignment="Right" VerticalAlignment="Bottom"  Width="100" Height="30" Content="Начать сначала"/>
+                            </StackPanel>
                         </StackPanel>
                         <ContentPresenter 
                             Content="{Binding Content}"  x:Name="OutputView" />
@@ -431,8 +433,8 @@
                             </Grid>
                         </Popup>
                         <Label x:Name="pauseLbl" Content="" HorizontalContentAlignment="Center"
-                               FontSize="40"  HorizontalAlignment="Center" 
-                               VerticalAlignment="Top" Width="538" Margin="-80,57,93.6,0"/>
+                               FontSize="40"  HorizontalAlignment="Center"
+                               VerticalAlignment="Top" Width="538" Margin="-70,57,93.6,0"/>
                     </StackPanel>
                 </ScrollViewer>
             </DockPanel>

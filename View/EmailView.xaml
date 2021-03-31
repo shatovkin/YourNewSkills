@@ -36,8 +36,6 @@
                 <Label x:Name="fileCounterTxt" Margin="7,0,0.6,0"  Visibility="Hidden" Width="242" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Content="Добавленно:" FontSize="14" Height="28"/>
                 <Button x:Name="sendEmailButton" Content="Отправить сообщение" IsEnabled="True" HorizontalAlignment="Left" Margin="13,10,0,0"  VerticalAlignment="Top" Click="sendEmailButton_Click" Width="147"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="248,0,88,20" Height="52">
-            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

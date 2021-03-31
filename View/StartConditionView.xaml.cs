@@ -8,7 +8,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Data;
 using System.Collections.Generic;
 using System.Globalization;
-
+using System.Media;
+using System.Windows.Navigation;
+using System.Diagnostics;
 
 namespace NewSkills.View
 {
@@ -17,36 +19,31 @@ namespace NewSkills.View
     /// </summary>
     public partial class StartConditionView : UserControl
     {
-        bool btn1Bool = false;
-        bool btn2Bool = false;
-        bool btn3Bool = false;
-        bool btn4Bool = false;
-        bool btn5Bool = false;
-        bool btn6Bool = false;
-        bool btn7Bool = false;
-        bool btn8Bool = false;
-        bool btn9Bool = false;
-        bool btn10Bool = false;
 
-        bool btn1Controll = true;
-        bool btn2Controll = true;
-        bool btn3Controll = true;
-        bool btn4Controll = true;
-        bool btn5Controll = true;
-        bool btn6Controll = true;
-        bool btn7Controll = true;
-        bool btn8Controll = true;
-        bool btn9Controll = true;
-        bool btn10Controll = true;
-
+        private bool btn1Bool = false;
+        private bool btn2Bool = false;
+        private bool btn3Bool = false;
+        private bool btn4Bool = false;
+        private bool btn5Bool = false;
+       
+        private bool btn1Controll = true;
+        private bool btn2Controll = true;
+        private bool btn3Controll = true;
+        private bool btn4Controll = true;
+        private bool btn5Controll = true;
+      
+        private bool instructionOn = false;
         Label progress;
         MainWindow mainWindow;
+        private SoundPlayer soundPlayer = new SoundPlayer();
 
         public StartConditionView(Label progress, MainWindow mainWindow)
         {
             InitializeComponent();
 
             DataContext = this;
+            mainWindow.instructionButton.Visibility = Visibility.Hidden;
+            mainWindow.restartButton.Visibility = Visibility.Hidden;
             this.DataContext = Application.Current.MainWindow;
 
             this.progress = progress;
@@ -140,87 +137,7 @@ namespace NewSkills.View
             makeButtonActive();
         }
 
-        private void btn6_Click(object sender, RoutedEventArgs e)
-        {
-            if (btn6Bool == true)
-            {
-                btn6Bool = false;
-                btn6Controll = true;
-            }
-            else
-            {
-                btn6Bool = true;
-                btn6Controll = false;
-            }
-            checkSoundContent(btn6, btn6Bool);
-            makeButtonActive();
-        }
-
-
-        private void btn7_Click(object sender, RoutedEventArgs e)
-        {
-            if (btn7Bool == true)
-            {
-                btn7Bool = false;
-                btn7Controll = true;
-            }
-            else
-            {
-                btn7Bool = true;
-                btn7Controll = false;
-            }
-            checkSoundContent(btn7, btn7Bool);
-            makeButtonActive();
-        }
-
-        private void btn8_Click(object sender, RoutedEventArgs e)
-        {
-            if (btn8Bool == true)
-            {
-                btn8Bool = false;
-                btn8Controll = true;
-            }
-            else
-            {
-                btn8Bool = true;
-                btn8Controll = false;
-            }
-            checkSoundContent(btn8, btn8Bool);
-            makeButtonActive();
-        }
-
-        private void btn9_Click(object sender, RoutedEventArgs e)
-        {
-            if (btn9Bool == true)
-            {
-                btn9Bool = false;
-                btn9Controll = true;
-            }
-            else
-            {
-                btn9Bool = true;
-                btn9Controll = false;
-            }
-            checkSoundContent(btn9, btn9Bool);
-            makeButtonActive();
-        }
-
-        private void btn10_Click(object sender, RoutedEventArgs e)
-        {
-            if (btn10Bool == true)
-            {
-                btn10Bool = false;
-                btn10Controll = true;
-            }
-            else
-            {
-                btn10Bool = true;
-                btn10Controll = false;
-            }
-            checkSoundContent(btn10, btn10Bool);
-            makeButtonActive();
-        }
-
+      
 
         private void BtnForward_Click(object sender, RoutedEventArgs e)
         {
@@ -267,9 +184,7 @@ namespace NewSkills.View
 
         public void makeButtonActive()
         {
-            if (btn1Controll == false && btn2Controll == false && btn3Controll == false && btn4Controll == false &&
-                btn5Controll == false && btn6Controll == false && btn7Controll == false && btn8Controll == false &&
-                btn9Controll == false && btn10Controll == false)
+            if (btn1Controll == false && btn2Controll == false && btn3Controll == false && btn4Controll == false && btn5Controll == false)
             {
                 BtnForward.IsEnabled = true;
             }
@@ -277,6 +192,44 @@ namespace NewSkills.View
             {
                 BtnForward.IsEnabled = false;
             }
+        }
+
+        private void instructionButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (instructionOn == false)
+            {
+                instructionOn = true;
+                instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instruction" + ".png")), VerticalAlignment = VerticalAlignment.Center };
+                soundPlayer.Stream = Properties.Resources.audio_instruciya_wav;
+                soundPlayer.Play();
+            }
+            else
+            {
+                instructionOn = false;
+                soundPlayer.Stop();
+                instructionButton.Content = new System.Windows.Controls.Image { Source = new BitmapImage(new Uri("pack://application:,,,/Resources/" + "instructionOff" + ".png")), VerticalAlignment = VerticalAlignment.Center };
+            }
+        }
+        
+
+        private void Hyperlink_Click_1(object sender, RoutedEventArgs e) {
+            hype1.NavigateUri = new Uri(getHyperLink("1"));
+        }
+
+        private string getHyperLink(string bookNumber)
+        {
+            LicenseServiceController licenseController = new LicenseServiceController();
+            string link = licenseController.getBookHyperLink(bookNumber);
+            return link;
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            // for .NET Core you need to add UseShellExecute = true
+            // see https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo.useshellexecute#property-value
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+
         }
     }
 }
