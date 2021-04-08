@@ -25,6 +25,8 @@ namespace NewSkills.View
         int fontVariantSettings;
         private StreamReaderController streamReaderController;
         public bool spaceButtonClicked = false;
+        private int lastCaretIndex = 0;
+        private string lastTypedText ="";
         private string inputText;
         NextLetterService nextLetterClass = new NextLetterService();
         NextLetterService.NextLetterWrapper nextLetterWrapper = new NextLetterService.NextLetterWrapper();
@@ -36,21 +38,25 @@ namespace NewSkills.View
         private int correctTextLenght = 0;
         private string fileName;
         SoundPlayer sp; 
+
         public FirstUC(string fileName, MainWindow mainWindow)
         {
             InitializeComponent();
 
             this.mainWindow = mainWindow;
             mainWindow.Home.IsEnabled = false;
+            mainWindow.instructionButton.Visibility = Visibility.Visible;
             mainWindow.soundButton.Visibility = Visibility.Visible;
+            mainWindow.questionButton.Visibility = Visibility.Visible;
             mainWindow.menuVisibility(Visibility.Visible);
-            mainWindow.restartButton.Visibility = Visibility.Visible;
+
+            mainWindow.stackPanelDockTop.Height = 650;
+            mainWindow.stackPanelDockTop.VerticalAlignment = VerticalAlignment.Top;
 
             mainWindow.scroll.ScrollToHome();
             //mainWindow.restartButton.Visibility = Visibility.Visible;
             fontVariantSettings = Properties.Settings.Default.FontVariant;
 
-           
             this.fileName = fileName;
             this.inputText = this.fileName;
             streamReaderController = new StreamReaderController(fileName);
@@ -83,7 +89,6 @@ namespace NewSkills.View
             }
             else if (fileName == "inputText3")
             {
-
                 return Properties.Settings.Default.InputText3;
             }
             return 0;
@@ -165,101 +170,122 @@ namespace NewSkills.View
                     string typingText = this.typingTextTxt.Text.Trim().Replace(" ", "|");
                     string sampleText = this.exampleText.Text.Trim().Replace(" ", "|");
 
-                    if (typingText.Length > sampleText.Length)
+                    if ((lastCaretIndex > this.typingTextTxt.CaretIndex) && typingTextTxt.Text.Length != 0)
                     {
-                        string typingText2 = this.typingTextTxt.Text;
-                        this.typingTextTxt.Text = typingText2.Substring(0, sampleText.Length - 1);
-                        this.typingTextTxt.CaretIndex = sampleText.Length - 1;
-                    }
+                        this.typingTextTxt.Text = lastTypedText;
+                        this.typingTextTxt.CaretIndex = lastCaretIndex;
 
-                    if (spaceButtonClicked == true)
-                    {
-                        typingText = typingText + "|";
-                    }
+                        char nextLetterToShow = nextLetter(typingText, sampleText);
 
-                    if (typingText.Length <= sampleText.Length)
-                    {
-                        if (!getCurrentLetter(typingText.Length, typingText, sampleText))
+                        if (nextLetterToShow.ToString() != "|")
                         {
-                            writeLetter = false;
-                            this.typingTextTxt.Text = typingText.Substring(0, typingText.Length - 1).Replace("|", " ");//обрезать последнюю букву, если возникла ошибка
-                            if (UtilController.BlockTextFieldAndTimer != true)
-                            {
-                                this.typingTextTxt.IsReadOnly = true;
-                                this.typingTextTxt.CaretIndex = correctTextLenght; //Поставить курсор на последнее место
-                            }
+                            nextLetterWrapper = nextLetterClass.getLetter(nextLetterToShow, fontVariantSettings);
+
+                        }
+                        //If sound "On" play sounds
+                        if (Properties.Settings.Default.SoundOn)
+                        {
+                            voiceMessages(nextLetterWrapper.voicePath);
                         }
                         else
-                        {
-                            char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
-                            char nextLetterToShow = nextLetter(typingText, sampleText);
-
-                            if (nextLetterToShow.ToString() != "|")
-                            {
-                                nextLetterWrapper = nextLetterClass.getLetter(nextLetterToShow, fontVariantSettings);
-                                string message = nextLetterWrapper.letterDescription;
-                                popUpToRightCase(message); // set text to "Подсказки"
-
-                                //If sound "On" play sounds
-                                if (Properties.Settings.Default.SoundOn)
-                                {
-                                    voiceMessages(nextLetterWrapper.voicePath);
-                                }
-
-                                image.Source = getImage(nextLetterToShow);
-                                this.typingTextTxt.Text.Replace("|", " ");
-                            }
-                            else if (nextLetterToShow.ToString() == "|" && writeLetter == true)
-                            {
-                                popUpToClickSpace(lastLetter);
-                                this.typingTextTxt.Text.Replace("|", " ");
-                            }
-                        }
-                    }
-
-                    if (typingText.Length == sampleText.Length && (typingText == sampleText))
                     {
-                        fileLineNumber++;
-
-                        if (getCurrentLetter(typingText.Length, typingText, sampleText))
+                        if (typingText.Length > sampleText.Length)
                         {
-                            if (fileLineNumber != wholeText.Length)
-                            {
-                                if (fileLineNumber <= wholeText.Length - 1)
-                                {
-                                    this.exampleText.Text = wholeText[fileLineNumber];
-                                }
+                            string typingText2 = this.typingTextTxt.Text;
+                            this.typingTextTxt.Text = typingText2.Substring(0, sampleText.Length - 1);
+                            this.typingTextTxt.CaretIndex = sampleText.Length - 1;
+                        }
 
-                                this.typingTextTxt.Text = "";
-                               
-                                writeStopLine(fileName, fileLineNumber);
-                                this.mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength).ToString();//считать проценты для прогресса
+                        if (spaceButtonClicked == true)
+                        {
+                            typingText = typingText + "|";
+                        }
+
+                        if (typingText.Length <= sampleText.Length)
+                        {
+                            if (!getCurrentLetter(typingText.Length, typingText, sampleText))
+                            {
+                                writeLetter = false;
+                                this.typingTextTxt.Text = typingText.Substring(0, typingText.Length - 1).Replace("|", " ");//обрезать последнюю букву, если возникла ошибка
+                                if (UtilController.BlockTextFieldAndTimer != true)
+                                {
+                                    this.typingTextTxt.IsReadOnly = true;
+                                    this.typingTextTxt.CaretIndex = correctTextLenght; //Поставить курсор на последнее место
+                                }
                             }
                             else
                             {
-                                try
+                                char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
+                                char nextLetterToShow = nextLetter(typingText, sampleText);
+
+                                if (nextLetterToShow.ToString() != "|")
                                 {
-                                    stopSound(sp);
-                                    mainWindow.RunTimer = false;
-                                    mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength);
-                                    CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow,fileName);
-                                    congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                                    congratulationWindow.Owner = Application.Current.MainWindow;
-                                    congratulationWindow.Show();
+                                    nextLetterWrapper = nextLetterClass.getLetter(nextLetterToShow, fontVariantSettings);
+                                    string message = nextLetterWrapper.letterDescription;
+                                    popUpToRightCase(message); // set text to "Подсказки"
+
+                                    //If sound "On" play sounds
+                                    if (Properties.Settings.Default.SoundOn)
+                                    {
+                                        voiceMessages(nextLetterWrapper.voicePath);
+                                    }
+
+                                    image.Source = getImage(nextLetterToShow);
+                                    this.typingTextTxt.Text.Replace("|", " ");
                                 }
-                                catch (Exception er)
+                                else if (nextLetterToShow.ToString() == "|" && writeLetter == true)
                                 {
-                                    MessageBox.Show("test"+er.ToString());
+                                    popUpToClickSpace(lastLetter);
+                                    this.typingTextTxt.Text.Replace("|", " ");
                                 }
                             }
                         }
-                        else
-                        {
-                            this.typingTextTxt.Text = typingText.Substring(0, typingText.Length - 1).Replace("|", " "); // обрезать последнюю букву, если возникла ошибка
-                            this.typingTextTxt.Select(typingTextTxt.Text.Length, typingTextTxt.Text.Length); //Поставить курсор на последнее место
-                        }
-                    }
 
+                        if (typingText.Length == sampleText.Length && (typingText == sampleText))
+                        {
+                            fileLineNumber++;
+
+                            if (getCurrentLetter(typingText.Length, typingText, sampleText))
+                            {
+                                if (fileLineNumber != wholeText.Length)
+                                {
+                                    if (fileLineNumber <= wholeText.Length - 1)
+                                    {
+                                        this.exampleText.Text = wholeText[fileLineNumber];
+                                    }
+
+                                    this.typingTextTxt.Text = "";
+
+                                    writeStopLine(fileName, fileLineNumber);
+                                    this.mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength).ToString();//считать проценты для прогресса
+                                }
+                                else
+                                {
+                                    try
+                                    {
+                                        stopSound(sp);
+                                        mainWindow.RunTimer = false;
+                                        mainWindow.progress.Content = UtilController.getProgressInPercent(fileLineNumber, fileLength);
+                                        CongratulationWindow congratulationWindow = new CongratulationWindow(mainWindow, fileName);
+                                        congratulationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                                        congratulationWindow.Owner = Application.Current.MainWindow;
+                                        congratulationWindow.Show();
+                                    }
+                                    catch (Exception er)
+                                    {
+                                        MessageBox.Show("test" + er.ToString());
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                this.typingTextTxt.Text = typingText.Substring(0, typingText.Length - 1).Replace("|", " "); // обрезать последнюю букву, если возникла ошибка
+                                this.typingTextTxt.Select(typingTextTxt.Text.Length, typingTextTxt.Text.Length); //Поставить курсор на последнее место
+                            }
+                        }
+                        lastCaretIndex = this.typingTextTxt.CaretIndex;
+                        lastTypedText = this.typingTextTxt.Text;
+                    }
                 } while (fileLength == 0);
             }
             catch (Exception exception)
@@ -335,7 +361,6 @@ namespace NewSkills.View
                 }
                 else
                 {
-                    //streamReaderController.writeLogs(this.GetType().Name, e);
                     writeLetter = false;
                     return false;
                 }
@@ -444,7 +469,6 @@ namespace NewSkills.View
                     if (Properties.Settings.Default.SoundOn)
                     {
                         voiceMessages(Properties.Resources.audio_Probel_levoj21_wav);
-
                     }
                     this.typingTextTxt.Focus();
                 }

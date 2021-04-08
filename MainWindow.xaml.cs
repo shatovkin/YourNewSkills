@@ -60,6 +60,7 @@ namespace NewSkills
         public bool AnyKeyPressed { get { return anyKeyPressed; } set { anyKeyPressed = value; }}
         public bool ConfirmButtonClicked { get { return confirmed;} set { confirmed = value; }}
 
+        private HelpWindow helpWindow; 
         // End of Timer Variables
         private SoundPlayer soundPlayer = new SoundPlayer();
 
@@ -73,9 +74,9 @@ namespace NewSkills
             checkSoundContent();
             this.Loaded += MainWindow_Loaded;
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-            this.restartButton.Visibility = Visibility.Visible;
+           
             menuVisibility(Visibility.Hidden);
-
+            this.questionButton.Visibility = Visibility.Hidden;
 
             this.setSettingsPerDefault();
 
@@ -527,10 +528,22 @@ namespace NewSkills
         }
 
        
-        private void StartNew_Click(object sender, RoutedEventArgs e)
+        private void resetButton_Click(object sender, RoutedEventArgs e)
         {
             CustomMessageBox customBox = new CustomMessageBox("Вы уверены, что хотите начать сначала ?", "Да", "Нет",this);
             customBox.Show();
+        }
+
+        private void questionButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (helpWindow != null) {
+                helpWindow.Show();
+            } else {
+                helpWindow = new HelpWindow();
+                helpWindow.Topmost = true;
+                helpWindow.Show();
+            }
+         
         }
 
         private void setSoundImageContent(string soundOnUri, bool soundResourceSetting)

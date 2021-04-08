@@ -30,11 +30,13 @@ namespace NewSkills
 
         private void confirmBtn_Click(object sender, RoutedEventArgs e)
         {
-                main.timeReset(Visibility.Visible);
-                FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, main);
-                FirstView vmF = new FirstView(main);
-                viewF.DataContext = vmF;
-                this.Close();
+            main.timeReset(Visibility.Visible);
+            main.menuVisibility(Visibility.Visible);
+            FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, main);
+            FirstView vmF = new FirstView(main);
+            viewF.DataContext = vmF;
+            main.OutputView.Content = viewF;
+            this.Close();
         }
 
         private void cancelBtn_Click(object sender, RoutedEventArgs e)

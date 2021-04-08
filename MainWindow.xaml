@@ -402,7 +402,7 @@
                             CanVerticallyScroll="True"
                             CanHorizontallyScroll="True"
                             HorizontalAlignment="Left"
-                            x:Name="stackPanelDockTop" Width="654" Height="1600"
+                            x:Name="stackPanelDockTop" Width="654" Height="1650"
                                >
                         <!--Контент-->
                         <StackPanel Orientation="Horizontal">
@@ -411,15 +411,20 @@
                                     <Image  Source="Resources/instructionOff.png"/>
                                 </StackPanel>
                             </Button>
-                            <Button x:Name="soundButton" Click="soundButton_Click" ToolTip="Включить озвучку символов" HorizontalAlignment="Right" Margin="5,2" VerticalAlignment="Top" Width="30" Height="30">
+                            <Button x:Name="soundButton" Click="soundButton_Click" ToolTip="Озвучка символов" HorizontalAlignment="Right" Margin="5,2" VerticalAlignment="Top" Width="30" Height="30">
                                 <StackPanel>
                                     <Image  Source="Resources/soundOn.png"/>
                                 </StackPanel>
                             </Button>
-                            <StackPanel VerticalAlignment="Bottom" Margin="850,0,0,-450" Height="30" HorizontalAlignment="Right">
-                                <Button x:Name="restartButton" Click="StartNew_Click" ToolTip="Включить озвучку символов" 
-                                    HorizontalAlignment="Right" VerticalAlignment="Bottom"  Width="100" Height="30" Content="Начать сначала"/>
-                            </StackPanel>
+                            <Button x:Name="questionButton" Click="questionButton_Click" ToolTip="Подсказка" HorizontalAlignment="Right" Margin="0,2" VerticalAlignment="Top" Width="30" Height="30">
+                                <StackPanel>
+                                    <Image  Source="Resources/questionImage.png" Height="28" Width="27"/>
+                                </StackPanel>
+                            </Button>
+                            <!--<StackPanel VerticalAlignment="Bottom" Margin="775,0,0,-450" Height="30" HorizontalAlignment="Right">
+                                <Button x:Name="restartButton" Click="resetButton_Click" ToolTip="Включить озвучку символов" 
+                                   Width="100" Height="30" Content="Начать сначала"/>
+                            </StackPanel>-->
                         </StackPanel>
                         <ContentPresenter 
                             Content="{Binding Content}"  x:Name="OutputView" />

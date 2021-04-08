@@ -38,7 +38,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -194,6 +194,9 @@
     <Compile Include="View\FirstUC.xaml.cs">
       <DependentUpon>FirstUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LicenseWindow.xaml.cs">
       <DependentUpon>LicenseWindow.xaml</DependentUpon>
     </Compile>
@@ -238,6 +241,10 @@
     <Page Include="View\FirstUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LicenseWindow.xaml">
       <SubType>Designer</SubType>
@@ -1210,9 +1217,6 @@
     <EmbeddedResource Include="Resources\audio_Zvezdochka21.wav.wav" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\audio_instruciya.wav.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\audio_Cifra_chetyre11.wav.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -1241,6 +1245,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icoDen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\questionImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\audio_instruciya.wav.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

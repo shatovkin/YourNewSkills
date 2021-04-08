@@ -26,9 +26,9 @@
                         <Run FontWeight="Bold" FontSize="21">около каждого пункта. После чего нажмите на кнопку далее.</Run>
                     </Label>
                 </StackPanel>
-                <StackPanel Focusable="False" Height="1450" Margin="0,20,0.4,0">
+                <StackPanel Focusable="False" Height="1550" Margin="0,20,0.4,0">
                     <StackPanel Orientation="Horizontal" Height="60"  Margin="0,0,0,5" >
-                        <Button x:Name="btn1" Height="30" VerticalAlignment="Top"  Click="btn1_Click" Margin="0,5">
+                        <Button x:Name="btn1" Height="30" VerticalAlignment="Top"  Click="btn1_Click" Margin="0,0">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
                             </StackPanel>
@@ -39,19 +39,18 @@
                                     1. Обязательно прочтите или прослушайте инструкцию по использованию тренажёра.
                                 </Run>
                             </Label>
-                            <TextBlock Margin="25,0,0,10" FontSize="18">           
-                        <Hyperlink Name="hype1" RequestNavigate="Hyperlink_RequestNavigate" Click="Hyperlink_Click_1">
-                             <TextBlock x:Name="hyperlinkText1" Height="26"  VerticalAlignment="Center">
+                            <TextBlock Margin="25,0,0,10" FontSize="18" Width="446" HorizontalAlignment="Left">           
+                        <Hyperlink Name="hype1" RequestNavigate="Hyperlink_RequestNavigate" Click="Hyperlink_Click_1" TextDecorations="">
+                             <TextBlock x:Name="hyperlinkText1" Height="26"  VerticalAlignment="Top" Width="360" Margin="8,0,0,0">
                                 Инструкция по использованию тренажера 
                              </TextBlock>
-                             <Button x:Name="instructionButton" Click="instructionButton_Click" ToolTip="Прослушать инструкцию" HorizontalAlignment="Left" Width="30" Height="30" Margin="20,0">
+                        </Hyperlink>    
+                                <Button x:Name="instructionButton" Click="instructionButton_Click" ToolTip="Прослушать инструкцию" Width="30" Height="30" Margin="5,4,0,0">
                                 <StackPanel>
                                     <Image  Source="../Resources/instructionOff.png"/>
                                 </StackPanel>
                             </Button>
-                        </Hyperlink>    
-
-                        </TextBlock>
+                       </TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="80" Margin="0,10,0,0" >
@@ -63,7 +62,7 @@
                         <StackPanel Orientation="Vertical" VerticalAlignment="Top">
                             <Label Grid.Column="1" Margin="12,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    2. Перед началом обучения Вам нужно подготовиться и сделать так чтобы вам
+                                    2. Перед началом обучения Вам нужно подготовиться и сделать так, чтобы вам
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
@@ -73,12 +72,12 @@
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    мессенджеры на компьютере и т.д
+                                    мессенджеры на компьютере и т.д.
                                 </Run>
                             </Label>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Height="100" Margin="0,0,0,0">
+                    <StackPanel Orientation="Horizontal" Height="105" Margin="0,0,0,0">
                         <Button x:Name="btn3" Height="30" VerticalAlignment="Top" Click="btn3_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
@@ -87,28 +86,28 @@
                         <StackPanel Orientation="Vertical" VerticalAlignment="Top">
                             <Label Grid.Column="1" Margin="12,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    3. Поставьте стакан с чистой водой рядом с собой, так чтобы не задеть руками.
+                                    3. Поставьте стакан с чистой водой рядом с собой, убедитесь чтобы он Вам 
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    Вода будет нужна для увлажнения голосовых связок в процессе проговаривания
+                                    не мешал. Вода будет нужна для увлажнения голосовых связок в процессе 
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    ориентировочных команд. Перед выполненеием каждого действия рекомендуется
+                                    проговаривания команд. Перед выполнением каждого действия, необходимо 
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    проговаривание этого действия или воспроизведение голосовой озвучки.
+                                    проговаривать команды  вслух и прослушивать ориентировочные команды диктора.
                                 </Run>
                             </Label>
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="140" Margin="0,0,0.4,0" >
+                    <StackPanel Orientation="Horizontal" Height="200" Margin="0,0,0.4,0" >
                         <Button x:Name="btn4" Height="30" VerticalAlignment="Top" Click="btn4_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../Resources/checkBoxInActive.png" Width="25" Height="25"/>
@@ -117,7 +116,22 @@
                         <StackPanel Orientation="Vertical" VerticalAlignment="Top">
                             <Label Grid.Column="1" Margin="12,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    4. Запомните нумерацию пальцев:
+                                    4. Посмотрите на виртуальную клавиатуру, определите активные клавиши и пальцы.
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
+                                <Run FontWeight="Bold" FontSize="16">
+                                    Убедитесь, что Вы правильно позиционируете пальцы на клавишах "Ф,Ы,В,А" и "О,Л,Д,Ж".
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="30,10,0,0" Padding="1">
+                                <Run FontWeight="Bold" FontSize="16">
+                                    Запомните нумерацию пальцев:
+                                </Run>
+                            </Label>
+                            <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
+                                <Run FontWeight="Bold" FontSize="16">
+                                    большой - 0 - нулевой
                                 </Run>
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
@@ -137,15 +151,9 @@
                             </Label>
                             <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
                                 <Run FontWeight="Bold" FontSize="16">
-                                    мизинец - 4 - четвертый
+                                    мизинец - 4 - четвёртый
                                 </Run>
                             </Label>
-                            <Label Grid.Column="1" Margin="30,0,0,0" Padding="1">
-                                <Run FontWeight="Bold" FontSize="16">
-                                    большой - 0 - нулевой
-                                </Run>
-                            </Label>
-
                         </StackPanel>
                     </StackPanel>
                     <Grid Height="393" Margin="38,0,38.4,0" HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -156,7 +164,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Label x:Name="label5" Content=""  Grid.Column="0" Width="0" Margin="108,0,52,0"/>
-                        <Image x:Name="image" Width="650" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/fingerNumbers.png" Grid.ColumnSpan="4" Margin="0,0,-0.067,-27" />
+                        <Image x:Name="image" Width="650" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/fingerNumbers.png" Grid.ColumnSpan="4" Margin="-8,0,0,-27" />
                     </Grid>
 
                     <StackPanel Orientation="Horizontal" Height="90" Margin="0,30,0,0">
@@ -186,10 +194,10 @@
                         </StackPanel>
                     </StackPanel>
                     <StackPanel>
-                        <Image x:Name="fingerPosition" Height="450" Width="650" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/fingerPosition.jpg" Margin="43,0,0,-451" />
+                        <Image x:Name="fingerPosition" Height="450" Width="650" HorizontalAlignment="Left" Source="/NewSkills;component/Resources/fingerPosition.jpg" Margin="62,0,0,-451" />
                         <Label x:Name="label6" Content=""  Grid.Column="3" Width="0" Margin="107.934,0,108.6,0" />
                     </StackPanel>
-                    <Button x:Name="BtnForward" VerticalAlignment="Bottom" Margin="0,435,40,20" Width="135" Height="28" HorizontalAlignment="Right" Click="BtnForward_Click">
+                    <Button x:Name="BtnForward" VerticalAlignment="Bottom" Margin="0,435,69,20" Width="135" Height="28" HorizontalAlignment="Right" Click="BtnForward_Click">
                         <Run FontSize="15" FontWeight="Bold">Далее</Run>
                     </Button>
                 </StackPanel>

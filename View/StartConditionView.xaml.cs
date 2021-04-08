@@ -43,7 +43,7 @@ namespace NewSkills.View
 
             DataContext = this;
             mainWindow.instructionButton.Visibility = Visibility.Hidden;
-            mainWindow.restartButton.Visibility = Visibility.Hidden;
+           
             this.DataContext = Application.Current.MainWindow;
 
             this.progress = progress;

@@ -7,42 +7,78 @@
              xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
              mc:Ignorable="d" Margin="50">
     <StackPanel>
-        <Grid Height="200">
+        <Grid Height="800">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="600"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Label x:Name="suggestions" FontSize="16" Content="Выбор подсказок:" Width="150" Grid.Column="0"/>
-                <ComboBox x:Name="styleComboBox" FontSize="16" Width="400" Grid.Column="0" SelectionChanged="styleComboBox_SelectionChanged" Loaded="styleComboBox_Loaded">
-                    <ComboBoxItem x:Name="variant2" Content="Цифровое обозначение пальцев(по умолчанию)"/>
-                    <ComboBoxItem x:Name="variant3" Content="Текствое обозначение пальцев"/>
-                </ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0,40" >
-                <Label x:Name="textSuggestions" FontSize="16" Width="150" Content="Выбор текста:" Grid.Column="1" HorizontalAlignment="Left"/>
-                <ComboBox x:Name="typingTextComboBox" FontSize="16" Loaded="typingTextComboBox_Loaded" Width="400" Grid.Column="1" HorizontalAlignment="Right" SelectionChanged="typingTextComboBox_SelectionChanged">
-                    <ComboBoxItem Content="1. Базовый текст" />
-                    <ComboBoxItem Content="1. Базовый текст без буквы 'ё'" />
-                    <ComboBoxItem Content="2. Основной текст" />
-                    <ComboBoxItem Content="2. Основной текст без буквы 'ё'" />
-                    <ComboBoxItem Content="3. Алфавит" />
-                    <ComboBoxItem Content="3. Алфавит без буквы 'ё'" />
-                </ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="0">
-                <Label x:Name="background" FontSize="16" Margin="0,80,0,85" Content="Цвет фона:" Width="150" Grid.Column="1"/>
-                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBackground" Margin="0,80" Width="200" SelectedColorChanged="ColorPickerBackground_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="0">
-                <Label x:Name="borderColorLabel" FontSize="16" Margin="0,120,0,45" Content="Цвет рамки:" Width="150"/>
-                <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBorder" Margin="0,130,0,35" Width="200" SelectedColorChanged="ColorPickerBorder_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
-                <!--<StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="145,80,0,0" Width="60">
+            <Grid>
+                <Rectangle RadiusX="13.5" RadiusY="13.5" StrokeThickness="2"  Stroke="Black"
+                   Height="120"
+                   Width="600"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   />
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,15,0,0">
+                    <Label x:Name="labelSettings" FontSize="20" Content="НАСТРОЙКА ГОЛОСОВЫХ КОМАНД" FontWeight="Bold" Grid.Column="0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,70,0,0">
+                    <Label x:Name="suggestions" FontSize="16" Content="Выбор подсказок:" Width="150" Grid.Column="0"/>
+                    <ComboBox x:Name="styleComboBox" FontSize="16" Width="400" Grid.Column="0" SelectionChanged="styleComboBox_SelectionChanged" Loaded="styleComboBox_Loaded">
+                        <ComboBoxItem x:Name="variant2" Content="Цифровое обозначение пальцев(по умолчанию)"/>
+                        <ComboBoxItem x:Name="variant3" Content="Текствое обозначение пальцев"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Rectangle RadiusX="13.5" RadiusY="13.5" StrokeThickness="2"  Stroke="Black"
+                   Height="120"
+                   Width="600"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0,180"
+                   />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,195,0,0">
+                    <Label x:Name="labelTextVariant" FontSize="20" Content="ВЫБОР ОБУЧАЮЩЕГО ТЕКСТА" FontWeight="Bold" Grid.Column="0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,250" >
+                    <Label x:Name="textSuggestions" FontSize="16" Width="150" Content="Выбор текста:" Grid.Column="1" HorizontalAlignment="Left"/>
+                    <ComboBox x:Name="typingTextComboBox" FontSize="16" Loaded="typingTextComboBox_Loaded" Width="400" Grid.Column="1" HorizontalAlignment="Right" SelectionChanged="typingTextComboBox_SelectionChanged">
+                        <ComboBoxItem Content="1. Базовый текст" />
+                        <ComboBoxItem Content="2. Базовый текст без буквы 'ё'" />
+                        <ComboBoxItem Content="3. Основной текст" />
+                        <ComboBoxItem Content="4. Основной текст без буквы 'ё'" />
+                        <ComboBoxItem Content="5. Алфавит - пробный текст" />
+                        <ComboBoxItem Content="6. Алфавит - пробный текст без буквы 'ё'" />
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid>
+                <Rectangle RadiusX="13.5" RadiusY="13.5" StrokeThickness="2"  Stroke="Black"
+                   Height="180"
+                   Width="600"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0,360,0,0"
+                   />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,380,0,0">
+                    <Label x:Name="labelColor" FontSize="20" Content="НАСТРОЙКА ЦВЕТОВОЙ ГАММЫ" FontWeight="Bold" Grid.Column="0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Label x:Name="background" FontSize="16" Margin="10,450,0,85" Content="Цвет фона:" Width="150" Grid.Column="1"/>
+                    <wpfTool:ColorPicker StandardTabHeader="Cтандарт" AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBackground" Margin="0,220,0,85" Width="200" SelectedColorChanged="ColorPickerBackground_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0,0,-41,0">
+                    <Label x:Name="borderColorLabel" FontSize="16" Margin="10,490,0,45" Content="Цвет рамки:" Width="150"/>
+                    <wpfTool:ColorPicker StandardTabHeader="Cтандарт" Margin="0,250,0,35"  AdvancedTabHeader="Продвинутые настройки" x:Name="ColorPickerBorder" Width="200" SelectedColorChanged="ColorPickerBorder_SelectedColorChanged" Height="30" DisplayColorAndName="True"/>
+                    <!--<StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="145,80,0,0" Width="60">
                     <Button x:Name="button" Content="Светлый" Width="54" Margin="0,5,2,0" Height="24" />
                     <Button x:Name="button_Copy" Content="Мягкий" Width="54" Height="24" Margin="0,5,2,0" />
                     <Button x:Name="button_Copy1" Content="Темный" Width="54" Height="24" Margin="0,5,2,0"/>
                 </StackPanel>-->
-            </StackPanel>
+                </StackPanel>
+            </Grid>
         </Grid>
     </StackPanel>
 </UserControl>

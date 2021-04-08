@@ -1,0 +1,17 @@
+﻿<Window x:Class="NewSkills.View.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewSkills.View"
+        mc:Ignorable="d"
+        Title="Правильная позиция рук и пальцев" Height="670" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+        <Image x:Name="image" Width="490" Height="300" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerNumbers.png" Margin="0,0,0,0" />
+        </StackPanel>
+        <StackPanel>
+        <Image x:Name="fingerPosition" Width="490" Height="912" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerPosition.jpg" Margin="1,0" />
+        </StackPanel>
+    </Grid>
+</Window>
