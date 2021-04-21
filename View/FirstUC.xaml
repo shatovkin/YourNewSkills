@@ -13,12 +13,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label x:Name="label3" Grid.Column="0"/>
-            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="#e6e6e6" Width="600" FontSize="20" Height="50" Grid.ColumnSpan="3" Margin="26,8,0,7" />
+            <TextBlock x:Name="suggestionMessage" FontWeight="Bold" TextWrapping="WrapWithOverflow" Text="" HorizontalAlignment="Left" Background="#e6e6e6" Width="600" FontSize="20" Height="50" Grid.ColumnSpan="3" Margin="30,8,0,7" />
             <Label x:Name="label4" Content=""  Grid.Column="2"/>
         </Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0,10,0,0" HorizontalAlignment="Center" Height="90" >
 
-            <TextBlock Name="exampleText" FontSize="28" Height="38" Width="600" Margin="4,0,145,0"></TextBlock>
+            <TextBlock Name="exampleText" FontSize="28" Height="38" Width="600" Margin="5,0,145,0"></TextBlock>
 
             <TextBox AcceptsTab="False" TabIndex="-1" Margin="0,5,145,0" MinHeight="42" FontSize="28" Text="{Binding InputText}" x:Name="typingTextTxt" TextChanged="typingTextChanged" 
                      PreviewKeyDown="previewKeyDown" Focusable="True" VerticalContentAlignment="Top" Height="38" RenderTransformOrigin="0.5,0.423" Width="600"/>

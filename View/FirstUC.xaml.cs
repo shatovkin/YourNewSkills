@@ -26,6 +26,8 @@ namespace NewSkills.View
         private StreamReaderController streamReaderController;
         public bool spaceButtonClicked = false;
         private int lastCaretIndex = 0;
+        private char lastLetter = 'a';
+        private char nextLetterToShow = 'a';
         private string lastTypedText ="";
         private string inputText;
         NextLetterService nextLetterClass = new NextLetterService();
@@ -167,6 +169,7 @@ namespace NewSkills.View
             {
                 do
                 {
+                  
                     string typingText = this.typingTextTxt.Text.Trim().Replace(" ", "|");
                     string sampleText = this.exampleText.Text.Trim().Replace(" ", "|");
 
@@ -175,19 +178,20 @@ namespace NewSkills.View
                         this.typingTextTxt.Text = lastTypedText;
                         this.typingTextTxt.CaretIndex = lastCaretIndex;
 
-                        char nextLetterToShow = nextLetter(typingText, sampleText);
-
-                        if (nextLetterToShow.ToString() != "|")
+                        if (nextLetterToShow.Equals('|'))
                         {
-                            nextLetterWrapper = nextLetterClass.getLetter(nextLetterToShow, fontVariantSettings);
-
+                            popUpToClickSpace(lastLetter);   
                         }
-                        //If sound "On" play sounds
+                        else {
+                            nextLetterWrapper = nextLetterClass.getLetter(nextLetterToShow, fontVariantSettings);
+                        }
+                        
                         if (Properties.Settings.Default.SoundOn)
                         {
                             voiceMessages(nextLetterWrapper.voicePath);
                         }
-                        else
+                    }
+                    else
                     {
                         if (typingText.Length > sampleText.Length)
                         {
@@ -215,8 +219,8 @@ namespace NewSkills.View
                             }
                             else
                             {
-                                char lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
-                                char nextLetterToShow = nextLetter(typingText, sampleText);
+                                lastLetter = lastLetterBeforeClickSpace(typingText); // to detect the space direction left or right
+                                nextLetterToShow = nextLetter(typingText, sampleText);
 
                                 if (nextLetterToShow.ToString() != "|")
                                 {
