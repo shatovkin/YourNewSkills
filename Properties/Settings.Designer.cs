@@ -166,5 +166,41 @@ namespace NewSkills.Properties {
                 this["BorderColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText4 {
+            get {
+                return ((int)(this["InputText4"]));
+            }
+            set {
+                this["InputText4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText5 {
+            get {
+                return ((int)(this["InputText5"]));
+            }
+            set {
+                this["InputText5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InputText6 {
+            get {
+                return ((int)(this["InputText6"]));
+            }
+            set {
+                this["InputText6"] = value;
+            }
+        }
     }
 }

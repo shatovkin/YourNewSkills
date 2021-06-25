@@ -14,9 +14,8 @@ using System.Windows.Media;
 using System.Windows.Controls;
 using System.Diagnostics;
 using Tulpep.NotificationWindow;
-using System.Drawing;
 using static NewSkills.View.LicenseWindow;
-using System.Threading;
+using System.ComponentModel;
 
 namespace NewSkills
 {
@@ -122,6 +121,9 @@ namespace NewSkills
             Properties.Settings.Default.InputText1 = 0;
             Properties.Settings.Default.InputText2 = 0;
             Properties.Settings.Default.InputText3 = 0;
+            Properties.Settings.Default.InputText4 = 0;
+            Properties.Settings.Default.InputText5 = 0;
+            Properties.Settings.Default.InputText6 = 0;
             Properties.Settings.Default.Save();
         }
 
@@ -643,6 +645,24 @@ namespace NewSkills
             popupNotifier.Size = new System.Drawing.Size(500, 200);
             popupNotifier.Scroll = true;
             popupNotifier.Popup();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Process[] df = Process.GetProcesses();
+
+           foreach (Process process in Process.GetProcesses())
+           {
+                if (process.ProcessName == "NewSkills"){
+                    process.Kill();
+                }
+           }
+
+            if (soundPlayer != null) {
+                soundPlayer.Stop();
+            }
+            
+            e.Cancel = false;
         }
     }
 }

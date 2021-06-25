@@ -33,6 +33,7 @@ namespace NewSkills.View
         //Option 1
         void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            this.Close();
             e.Cancel = true;
         }
     }

@@ -25,7 +25,7 @@ namespace NewSkills.View
             mainWindow.CommonTime = 0;
             mainWindow.RunTimer = true; 
             
-            resetTextVariant(fileName);
+            //resetTextVariant(fileName);
             FirstUC viewF = new FirstUC(Properties.Settings.Default.CurrentInputTextName, mainWindow);
             FirstView vmF = new FirstView(mainWindow);
             viewF.DataContext = vmF;
@@ -47,6 +47,18 @@ namespace NewSkills.View
             else if (fileName == "inputText3")
             {
                 Properties.Settings.Default.InputText3 = 0;
+            }
+            else if (fileName == "inputText4")
+            {
+                Properties.Settings.Default.InputText4 = 0;
+            }
+            else if (fileName == "inputText5")
+            {
+                Properties.Settings.Default.InputText5 = 0;
+            }
+            else if (fileName == "inputText6")
+            {
+                Properties.Settings.Default.InputText6 = 0;
             }
             Properties.Settings.Default.Save();
         }

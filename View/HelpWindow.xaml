@@ -5,13 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewSkills.View"
         mc:Ignorable="d"
-        Title="Правильная позиция рук и пальцев" Height="670" Width="500" WindowStartupLocation="CenterScreen">
+        Title="Правильная позиция рук и пальцев" Height="750" Width="500" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
-        <Image x:Name="image" Width="490" Height="300" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerNumbers.png" Margin="0,0,0,0" />
+            <TextBox x:Name="suggestionMessage" HorizontalContentAlignment="Center" FontWeight="Medium" TextWrapping="WrapWithOverflow" Width="470" FontSize="14" Height="50" BorderThickness="0" Grid.ColumnSpan="3" Margin="0,0,0,0">
+                Первоначальное позиционирование пальцев
+            </TextBox>
+            <Image x:Name="image0" Width="320" Height="100" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/rightFingers.png" Margin="0,-50,0,0" />
         </StackPanel>
         <StackPanel>
-        <Image x:Name="fingerPosition" Width="490" Height="912" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerPosition.jpg" Margin="1,0" />
+            <Image x:Name="image" Width="490" Height="300" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerNumbers.png" Margin="0,80,0,0" />
+        </StackPanel>
+        <StackPanel>
+            <Image x:Name="fingerPosition" Width="490" Height="640" HorizontalAlignment="Center" Source="/NewSkills;component/Resources/fingerPosition.jpg" Margin="1,230,1,0" />
         </StackPanel>
     </Grid>
 </Window>

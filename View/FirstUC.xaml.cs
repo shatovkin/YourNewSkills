@@ -30,6 +30,7 @@ namespace NewSkills.View
         private char nextLetterToShow = 'a';
         private string lastTypedText ="";
         private string inputText;
+        private int spaceCounter = 0; 
         NextLetterService nextLetterClass = new NextLetterService();
         NextLetterService.NextLetterWrapper nextLetterWrapper = new NextLetterService.NextLetterWrapper();
 
@@ -93,6 +94,18 @@ namespace NewSkills.View
             {
                 return Properties.Settings.Default.InputText3;
             }
+            else if (fileName == "inputText4")
+            {
+                return Properties.Settings.Default.InputText4;
+            }
+            else if (fileName == "inputText5")
+            {
+                return Properties.Settings.Default.InputText5;
+            }
+            else if (fileName == "inputText6")
+            {
+                return Properties.Settings.Default.InputText6;
+            }
             return 0;
         }
 
@@ -110,6 +123,18 @@ namespace NewSkills.View
             else if (fileName == "inputText3")
             {
                 Properties.Settings.Default.InputText3 = lineNumber;
+            }
+            else if (fileName == "inputText4")
+            {
+                Properties.Settings.Default.InputText4 = lineNumber;
+            }
+            else if (fileName == "inputText5")
+            {
+                Properties.Settings.Default.InputText5 = lineNumber;
+            }
+            else if (fileName == "inputText6")
+            {
+                Properties.Settings.Default.InputText6 = lineNumber;
             }
             Properties.Settings.Default.Save();
         }
@@ -169,7 +194,6 @@ namespace NewSkills.View
             {
                 do
                 {
-                  
                     string typingText = this.typingTextTxt.Text.Trim().Replace(" ", "|");
                     string sampleText = this.exampleText.Text.Trim().Replace(" ", "|");
 
@@ -193,6 +217,11 @@ namespace NewSkills.View
                     }
                     else
                     {
+                        if (spaceCounter != 0)
+                        {
+                            this.typingTextTxt.CaretIndex = this.typingTextTxt.Text.Trim().Length+1;
+                        }
+
                         if (typingText.Length > sampleText.Length)
                         {
                             string typingText2 = this.typingTextTxt.Text;
@@ -414,10 +443,12 @@ namespace NewSkills.View
             if (e.Key == Key.Space)
             {
                 spaceButtonClicked = true;
+                spaceCounter++;
             }
             else
             {
                 spaceButtonClicked = false;
+                spaceCounter = 0;
             }
 
             if (UtilController.WorkTime == 0 && UtilController.PauseTime == 0 && UtilController.ActivateWorkOrPause == true)
